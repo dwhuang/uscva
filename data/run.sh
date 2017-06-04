@@ -12,7 +12,7 @@ for i in {105..115}; do
     case $1 in
         fetch)
         rsync -avz --delete --delete-excluded --exclude **/text-versions/ \
-            --exclude **/*.xml govtrack.us::govtrackdata/congress/$i/votes $i/
+            --exclude **/*.xml govtrack.us::govtrackdata/congress/$i .
         ;;
         archive)
         tar -zvcf $i.tgz $i/
