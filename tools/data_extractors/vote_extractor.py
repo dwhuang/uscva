@@ -1,6 +1,27 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Output voting history for each voter
 
+Output format:
+[
+    {
+        "id": "P000449",
+        "display_name": [
+            "Portman"
+        ],
+        "votes": {
+            "0": "Present",
+            "1": "Aye",
+            "2": "No",
+            "3": "Aye",
+            "4": "Yea",
+            ...
+        }
+    },
+...
+]
+"""
 import sys
 import os
 import json
@@ -86,26 +107,6 @@ class VoteExtractor:
 
 
     def extract(self, input_path, output_path):
-        """Output voting history for each voter
-
-           Output samples:
-
-           "P000449": {
-               "display_name": [
-                   "Portman"
-               ],
-               "votes": {
-                   "0": "Present",
-                   "1": "Aye",
-                   "2": "No",
-                   "3": "Aye",
-                   "4": "Yea",
-                   ...
-               }
-           },
-           ...
-
-        """
         for fpath in FileWalker.walk(
             input_path,
             [
