@@ -7,15 +7,15 @@ Output format:
 [
     {
         "id": "P000449",
-        "display_name": [
+        "display_names": [
             "Portman"
         ],
         "votes": {
-            "0": "Present",
-            "1": "Aye",
-            "2": "No",
-            "3": "Aye",
-            "4": "Yea",
+            "bill_id_1": 0,
+            "bill_id_2": 1,
+            "bill_id_3": -1,
+            "bill_id_4": 1,
+            "bill_id_5": 1,
             ...
         }
     },
@@ -119,7 +119,7 @@ class VoteExtractor:
         ):
             self.__process_file(fpath)
 
-        with open(output_path + "/congress_member_votes.json", "w") as fp:
+        with open(output_path + '/' + self.__class__.__name__ + ".output.json", "w") as fp:
             json.dump(
                 [m.to_dict() for _, m in sorted(self.congress_members.items())],
                 fp,
@@ -131,12 +131,20 @@ class VoteExtractor:
     def __process_file(self, fpath):
         with open(fpath, 'r') as fp:
             raw = json.load(fp)
+            if 'bill' not in raw:
+                # extract bill-related votes only
+                return
+
+            bill_id = "{}{}-{}".format(
+                raw['bill']['type'],
+                raw['bill']['number'],
+                raw['bill']['congress'],
+            )
             for vote in raw['votes']:
                 if vote.lower().strip() not in self.VOTE_VALUE:
                     print("Unknown vote {} in {}; skip".format(vote, fpath))
                     return
 
-            vote_id = raw['vote_id']
             for vote, voters in raw['votes'].items():
                 vote = self.VOTE_VALUE[vote.lower().strip()]
                 for voter in voters:
@@ -144,7 +152,7 @@ class VoteExtractor:
                         continue  # tie-breaking vice president vote
                     member = self.__get_or_create_congress_member(voter['id'])
                     member.set_display_name(voter['display_name'])
-                    member.vote(vote_id, vote)
+                    member.vote(bill_id, vote)
 
 
     def __get_or_create_congress_member(self, id):

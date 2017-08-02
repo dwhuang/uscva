@@ -28,7 +28,7 @@ class BillFinder:
                     print(id)
                     results.append(id)
 
-        with open(output_path + '/bill_finder_results.json', 'w') as fp:
+        with open(output_path + '/' + BillFinder.__name__ + '.output.json', 'w') as fp:
             json.dump(results, fp, indent=4)
 
 
