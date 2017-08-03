@@ -1,2 +1,3 @@
-test*
-*.log
+tags
+*.som
+test_data.txt
