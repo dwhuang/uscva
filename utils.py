@@ -13,7 +13,7 @@ def gen_random_data(fpath, seed=7788):
             print("d%03d %f %f %f" % (i, d[i, 0], d[i, 1], d[i, 2]), file=fp)
 
 
-def read_data(fpath):
+def read_data(fpath, delimiter='\t'):
     '''Read input data from a file
     '''
     with open(fpath, 'r') as fp:
@@ -22,7 +22,7 @@ def read_data(fpath):
         data = []
         labels = []
         for i, line in enumerate(lines):
-            toks = line.split(' ')
+            toks = line.split(delimiter)
             tok_count = len(toks)
             if tok_count <= 1:
                 raise RuntimeError("Not enough tokens in line:", i)
