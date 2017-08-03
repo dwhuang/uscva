@@ -7,7 +7,7 @@ import json
 class CongressMemberFeatures:
     def __init__(self, fname_vote_history, fname_bill_ids, output_path):
         self.congress_members = self.read_vote_history(fname_vote_history)
-        self.bill_ids = self.read_bill_ids(fname_bill_ids)
+        self.bill_ids = set(self.read_bill_ids(fname_bill_ids))
         self.output_path = output_path
         #self.bill_indices = {}
         #for i, bill_id in enumerate(self.bill_ids):
@@ -27,10 +27,17 @@ class CongressMemberFeatures:
 
 
     def gen(self):
+        # remove unused bill_ids, since some bills were not meant to be voted
+        bills_voted = set()
+        for m in self.congress_members:
+            for bill_voted in m['votes']:
+                bills_voted.add(bill_voted)
+        bills = self.bill_ids.intersection(bills_voted)
+        # create training samples
         samples = []
         for m in self.congress_members:
             sample = [m['id']]
-            for bill_id in self.bill_ids:
+            for bill_id in bills:
                 if bill_id in m['votes']:
                     sample.append(m['votes'][bill_id])
                 else:
@@ -66,8 +73,6 @@ class CongressMemberFeatures:
             if sv:
                 single_valued_col_count += 1
                 print("feature {} has a single value only".format(i))
-        print("There are {}/{} single-valued columns".format(single_valued_col_count, len(cols)))
-        # TODO There are 550/675 single-valued columns, meaning there are 125 voted bills
 
 
 def main(argv):
