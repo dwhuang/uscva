@@ -8,7 +8,7 @@ fi
 if [ ! -f out/BillFinder.output.json ]; then
     python bill_finder.py ../../data out bill Taiwan China
 fi
-if [ ! -f out/CongressMemberFeatures.output.csv ]; then
+if [ ! -f out/CongressMemberFeatures.output.tsv ]; then
     python congress_member_features.py out/VoteExtractor.output.json \
         out/BillFinder.output.json out
 fi

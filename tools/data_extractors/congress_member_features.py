@@ -47,7 +47,7 @@ class CongressMemberFeatures:
 
         with open(self.output_path + '/' + self.__class__.__name__ + '.output.csv', 'w') as fp:
             for sample in samples:
-                print(','.join([str(s) for s in sample]), file=fp)
+                print('\t'.join([str(s) for s in sample]), file=fp)
 
 
     def sanity_check(self, samples):
