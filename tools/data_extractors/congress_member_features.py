@@ -32,7 +32,10 @@ class CongressMemberFeatures:
         for m in self.congress_members:
             for bill_voted in m['votes']:
                 bills_voted.add(bill_voted)
-        bills = self.bill_ids.intersection(bills_voted)
+        # sort bill ids using congress number first and then bill type/number
+        bills = sorted(self.bill_ids.intersection(bills_voted),
+            key=lambda bill_id: bill_id.split('-')[::-1],
+        )
         # create training samples
         samples = []
         for m in self.congress_members:
@@ -48,6 +51,8 @@ class CongressMemberFeatures:
         with open(self.output_path + '/' + self.__class__.__name__ + '.output.csv', 'w') as fp:
             for sample in samples:
                 print('\t'.join([str(s) for s in sample]), file=fp)
+        with open(self.output_path + '/' + self.__class__.__name__ + '.bills.json', 'w') as fp:
+            json.dump(bills, fp, indent=2)
 
 
     def sanity_check(self, samples):
