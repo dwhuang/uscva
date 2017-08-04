@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Self-organizing map training script
+"""
 import sys
 sys.path.append("../")
 

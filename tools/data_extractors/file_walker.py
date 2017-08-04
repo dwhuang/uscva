@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+"""
+Regular expression based directory traversal
+"""
 import os
 from os import path
 import re

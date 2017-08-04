@@ -1,6 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Combine the results of VoteExtractor and BillFinder and produce the voting
+history (as features) of each congress member.
 
+Generate two files: a json file containing all relevant bill IDs and their
+ordering as features, and a tsv file containing feature vectors for the 
+congress members.
+"""
 import sys
 import json
 
@@ -48,7 +55,7 @@ class CongressMemberFeatures:
             samples.append(sample)
         self.sanity_check(samples)
 
-        with open(self.output_path + '/' + self.__class__.__name__ + '.output.csv', 'w') as fp:
+        with open(self.output_path + '/' + self.__class__.__name__ + '.output.tsv', 'w') as fp:
             for sample in samples:
                 print('\t'.join([str(s) for s in sample]), file=fp)
         with open(self.output_path + '/' + self.__class__.__name__ + '.bills.json', 'w') as fp:

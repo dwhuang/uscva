@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Output voting history for each voter
+Output voting history for each congress member
 
 Output format:
 [

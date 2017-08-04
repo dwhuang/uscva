@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Search through all bill metadata fields for keywords.
+
+Output a list of bill IDs that has any of the keywords.
+"""
 import sys
 import json
 
