@@ -13,28 +13,32 @@ from array import array
 
 class BillFinder:
     @staticmethod
-    def find(input_path, output_path, scope, keywords):
-        if scope.lower() != 'bill' and scope.lower() != 'amendment':
-            print("Scope must be either 'bill' or 'amendment'")
+    def find(config):
+        keywords = config['bill_keywords']
+        if len(keywords) == 0:
+            print("No keywords provided")
             return
 
         results = []
-        for fpath in FileWalker.walk(input_path, [
-            r"^109|110|111|112|113|114|115$",
-            r"^{}s$".format(scope),
-            r"^.*$",
-            r"^.*$",
-            r"^data.json$",
-        ]):
+        for fpath in FileWalker.walk(
+            config['input_path'],
+            config['bill_data_path_patterns'],
+        ):
             with open(fpath, 'r') as fp:
                 raw = json.load(fp)
                 if BillFinder.__has_keyword(raw, keywords):
-                    id = raw['{}_id'.format(scope)]
+                    id = raw[config['bill_id_field']]
                     print(id)
                     results.append(id)
 
-        with open(output_path + '/' + BillFinder.__name__ + '.output.json', 'w') as fp:
-            json.dump(results, fp, indent=4)
+        with open(
+            "{}/{}-bills.json".format(
+                config['output_path'],
+                config['name'],
+            ),
+            'w',
+        ) as fp:
+            json.dump(results, fp, indent=2)
 
 
     @staticmethod
@@ -56,14 +60,14 @@ class BillFinder:
 
 
 def main(argv):
-    if len(argv) <= 4:
-        print("Usage: {} input_path output_path scope keyword1 keyword2 ...".format(argv[0]))
-        print("  Returns bill IDs matching any of the keywords (case sensitive)")
-        print()
-        print("Example: {} ../../data out bill taiwan china".format(argv[0]))
+    if len(argv) < 2:
+        print("Usage: {} config".format(argv[0]))
+        print("  Generate bill IDs matching any of the keywords (case sensitive)")
         return
     
-    BillFinder.find(argv[1], argv[2], argv[3], argv[4:])
+    with open(argv[1], 'r') as fp:
+        config = json.load(fp)
+        BillFinder.find(config)
     
 
 if __name__ == "__main__":

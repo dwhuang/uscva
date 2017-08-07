@@ -1,0 +1,24 @@
+{
+    "name": "sbills",
+    "output_path": "out_",
+    "input_path": "../../data",
+    "vote_data_path_patterns": [
+        "^109|110|111|112|113|114|115$",
+        "^votes$",
+        "^\\d{4}$",
+        "^[s]\\d+$",
+        "^data.json$"
+    ],
+    "bill_data_path_patterns": [
+        "^109|110|111|112|113|114|115$",
+        "^bills$",
+        "^[hs].*$",
+        "^.*$",
+        "^data.json$"
+    ],
+    "bill_id_field": "bill_id",
+    "bill_keywords": [
+        "Taiwan",
+        "China"
+    ]
+}

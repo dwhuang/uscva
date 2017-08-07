@@ -56,7 +56,7 @@ class CongressMember:
     @staticmethod
     def save_histograms(output_path):
         for key in CongressMember.histogram:
-            with open(output_path + "/h_{}.csv".format(key), "w") as fp:
+            with open(output_path + "/hist_{}.csv".format(key), "w") as fp:
                 for bin, count in sorted(CongressMember.histogram[key].items()):
                     fp.write("{},{}\n".format(bin, count))
 
@@ -106,26 +106,23 @@ class VoteExtractor:
         self.congress_members = {}
 
 
-    def extract(self, input_path, output_path):
+    def extract(self, config):
         for fpath in FileWalker.walk(
-            input_path,
-            [
-                r"^\d{1,3}$",
-                r"^votes$",
-                r"^\d{4}$",
-                r"^[hs]\d+$",
-                r"^data.json$",
-            ],
+            config['input_path'],
+            config['vote_data_path_patterns'],
         ):
             self.__process_file(fpath)
 
-        with open(output_path + '/' + self.__class__.__name__ + ".output.json", "w") as fp:
+        with open(
+            "{}/{}-votes.json".format(config['output_path'], config['name']),
+            'w'
+        ) as fp:
             json.dump(
                 [m.to_dict() for _, m in sorted(self.congress_members.items())],
                 fp,
                 indent=2,
             )
-        CongressMember.save_histograms(output_path)
+        CongressMember.save_histograms(config['output_path'])
 
 
     def __process_file(self, fpath):
@@ -162,11 +159,13 @@ class VoteExtractor:
 
 
 def main(argv):
-    if len(argv) <= 2:
-        print("Usage: {} input_path output_path".format(argv[0]))
+    if len(argv) < 2:
+        print("Usage: {} config".format(argv[0]))
         return
 
-    VoteExtractor().extract(argv[1], argv[2])
+    with open(argv[1], 'r') as fp:
+        config = json.load(fp)
+        VoteExtractor().extract(config)
     
 
 if __name__ == "__main__":

@@ -36,7 +36,7 @@ elif sys.argv[1] == 'load':
     with open(som_fname, 'rb') as fp:
         som = pickle.load(fp)
 elif sys.argv[1] == 'parameter_sweep':
-    parameter_sweep(10, data_fname, 'out/parameter_sweep.log',
+    parameter_sweep(10, data_fname, 'out/parameter_sweep.csv',
         [0.9, 0.75, 0.6], [0.4, 0.5, 0.6], [0.01, 0.001, 0.0001],
         [0.4, 0.3, 0.2], [0.4, 0.5, 0.6], [0.01, 0.001, 0.0001],
     )

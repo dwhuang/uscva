@@ -12,13 +12,27 @@ import sys
 import json
 
 class CongressMemberFeatures:
-    def __init__(self, fname_vote_history, fname_bill_ids, output_path):
+    def __init__(self, config):
+        fname_vote_history = "{}/{}-votes.json".format(
+            config['output_path'],
+            config['name'],
+        )
+        fname_bill_ids = "{}/{}-bills.json".format(
+            config['output_path'],
+            config['name'],
+        )
+
+        self.config = config
+
         self.congress_members = self.read_vote_history(fname_vote_history)
+        if len(self.congress_members) == 0:
+            print("Congress member voting records not found")
+            raise RuntimeError()
+
         self.bill_ids = set(self.read_bill_ids(fname_bill_ids))
-        self.output_path = output_path
-        #self.bill_indices = {}
-        #for i, bill_id in enumerate(self.bill_ids):
-        #    self.bill_indices[bill_id] = i
+        if len(self.bill_ids) == 0:
+            print("Bill IDs not found")
+            raise RuntimeError()
 
 
     def read_vote_history(self, fname):
@@ -47,54 +61,45 @@ class CongressMemberFeatures:
         samples = []
         for m in self.congress_members:
             sample = [m['id']]
+            voted_any = False
             for bill_id in bills:
                 if bill_id in m['votes']:
                     sample.append(m['votes'][bill_id])
+                    voted_any = True
                 else:
                     sample.append(0)
-            samples.append(sample)
-        self.sanity_check(samples)
+            if voted_any:
+                samples.append(sample)
 
-        with open(self.output_path + '/' + self.__class__.__name__ + '.output.tsv', 'w') as fp:
+        with open(
+            "{}/{}-features.tsv".format(
+                self.config['output_path'],
+                self.config['name'],
+            ),
+            'w',
+        ) as fp:
             for sample in samples:
                 print('\t'.join([str(s) for s in sample]), file=fp)
-        with open(self.output_path + '/' + self.__class__.__name__ + '.bills.json', 'w') as fp:
+
+        with open(
+            "{}/{}-feature_ids.json".format(
+                self.config['output_path'],
+                self.config['name'],
+            ),
+            'w',
+        ) as fp:
             json.dump(bills, fp, indent=2)
 
 
-    def sanity_check(self, samples):
-        # check if there are single-valued rows
-        for sample in samples:
-            single_valued = True
-            val = sample[1]
-            for feature in sample[2:]:
-                if feature != val:
-                    single_valued = False
-                    break
-            if single_valued:
-                print(sample[0] + " has single-valued features")
-        # check if there are single-valued columns
-        cols = samples[0][1:]
-        single_valued = [True] * len(cols)
-        for sample in samples[1:]:
-            for i, feature in enumerate(sample[1:]):
-                if feature != cols[i]:
-                    single_valued[i] = False
-        single_valued_col_count = 0
-        for i, sv in enumerate(single_valued):
-            if sv:
-                single_valued_col_count += 1
-                print("feature {} has a single value only".format(i))
-
-
 def main(argv):
-    if len(argv) < 4:
-        print("Usage: {} vote_extractor_output bill_finder_output output_path".format(argv[0]))
-        print()
-        print("Example: {} out/VoteExtractor.output.json out/BillFinder.output.json out".format(argv[0]))
+    if len(argv) < 2:
+        print("Usage: {} config".format(argv[0]))
+        print("  Generate feature files")
         return
 
-    CongressMemberFeatures(argv[1], argv[2], argv[3]).gen()
+    with open(argv[1], 'r') as fp:
+        config = json.load(fp)
+        CongressMemberFeatures(config).gen()
 
 
 if __name__ == "__main__":
