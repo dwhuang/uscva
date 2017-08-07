@@ -20,10 +20,17 @@ if len(sys.argv) <= 1:
     sys.exit()
 
 
-data_fname = 'out/CongressMemberFeatures.output.tsv'
+data_fname = 'out/sbills-features.tsv'
 labels, inputs = read_data(data_fname)
 
-som = Som(grid=HexGrid(20), input_dim=inputs.shape[1])
+som = Som(
+    grid=HexGrid(20),
+    input_dim=inputs.shape[1],
+    input_ranges=[
+        [-1] * inputs.shape[1],
+        [1] * inputs.shape[1],
+    ],
+)
 
 som_fname = 'out/test.som'
 if sys.argv[1] == 'train':
@@ -39,6 +46,10 @@ elif sys.argv[1] == 'parameter_sweep':
     parameter_sweep(10, data_fname, 'out/parameter_sweep.csv',
         [0.9, 0.75, 0.6], [0.4, 0.5, 0.6], [0.01, 0.001, 0.0001],
         [0.4, 0.3, 0.2], [0.4, 0.5, 0.6], [0.01, 0.001, 0.0001],
+        input_ranges=[
+            [-1] * inputs.shape[1],
+            [1] * inputs.shape[1],
+        ],
     )
 else:
     print("Unknown command {}".format(sys.argv[1]))
