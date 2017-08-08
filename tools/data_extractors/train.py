@@ -18,12 +18,16 @@ from som.utils import gen_random_data
 from som.utils import parameter_sweep
 
 
-def display_som(som, inputs):
+def display_som(som, labels, inputs):
     print(som.smoothness())
     print(som.error(inputs))
 
     # U-matrix visualization
-    som.grid.draw(np.tile(som.umatrix(), 3))
+    som.grid.draw(
+        np.tile(som.umatrix(), 3),
+        text=som.label(labels, inputs),
+        scale=10,
+    )
 
 
 def main():
@@ -62,16 +66,15 @@ def main():
     )
     if command == 'train':
         som.train(inputs, 1000)
-        display_som(som, inputs)
+        display_som(som, labels, inputs)
         # save SOM to a file
         with open(som_fname, 'wb') as fp:
             pickle.dump(som, fp, protocol=-1)
     elif command == 'load':
         # load SOM from a file
-        display_som(som, inputs)
         with open(som_fname, 'rb') as fp:
             som = pickle.load(fp)
-        display_som(som, inputs)
+        display_som(som, labels, inputs)
     elif command == 'parameter_sweep':
         parameter_sweep(10,
             data_fname,
