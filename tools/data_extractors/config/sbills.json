@@ -1,6 +1,6 @@
 {
     "name": "sbills",
-    "output_path": "out_",
+    "output_path": "out",
     "input_path": "../../data",
     "vote_data_path_patterns": [
         "^109|110|111|112|113|114|115$",
