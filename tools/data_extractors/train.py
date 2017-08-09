@@ -23,8 +23,9 @@ def display_som(som, labels, inputs):
     print(som.error(inputs))
 
     # U-matrix visualization
+    umatrix = som.umatrix()
     som.grid.draw(
-        np.tile(som.umatrix(), 3),
+        [[m, m, m] for m in umatrix],
         text=som.label(labels, inputs),
         scale=10,
     )
@@ -93,6 +94,41 @@ def main():
                 [1] * inputs.shape[1],
             ],
         )
+    elif command == 'export_viz_data':
+        # load SOM from a file
+        with open(som_fname, 'rb') as fp:
+            som = pickle.load(fp)
+        # relevant data
+        umatrix = som.umatrix()
+        labeled_map = som.label(labels, inputs)
+        features = dict(zip(labels, inputs))
+        # export for each node
+        results = []
+        for i, (centroid, vertices) in enumerate(
+            som.grid.shape_coords(config['export_scale']),
+        ):
+            results.append(
+                {
+                    'centroid': centroid,
+                    'vertices': vertices,
+                    'umatrix_value': umatrix[i],
+                    'labels': [
+                        {
+                            'id': id,
+                            'features': [int(f) for f in features[id]],
+                        }
+                        for id in labeled_map[i]
+                    ]
+                }
+            )
+        with open(
+            "{}/{}-viz_data.json".format(
+                config['output_path'],
+                config['name'],
+            ),
+            'w'
+        ) as fp:
+            json.dump(results, fp, indent=2)
     else:
         print("Unknown command {}".format(command))
         sys.exit()
