@@ -21,5 +21,9 @@
         "Taiwan",
         "China"
     ],
-    "export_scale": 10
+    "export_shape_scale": 1,
+    "congress_member_data_path_patterns": [
+        "^congress-legislators$",
+        "^legislators-(current|historic).csv$"
+    ]
 }

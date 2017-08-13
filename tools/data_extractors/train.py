@@ -10,12 +10,14 @@ import pickle
 from os.path import exists
 import json
 import numpy as np
+import csv
 
 from som.som import Som
 from som.hexgrid import HexGrid
 from som.utils import read_data
 from som.utils import gen_random_data
 from som.utils import parameter_sweep
+from file_walker import FileWalker
 
 
 def display_som(som, labels, inputs):
@@ -94,7 +96,8 @@ def main():
                 [1] * inputs.shape[1],
             ],
         )
-    elif command == 'export_viz_data':
+    elif command == 'export':
+        # Export labeled map for visualization purposes
         # load SOM from a file
         with open(som_fname, 'rb') as fp:
             som = pickle.load(fp)
@@ -102,10 +105,11 @@ def main():
         umatrix = som.umatrix()
         labeled_map = som.label(labels, inputs)
         features = dict(zip(labels, inputs))
+        profiles = CongressMemberProfile(config)
         # export for each node
         results = []
         for i, (centroid, vertices) in enumerate(
-            som.grid.shape_coords(config['export_scale']),
+            som.grid.shape_coords(config['export_shape_scale']),
         ):
             results.append(
                 {
@@ -116,13 +120,14 @@ def main():
                         {
                             'id': id,
                             'features': [int(f) for f in features[id]],
+                            'profile': profiles.get_profile(id),
                         }
                         for id in labeled_map[i]
                     ]
                 }
             )
         with open(
-            "{}/{}-viz_data.json".format(
+            "{}/{}-export.json".format(
                 config['output_path'],
                 config['name'],
             ),
@@ -132,6 +137,81 @@ def main():
     else:
         print("Unknown command {}".format(command))
         sys.exit()
+
+
+class CongressMemberProfile:
+    def __init__(self, config):
+        self.govtrack_id_to_profile = {}
+        self.other_id_to_govtrack_id = {}
+        for fpath in FileWalker.walk(
+            config['input_path'],
+            config['congress_member_data_path_patterns'],
+        ):
+            with open(fpath, 'r') as fp:
+                reader = csv.DictReader(fp)
+                for row in reader:
+                    self.__add_profile_helper(row)
+
+
+    def get_profile(self, query_id):
+        if query_id in self.govtrack_id_to_profile:
+            return self.govtrack_id_to_profile[query_id]
+        for id_map in self.other_id_to_govtrack_id.values():
+            if query_id in id_map:
+                return self.govtrack_id_to_profile[id_map[query_id]]
+        print("ID not found:", query_id)
+        return None
+
+
+    def __add_profile_helper(self, row):
+        # check for ID existence/duplicate
+        if not self.__check_id_helper(
+            row,
+            'govtrack_id',
+            self.govtrack_id_to_profile,
+        ):
+            print("govtrack_id does not exist or is duplicate:", row)
+            raise RuntimeError()
+        id_fields = set()
+        for id_field, id in row.items():
+            if id_field != 'govtrack_id' and id_field.endswith('_id'):
+                if id is None or id.strip() == '':
+                    continue
+                id_fields.add(id_field)
+                if id_field not in self.other_id_to_govtrack_id:
+                    self.other_id_to_govtrack_id[id_field] = {}
+                if not self.__check_id_helper(
+                    row,
+                    id_field,
+                    self.other_id_to_govtrack_id[id_field],
+                    False,
+                ):
+                    print(id_field, "is duplicate:", row)
+                    raise RuntimeError()
+        # add ID
+        govtrack_id = row['govtrack_id']
+        self.govtrack_id_to_profile[govtrack_id] = row
+        for id_field in id_fields:
+            id = row[id_field]
+            self.other_id_to_govtrack_id[id_field][id] = govtrack_id
+
+
+    @staticmethod
+    def __check_id_helper(
+        row,
+        id_field,
+        id_map,
+        check_id_field_existence=True,
+        check_duplicate_id=True,
+    ):
+        id = row[id_field]
+        if check_id_field_existence and (id is None or id == ''):
+            print("No", id_field, "for:", row)
+            return False
+        if check_duplicate_id and id in id_map:
+            print("Duplicate", id_field, ":", row, id_map[id])
+            return False
+        return True
 
 
 if __name__ == "__main__":
