@@ -8,7 +8,7 @@ if [ $# -ne 1 ]; then
     exit -1
 fi
 
-for i in {109..115}; do
+for i in {109..115} congress-legislators; do
     case $1 in
         fetch)
         rsync -avz --delete --delete-excluded --exclude **/text-versions/ \
