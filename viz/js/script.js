@@ -37,7 +37,7 @@ function Main() {
         .attr('points', function(d) {
           var allCoordinates = d.vertices.map(function(coords) {
             const adjustedX = (coords[0] + coordOffsets[0]) * kScale;
-            const adjustedY = (coords[1] + coordOffsets[1]) * kScale;
+            const adjustedY = (-coords[1] + coordOffsets[1]) * kScale;
             return adjustedX + ',' + adjustedY;
           }).join(' ');
           return allCoordinates;
