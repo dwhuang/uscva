@@ -1,0 +1,20 @@
+{
+  "name": "uscva",
+  "version": "0.1.0",
+  "description": "Analysis of U.S. congressional votes.",
+  "author": "Di-Wei Huang <bdwhuang@gmail.com>",
+  "contributors": [
+    "Han-Wei Chu <owenchu@gmail.com>"
+  ],
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "http-server": "^0.10.0",
+    "webpack": "^3.5.5"
+  },
+  "scripts": {
+    "bundle-clean": "rm -f public/scripts/bundle.*",
+    "bundle-dev": "webpack -d --progress --display-error-details --watch",
+    "bundle-prod": "webpack -p",
+    "start": "http-server ./public -o"
+  }
+}
