@@ -15,6 +15,6 @@
     "bundle-clean": "rm -f public/scripts/bundle.*",
     "bundle-dev": "webpack -d --progress --display-error-details --watch",
     "bundle-prod": "webpack -p",
-    "start": "http-server ./public -o"
+    "start": "http-server ./public -c-1 -o"
   }
 }
