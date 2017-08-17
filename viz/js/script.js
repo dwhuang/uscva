@@ -2,22 +2,16 @@
 
 (function() {
 
-function GetCoordOffsets(entries) {
-  var minX = Infinity;
-  var minY = Infinity;
-
-  entries.forEach(function(entry) {
-    entry.vertices.forEach(function(vertex) {
-      if (vertex[0] < minX) {
-        minX = vertex[0];
-      }
-      if (vertex[1] < minY) {
-        minY = vertex[1];
-      }
-    });
-  });
-
-  return [-minX, -minY];
+function FindHexagonVertices() {
+  const SQRT3 = 1.732051;
+  return [
+    [0, 1],
+    [SQRT3/2, 1/2],
+    [SQRT3/2, -1/2],
+    [0, -1],
+    [-SQRT3/2, -1/2],
+    [-SQRT3/2, 1/2],
+  ];
 }
 
 function GetFillColor(d) {
@@ -25,22 +19,39 @@ function GetFillColor(d) {
   return d3.rgb(value, value, value);
 }
 
+function GetCanvasSize() {
+  var w = window,
+  d = document,
+  e = d.documentElement,
+  g = d.getElementsByTagName('body')[0],
+  x = w.innerWidth || e.clientWidth || g.clientWidth,
+  y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+  return [x, y];
+}
+
 function Main() {
-  const kScale = 12;
 
   d3.json('sbills-export.json', function(entries) {
-    const coordOffsets = GetCoordOffsets(entries);
-
-    d3.select('#canvas').selectAll('polygon')
+    var canvasSize = GetCanvasSize();
+    var canvas = d3.select('#canvas')
+        .attr('width', canvasSize[0])
+        .attr('height', canvasSize[1])
+      .append('g')
+        .attr(
+          'transform',
+          'translate(' + [canvasSize[0]/2, canvasSize[1]/2] + ')'
+        )
+      .append('g')
+        .attr('transform', 'scale(12,-12)');
+    var cell = canvas.selectAll('g')
         .data(entries)
-      .enter().append('polygon')
-        .attr('points', function(d) {
-          var allCoordinates = d.vertices.map(function(coords) {
-            const adjustedX = (coords[0] + coordOffsets[0]) * kScale;
-            const adjustedY = (-coords[1] + coordOffsets[1]) * kScale;
-            return adjustedX + ',' + adjustedY;
-          }).join(' ');
-          return allCoordinates;
+      .enter().append('g')
+        .attr('transform', function(entry) {
+          return 'translate(' + entry.centroid + ')';
+        })
+      .append('polygon')
+        .attr('points', function(entry) {
+          return FindHexagonVertices(entry.centroid);
         })
         .attr('fill', GetFillColor)
         .on('click', function() {
