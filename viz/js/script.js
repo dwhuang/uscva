@@ -2,8 +2,9 @@
 
 (function() {
 
+const SQRT3 = 1.732051;
+
 function FindHexagonVertices() {
-  const SQRT3 = 1.732051;
   return [
     [0, 1],
     [SQRT3/2, 1/2],
@@ -48,11 +49,9 @@ function Main() {
       .enter().append('g')
         .attr('transform', function(entry) {
           return 'translate(' + entry.centroid + ')';
-        })
-      .append('polygon')
-        .attr('points', function(entry) {
-          return FindHexagonVertices(entry.centroid);
-        })
+        });
+    cell.append('polygon')
+        .attr('points', FindHexagonVertices)
         .attr('fill', GetFillColor)
         .on('click', function() {
           d3.select('#SelectedHexagon')
@@ -62,6 +61,19 @@ function Main() {
             .attr('id', 'SelectedHexagon')
             .attr('fill', d3.rgb(66, 98, 244));
         });
+    cell.append('text')
+        .text(function(entry) {
+          switch (entry.labels.length) {
+            case 0: return null;
+            case 1: return '•';
+          }
+          return entry.labels.length;
+        })
+        .attr('fill', d3.rgb(150, 150, 150))
+        .attr('font-size', 1)
+        .attr('transform', 'scale(1,-1)')
+        .attr('text-anchor', 'middle')
+        .attr('alignment-baseline', 'middle');
   });
 }
 
