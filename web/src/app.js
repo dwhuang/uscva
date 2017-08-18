@@ -42,8 +42,8 @@ function GetCanvasSize() {
 
 function OnCellClick() {
   var selectedNode = d3.select(this.parentNode);
-  var previousSelectedNode = d3.select('#SelectedNode');
-  const isUnselectingNode = (selectedNode.attr('id') === 'SelectedNode');
+  var previousSelectedNode = d3.select('#selectedNode');
+  const isUnselectingNode = (selectedNode.attr('id') === 'selectedNode');
 
   if (!previousSelectedNode.empty()) {
     previousSelectedNode.attr('id', null);
@@ -57,7 +57,7 @@ function OnCellClick() {
     return;
   }
 
-  selectedNode.attr('id', 'SelectedNode');
+  selectedNode.attr('id', 'selectedNode');
   selectedNode.select('polygon')
     .attr('fill', GetSelectedCellBackgroundColor);
   selectedNode.select('text')
