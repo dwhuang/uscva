@@ -41,26 +41,26 @@ function GetCanvasSize() {
 }
 
 function OnCellClick() {
-  var selectedNode = d3.select(this.parentNode);
-  var previousSelectedNode = d3.select('#selectedNode');
-  const isUnselectingNode = (selectedNode.attr('id') === 'selectedNode');
+  var selectedCell = d3.select(this.parentNode);
+  var previousSelectedCell = d3.select('#selectedCell');
+  const isUnselectingCell = (selectedCell.attr('id') === 'selectedCell');
 
-  if (!previousSelectedNode.empty()) {
-    previousSelectedNode.attr('id', null);
-    previousSelectedNode.select('polygon')
+  if (!previousSelectedCell.empty()) {
+    previousSelectedCell.attr('id', null);
+    previousSelectedCell.select('polygon')
       .attr('fill', GetDefaultCellBackgroundColor);
-    previousSelectedNode.select('text')
+    previousSelectedCell.select('text')
       .attr('fill', GetDefaultCellTextColor);
   }
 
-  if (isUnselectingNode) {
+  if (isUnselectingCell) {
     return;
   }
 
-  selectedNode.attr('id', 'selectedNode');
-  selectedNode.select('polygon')
+  selectedCell.attr('id', 'selectedCell');
+  selectedCell.select('polygon')
     .attr('fill', GetSelectedCellBackgroundColor);
-  selectedNode.select('text')
+  selectedCell.select('text')
     .attr('fill', GetSelectedCellTextColor);
 }
 
