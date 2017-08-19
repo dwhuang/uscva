@@ -123,7 +123,10 @@ def main():
                             'profile': profiles.get_profile(id),
                         }
                         for id in labeled_map[i]
-                    ]
+                    ],
+                    'weights': [
+                        som.weights[i, :].round(6).tolist(),
+                    ],
                 }
             )
         with open(
