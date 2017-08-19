@@ -1,0 +1,7 @@
+#cellInfo {
+  font-family: 'Roboto Mono', monospace;
+}
+
+#cellInfo > thead {
+  text-decoration: underline;
+}
