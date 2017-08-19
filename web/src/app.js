@@ -1,6 +1,6 @@
 'use strict';
 
-const SQRT3 = 1.732051;
+var SQRT3 = 1.732051;
 
 function FindHexagonVertices() {
   return [
