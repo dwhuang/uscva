@@ -106,6 +106,7 @@ def main():
         labeled_map = som.label(labels, inputs)
         features = dict(zip(labels, inputs))
         profiles = CongressMemberProfile(config)
+        weights = som.weights
         # export for each node
         results = []
         for i, (centroid, vertices) in enumerate(
@@ -123,7 +124,10 @@ def main():
                             'profile': profiles.get_profile(id),
                         }
                         for id in labeled_map[i]
-                    ]
+                    ],
+                    'weights': [
+                        som.weights[i, :].round(6).tolist(),
+                    ],
                 }
             )
         with open(
