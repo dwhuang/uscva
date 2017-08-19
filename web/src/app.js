@@ -1,5 +1,7 @@
 'use strict';
 
+const assert = require('assert');
+
 var SQRT3 = 1.732051;
 
 function FindHexagonVertices() {
@@ -40,28 +42,69 @@ function GetCanvasSize() {
   return [x, y];
 }
 
-function OnCellClick() {
-  var selectedCell = d3.select(this.parentNode);
+function UnselectCell(cell) {
+  cell.attr('id', null);
+  cell.select('polygon')
+    .attr('fill', GetDefaultCellBackgroundColor);
+  cell.select('text')
+    .attr('fill', GetDefaultCellTextColor);
+}
+
+function SelectCell(cell) {
+  cell.attr('id', 'selectedCell');
+  cell.select('polygon')
+    .attr('fill', GetSelectedCellBackgroundColor);
+  cell.select('text')
+    .attr('fill', GetSelectedCellTextColor);
+}
+
+function ClearCellInfoTable() {
+  d3.select('#cellInfo').select('tbody').selectAll('*').remove();
+}
+
+function PopulateCellInfoTable(data) {
+  var labels = data['labels'];
+  if (labels.length <= 0) {
+    return;
+  }
+
+  var cellInfoTable = d3.select('#cellInfo');
+  var cellInfoTableBody = cellInfoTable.select('tbody');
+
+  for (var label of labels) {
+    var profile = label['profile'];
+    assert(profile);
+    var features = label['features'];
+    assert(features);
+
+    var cellInfoTableRow = cellInfoTableBody.append('tr');
+    cellInfoTableRow.append('td')
+        .text(profile['first_name'] + ' ' + profile['last_name']);
+    cellInfoTableRow.append('td')
+        .text(profile['party']);
+    cellInfoTableRow.append('td')
+        .text(profile['state']);
+    cellInfoTableRow.append('td')
+        .text(features.join(','));
+  }
+}
+
+function OnCellClick(data) {
+  var cell = d3.select(this.parentNode);
   var previousSelectedCell = d3.select('#selectedCell');
-  const isUnselectingCell = (selectedCell.attr('id') === 'selectedCell');
+  const isUnselectingCell = (cell.attr('id') === 'selectedCell');
 
   if (!previousSelectedCell.empty()) {
-    previousSelectedCell.attr('id', null);
-    previousSelectedCell.select('polygon')
-      .attr('fill', GetDefaultCellBackgroundColor);
-    previousSelectedCell.select('text')
-      .attr('fill', GetDefaultCellTextColor);
+    UnselectCell(previousSelectedCell);
+    ClearCellInfoTable();
   }
 
   if (isUnselectingCell) {
     return;
   }
 
-  selectedCell.attr('id', 'selectedCell');
-  selectedCell.select('polygon')
-    .attr('fill', GetSelectedCellBackgroundColor);
-  selectedCell.select('text')
-    .attr('fill', GetSelectedCellTextColor);
+  SelectCell(cell);
+  PopulateCellInfoTable(data);
 }
 
 function RenderGraph(entries) {
