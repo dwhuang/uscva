@@ -76,12 +76,24 @@ function PopulateCellInfoTable(data) {
     assert(profile);
     var features = label['features'];
     assert(features);
+    var party = profile['party'];
 
     var cellInfoTableRow = cellInfoTableBody.append('tr');
+    if (party === 'Democrat') {
+      cellInfoTableRow.append('td').append('img')
+          .attr('src', 'img/democrat.png');
+    } else if (party === 'Republican') {
+      cellInfoTableRow.append('td').append('img')
+          .attr('src', 'img/republican.png');
+    } else if (party == 'Independent') {
+      cellInfoTableRow.append('td')
+          .text('N/A');
+    } else {
+      cellInfoTableRow.append('td')
+          .text('oops');
+    }
     cellInfoTableRow.append('td')
         .text(profile['first_name'] + ' ' + profile['last_name']);
-    cellInfoTableRow.append('td')
-        .text(profile['party']);
     cellInfoTableRow.append('td')
         .text(profile['state']);
     cellInfoTableRow.append('td')
