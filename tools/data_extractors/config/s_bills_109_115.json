@@ -1,0 +1,30 @@
+{
+    "name": "s_bills_109_115",
+    "output_path": "out",
+    "input_path": "../../data",
+    "vote_data_path_patterns": [
+        "^109|110|111|112|113|114|115$",
+        "^votes$",
+        "^\\d{4}$",
+        "^[s]\\d+$",
+        "^data.json$"
+    ],
+    "bill_data_path_patterns": [
+        "^109|110|111|112|113|114|115$",
+        "^bills$",
+        "^[hs].*$",
+        "^.*$",
+        "^data.json$"
+    ],
+    "possible_bill_id_fields": ["bill_id"],
+    "bill_keywords": [
+        "Taiwan",
+        "China"
+    ],
+    "som_model_size": 10,
+    "export_shape_scale": 1,
+    "congress_member_data_path_patterns": [
+        "^congress-legislators$",
+        "^legislators-(current|historic).csv$"
+    ]
+}

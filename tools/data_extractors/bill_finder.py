@@ -27,7 +27,13 @@ class BillFinder:
             with open(fpath, 'r') as fp:
                 raw = json.load(fp)
                 if BillFinder.__has_keyword(raw, keywords):
-                    id = raw[config['bill_id_field']]
+                    id = None
+                    for bill_id_field in config['possible_bill_id_fields']:
+                        if bill_id_field in raw:
+                            id = raw[bill_id_field]
+                    if id is None:
+                        print("Cannot determine bill ID")
+                        raise RuntimeError()
                     print(id)
                     results.append(id)
 

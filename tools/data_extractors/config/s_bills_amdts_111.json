@@ -1,26 +1,27 @@
 {
-    "name": "sbills",
+    "name": "s_bills_amdts_111",
     "output_path": "out",
     "input_path": "../../data",
     "vote_data_path_patterns": [
-        "^109|110|111|112|113|114|115$",
+        "^111$",
         "^votes$",
         "^\\d{4}$",
         "^[s]\\d+$",
         "^data.json$"
     ],
     "bill_data_path_patterns": [
-        "^109|110|111|112|113|114|115$",
-        "^bills$",
+        "^111$",
+        "^bills|amendments$",
         "^[hs].*$",
         "^.*$",
         "^data.json$"
     ],
-    "bill_id_field": "bill_id",
+    "possible_bill_id_fields": ["bill_id", "amendment_id"],
     "bill_keywords": [
         "Taiwan",
         "China"
     ],
+    "som_model_size": 5,
     "export_shape_scale": 1,
     "congress_member_data_path_patterns": [
         "^congress-legislators$",

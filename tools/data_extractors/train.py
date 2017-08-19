@@ -49,7 +49,7 @@ def main():
     labels, inputs = read_data(data_fname)
 
     som = Som(
-        grid=HexGrid(20),
+        grid=HexGrid(config['som_model_size']),
         input_dim=inputs.shape[1],
         nb_init=0.9,
         nb_infl=0.4,
