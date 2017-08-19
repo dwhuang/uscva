@@ -1,6 +1,7 @@
 'use strict';
 
 const assert = require('assert');
+const d3 = require('d3');
 
 var SQRT3 = 1.732051;
 
