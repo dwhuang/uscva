@@ -1,0 +1,6464 @@
+[
+  {
+    "labels": [
+      {
+        "id": "S222",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Dorgan",
+          "cspan_id": "2318",
+          "state": "ND",
+          "opensecrets_id": "N00004615",
+          "party": "Democrat",
+          "first_name": "Byron",
+          "district": "",
+          "bioguide_id": "D000432",
+          "votesmart_id": "53332",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14812",
+          "wikipedia_id": "Byron Dorgan",
+          "birthday": "1942-05-14",
+          "twitter": "",
+          "url": "http://dorgan.senate.gov",
+          "phone": "",
+          "address": "",
+          "thomas_id": "00308",
+          "lis_id": "S222",
+          "govtrack_id": "300037",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S229",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Murray",
+          "cspan_id": "25277",
+          "state": "WA",
+          "opensecrets_id": "N00007876",
+          "party": "Democrat",
+          "first_name": "Patty",
+          "district": "",
+          "bioguide_id": "M001111",
+          "votesmart_id": "53358",
+          "ballotpedia_id": "Patty Murray",
+          "type": "sen",
+          "rss_url": "http://www.murray.senate.gov/public/?a=rss.feed",
+          "gender": "F",
+          "washington_post_id": "",
+          "icpsr_id": "49308",
+          "wikipedia_id": "Patty Murray",
+          "birthday": "1950-10-11",
+          "twitter": "PattyMurray",
+          "url": "https://www.murray.senate.gov/public",
+          "phone": "202-224-2621",
+          "address": "154 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "01409",
+          "lis_id": "S229",
+          "govtrack_id": "300076",
+          "contact_form": "http://www.murray.senate.gov/public/index.cfm/contactme",
+          "youtube": "SenatorPattyMurray",
+          "facebook": "",
+          "youtube_id": "UCb8jq3TvQ3AzKsexhWfFLoA"
+        }
+      },
+      {
+        "id": "S322",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Merkley",
+          "cspan_id": "1029842",
+          "state": "OR",
+          "opensecrets_id": "N00029303",
+          "party": "Democrat",
+          "first_name": "Jeff",
+          "district": "",
+          "bioguide_id": "M001176",
+          "votesmart_id": "23644",
+          "ballotpedia_id": "Jeff Merkley",
+          "type": "sen",
+          "rss_url": "http://www.merkley.senate.gov/rss/",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40908",
+          "wikipedia_id": "Jeff Merkley",
+          "birthday": "1956-10-24",
+          "twitter": "SenJeffMerkley",
+          "url": "https://www.merkley.senate.gov",
+          "phone": "202-224-3753",
+          "address": "313 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01900",
+          "lis_id": "S322",
+          "govtrack_id": "412325",
+          "contact_form": "http://www.merkley.senate.gov/contact/",
+          "youtube": "SenatorJeffMerkley",
+          "facebook": "jeffmerkley",
+          "youtube_id": "UCRoXttCJhMnLVCxCaa6VnNQ"
+        }
+      }
+    ],
+    "weights": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "umatrix_value": 0.8976336063961168,
+    "centroid": [
+      -4.330127018922193,
+      7.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.999028,
+        0.493148,
+        0.999801,
+        0.973556,
+        0.266818,
+        0.467212,
+        0.999761,
+        0.454408
+      ]
+    ],
+    "umatrix_value": 0.7504396284605463,
+    "centroid": [
+      -2.5980762113533156,
+      7.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S136",
+        "features": [
+          1,
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Cochran",
+          "cspan_id": "1200",
+          "state": "MS",
+          "opensecrets_id": "N00003328",
+          "party": "Republican",
+          "first_name": "Thad",
+          "district": "",
+          "bioguide_id": "C000567",
+          "votesmart_id": "53312",
+          "ballotpedia_id": "Thad Cochran",
+          "type": "sen",
+          "rss_url": "http://www.cochran.senate.gov/public/index.cfm/rss/feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14009",
+          "wikipedia_id": "Thad Cochran",
+          "birthday": "1937-12-07",
+          "twitter": "SenThadCochran",
+          "url": "https://www.cochran.senate.gov",
+          "phone": "202-224-5054",
+          "address": "113 Dirksen Senate Office Building Washington DC 20510",
+          "thomas_id": "00213",
+          "lis_id": "S136",
+          "govtrack_id": "300023",
+          "contact_form": "https://www.cochran.senate.gov/public/index.cfm/email-me",
+          "youtube": "sencochran",
+          "facebook": "",
+          "youtube_id": "UCTnKP_ye7nI5DEn_zreaa3g"
+        }
+      }
+    ],
+    "weights": [
+      [
+        1.0,
+        -1.0,
+        1.0,
+        1.0,
+        1.0,
+        -1.0,
+        1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.6230392864875569,
+    "centroid": [
+      -0.8660254037844384,
+      7.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S184",
+        "features": [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Shelby",
+          "cspan_id": "1859",
+          "state": "AL",
+          "opensecrets_id": "N00009920",
+          "party": "Republican",
+          "first_name": "Richard",
+          "district": "",
+          "bioguide_id": "S000320",
+          "votesmart_id": "53266",
+          "ballotpedia_id": "Richard Shelby",
+          "type": "sen",
+          "rss_url": "http://www.shelby.senate.gov/public/index.cfm/rss/feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14659",
+          "wikipedia_id": "Richard Shelby",
+          "birthday": "1934-05-06",
+          "twitter": "SenShelby",
+          "url": "https://www.shelby.senate.gov",
+          "phone": "202-224-5744",
+          "address": "304 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "01049",
+          "lis_id": "S184",
+          "govtrack_id": "300089",
+          "contact_form": "https://www.shelby.senate.gov/public/index.cfm/emailsenatorshelby",
+          "youtube": "SenatorRichardShelby",
+          "facebook": "RichardShelby",
+          "youtube_id": "UCyMzDCRZrmhr_OGDjVuAeJw"
+        }
+      }
+    ],
+    "weights": [
+      [
+        1.0,
+        -1.0,
+        1.0,
+        -1.0,
+        1.0,
+        -1.0,
+        1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.5442903456123499,
+    "centroid": [
+      0.8660254037844393,
+      7.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S289",
+        "features": [
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Alexander",
+          "cspan_id": "5",
+          "state": "TN",
+          "opensecrets_id": "N00009888",
+          "party": "Republican",
+          "first_name": "Lamar",
+          "district": "",
+          "bioguide_id": "A000360",
+          "votesmart_id": "15691",
+          "ballotpedia_id": "Lamar Alexander",
+          "type": "sen",
+          "rss_url": "http://www.alexander.senate.gov/public/?a=rss.feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40304",
+          "wikipedia_id": "Lamar Alexander",
+          "birthday": "1940-07-03",
+          "twitter": "SenAlexander",
+          "url": "https://www.alexander.senate.gov/public",
+          "phone": "202-224-4944",
+          "address": "455 Dirksen Senate Office Building Washington DC 20510",
+          "thomas_id": "01695",
+          "lis_id": "S289",
+          "govtrack_id": "300002",
+          "contact_form": "http://www.alexander.senate.gov/public/index.cfm?p=Email",
+          "youtube": "lamaralexander",
+          "facebook": "senatorlamaralexander",
+          "youtube_id": "UChDLBjn5RWqgMmCSswT05IQ"
+        }
+      },
+      {
+        "id": "S321",
+        "features": [
+          0,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Johanns",
+          "cspan_id": "56552",
+          "state": "NE",
+          "opensecrets_id": "N00029444",
+          "party": "Republican",
+          "first_name": "Mike",
+          "district": "",
+          "bioguide_id": "J000291",
+          "votesmart_id": "21309",
+          "ballotpedia_id": "Mike Johanns",
+          "type": "sen",
+          "rss_url": "http://www.johanns.senate.gov/public/?a=RSS.Feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40905",
+          "wikipedia_id": "Mike Johanns",
+          "birthday": "1950-06-18",
+          "twitter": "",
+          "url": "http://www.johanns.senate.gov",
+          "phone": "202-224-4224",
+          "address": "404 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "01899",
+          "lis_id": "S321",
+          "govtrack_id": "412320",
+          "contact_form": "http://www.johanns.senate.gov/public/?p=EmailSenatorJohanns",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        0.562635,
+        -1.0,
+        1.0,
+        1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.6356268710941118,
+    "centroid": [
+      2.598076211353316,
+      7.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S231",
+        "features": [
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          0,
+          -1
+        ],
+        "profile": {
+          "last_name": "Bennett",
+          "cspan_id": "25708",
+          "state": "UT",
+          "opensecrets_id": "N00006347",
+          "party": "Republican",
+          "first_name": "Robert",
+          "district": "",
+          "bioguide_id": "B000382",
+          "votesmart_id": "53351",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "49307",
+          "wikipedia_id": "Bob Bennett (politician)",
+          "birthday": "1933-09-18",
+          "twitter": "",
+          "url": "http://bennett.senate.gov",
+          "phone": "",
+          "address": "",
+          "thomas_id": "01280",
+          "lis_id": "S231",
+          "govtrack_id": "300007",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        -1.0,
+        1.0,
+        1.0,
+        -1.0,
+        -1.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.6039089196394474,
+    "centroid": [
+      4.330127018922193,
+      7.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.999946,
+        0.998762,
+        0.999472,
+        0.999795,
+        0.375176,
+        0.99762,
+        0.999932,
+        0.989612
+      ]
+    ],
+    "umatrix_value": 0.9142977840707217,
+    "centroid": [
+      -5.196152422706632,
+      6.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.999638,
+        0.973151,
+        0.998927,
+        0.996272,
+        0.288574,
+        0.949282,
+        0.999737,
+        0.717692
+      ]
+    ],
+    "umatrix_value": 0.8522712324038836,
+    "centroid": [
+      -3.4641016151377544,
+      6.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.996168,
+        0.34274,
+        0.997593,
+        0.936149,
+        0.599625,
+        -0.266119,
+        0.998839,
+        -0.567326
+      ]
+    ],
+    "umatrix_value": 0.7570311912482228,
+    "centroid": [
+      -1.7320508075688772,
+      6.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S200",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Bond",
+          "cspan_id": "2360",
+          "state": "MO",
+          "opensecrets_id": "N00005178",
+          "party": "Republican",
+          "first_name": "Christopher",
+          "district": "",
+          "bioguide_id": "B000611",
+          "votesmart_id": "53313",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "15501",
+          "wikipedia_id": "Kit Bond",
+          "birthday": "1939-03-06",
+          "twitter": "",
+          "url": "http://bond.senate.gov",
+          "phone": "",
+          "address": "",
+          "thomas_id": "01286",
+          "lis_id": "S200",
+          "govtrack_id": "300010",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        -1.0,
+        1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.6803901770033931,
+    "centroid": [
+      0.0,
+      6.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S288",
+        "features": [
+          1,
+          0,
+          1,
+          0,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Murkowski",
+          "cspan_id": "1004138",
+          "state": "AK",
+          "opensecrets_id": "N00026050",
+          "party": "Republican",
+          "first_name": "Lisa",
+          "district": "",
+          "bioguide_id": "M001153",
+          "votesmart_id": "15841",
+          "ballotpedia_id": "Lisa Murkowski",
+          "type": "sen",
+          "rss_url": "http://www.murkowski.senate.gov/public/?a=rss.feed",
+          "gender": "F",
+          "washington_post_id": "",
+          "icpsr_id": "40300",
+          "wikipedia_id": "Lisa Murkowski",
+          "birthday": "1957-05-22",
+          "twitter": "LisaMurkowski",
+          "url": "https://www.murkowski.senate.gov",
+          "phone": "202-224-6665",
+          "address": "522 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01694",
+          "lis_id": "S288",
+          "govtrack_id": "300075",
+          "contact_form": "https://www.murkowski.senate.gov/public/index.cfm/contact",
+          "youtube": "senatormurkowski",
+          "facebook": "SenLisaMurkowski",
+          "youtube_id": "UCaigku16AErqvD0wRuwGb9A"
+        }
+      }
+    ],
+    "weights": [
+      [
+        1.0,
+        -0.0,
+        1.0,
+        0.0,
+        -1.0,
+        -1.0,
+        1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.7213976981379405,
+    "centroid": [
+      1.7320508075688776,
+      6.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S318",
+        "features": [
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Wicker",
+          "cspan_id": "18203",
+          "state": "MS",
+          "opensecrets_id": "N00003280",
+          "party": "Republican",
+          "first_name": "Roger",
+          "district": "",
+          "bioguide_id": "W000437",
+          "votesmart_id": "21926",
+          "ballotpedia_id": "Roger Wicker",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "29534",
+          "wikipedia_id": "Roger Wicker",
+          "birthday": "1951-07-05",
+          "twitter": "SenatorWicker",
+          "url": "https://www.wicker.senate.gov",
+          "phone": "202-224-6253",
+          "address": "555 Dirksen Senate Office Building Washington DC 20510",
+          "thomas_id": "01226",
+          "lis_id": "S318",
+          "govtrack_id": "400432",
+          "contact_form": "https://www.wicker.senate.gov/public/index.cfm/contact",
+          "youtube": "SenatorWicker",
+          "facebook": "SenatorWicker",
+          "youtube_id": "UCIlKHiTjSkcQP_knBcXHWSg"
+        }
+      }
+    ],
+    "weights": [
+      [
+        1.0,
+        -1.0,
+        1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.6584837840029887,
+    "centroid": [
+      3.4641016151377544,
+      6.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.635532,
+        -0.976585,
+        0.999706,
+        -0.623181,
+        -0.998816,
+        -0.999224,
+        0.829415,
+        -0.831377
+      ]
+    ],
+    "umatrix_value": 0.7729707925405459,
+    "centroid": [
+      5.196152422706631,
+      6.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        1.0,
+        1.0,
+        0.999879,
+        1.0,
+        0.99964,
+        1.0,
+        1.0,
+        0.999878
+      ]
+    ],
+    "umatrix_value": 0.9580030342703539,
+    "centroid": [
+      -6.06217782649107,
+      4.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.998719,
+        0.997132,
+        0.985694,
+        0.998072,
+        0.955397,
+        0.993725,
+        0.998371,
+        0.699799
+      ]
+    ],
+    "umatrix_value": 0.9155229107455329,
+    "centroid": [
+      -4.330127018922193,
+      4.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S269",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "profile": {
+          "last_name": "Lincoln",
+          "cspan_id": "26202",
+          "state": "AR",
+          "opensecrets_id": "N00008092",
+          "party": "Democrat",
+          "first_name": "Blanche",
+          "district": "",
+          "bioguide_id": "L000035",
+          "votesmart_id": "26723",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "F",
+          "washington_post_id": "",
+          "icpsr_id": "29305",
+          "wikipedia_id": "Blanche Lincoln",
+          "birthday": "1960-09-30",
+          "twitter": "",
+          "url": "http://lincoln.senate.gov/",
+          "phone": "",
+          "address": "",
+          "thomas_id": "01570",
+          "lis_id": "S269",
+          "govtrack_id": "300068",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "umatrix_value": 0.8285680653505214,
+    "centroid": [
+      -2.598076211353316,
+      4.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.960094,
+        0.806138,
+        0.989642,
+        0.800906,
+        0.415842,
+        -0.036231,
+        0.988588,
+        -0.507757
+      ]
+    ],
+    "umatrix_value": 0.7792235021691223,
+    "centroid": [
+      -0.8660254037844388,
+      4.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.844933,
+        0.479304,
+        0.997045,
+        -0.040953,
+        -0.61513,
+        -0.404582,
+        0.993411,
+        -0.975061
+      ]
+    ],
+    "umatrix_value": 0.7548425885871729,
+    "centroid": [
+      0.8660254037844384,
+      4.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.19688,
+        -0.270196,
+        0.999643,
+        -0.839547,
+        -0.987524,
+        -0.742429,
+        0.994976,
+        -0.99551
+      ]
+    ],
+    "umatrix_value": 0.7151543468754188,
+    "centroid": [
+      2.598076211353316,
+      4.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S260",
+        "features": [
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Roberts",
+          "cspan_id": "16354",
+          "state": "KS",
+          "opensecrets_id": "N00005285",
+          "party": "Republican",
+          "first_name": "Pat",
+          "district": "",
+          "bioguide_id": "R000307",
+          "votesmart_id": "26866",
+          "ballotpedia_id": "Pat Roberts",
+          "type": "sen",
+          "rss_url": "http://www.roberts.senate.gov/public/?a=rss.feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14852",
+          "wikipedia_id": "Pat Roberts",
+          "birthday": "1936-04-20",
+          "twitter": "SenPatRoberts",
+          "url": "https://www.roberts.senate.gov",
+          "phone": "202-224-4774",
+          "address": "109 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "00968",
+          "lis_id": "S260",
+          "govtrack_id": "300083",
+          "contact_form": "https://www.roberts.senate.gov/public/?p=EmailPat",
+          "youtube": "SenPatRoberts",
+          "facebook": "SenPatRoberts",
+          "youtube_id": "UCRpswvC8LgxzE9AYSFpqUgw"
+        }
+      },
+      {
+        "id": "S266",
+        "features": [
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Crapo",
+          "cspan_id": "26440",
+          "state": "ID",
+          "opensecrets_id": "N00006267",
+          "party": "Republican",
+          "first_name": "Michael",
+          "district": "",
+          "bioguide_id": "C000880",
+          "votesmart_id": "26830",
+          "ballotpedia_id": "Mike Crapo",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "29345",
+          "wikipedia_id": "Mike Crapo",
+          "birthday": "1951-05-20",
+          "twitter": "MikeCrapo",
+          "url": "https://www.crapo.senate.gov",
+          "phone": "202-224-6142",
+          "address": "239 Dirksen Senate Office Building Washington DC 20510",
+          "thomas_id": "00250",
+          "lis_id": "S266",
+          "govtrack_id": "300030",
+          "contact_form": "https://www.crapo.senate.gov/contact",
+          "youtube": "senatorcrapo",
+          "facebook": "mikecrapo",
+          "youtube_id": "UCMHzKHg1BE7dEcFjnayw1lA"
+        }
+      },
+      {
+        "id": "S323",
+        "features": [
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Risch",
+          "cspan_id": "1020034",
+          "state": "ID",
+          "opensecrets_id": "N00029441",
+          "party": "Republican",
+          "first_name": "James",
+          "district": "",
+          "bioguide_id": "R000584",
+          "votesmart_id": "2919",
+          "ballotpedia_id": "Jim Risch",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40902",
+          "wikipedia_id": "Jim Risch",
+          "birthday": "1943-05-03",
+          "twitter": "SenatorRisch",
+          "url": "https://www.risch.senate.gov",
+          "phone": "202-224-2752",
+          "address": "483 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "01896",
+          "lis_id": "S323",
+          "govtrack_id": "412322",
+          "contact_form": "http://www.risch.senate.gov/public/index.cfm?p=Email",
+          "youtube": "SenatorJamesRisch",
+          "facebook": "",
+          "youtube_id": "UCncKW8xyT5UbPNO27YuQnBA"
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        -1.0,
+        1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.7808412842743968,
+    "centroid": [
+      4.330127018922193,
+      4.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S249",
+        "features": [
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          0
+        ],
+        "profile": {
+          "last_name": "Brownback",
+          "cspan_id": "",
+          "state": "KS",
+          "opensecrets_id": "N00005244",
+          "party": "Republican",
+          "first_name": "Samuel",
+          "district": "",
+          "bioguide_id": "B000953",
+          "votesmart_id": "21952",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "29523",
+          "wikipedia_id": "Sam Brownback",
+          "birthday": "1956-09-12",
+          "twitter": "",
+          "url": "http://brownback.senate.gov",
+          "phone": "",
+          "address": "",
+          "thomas_id": "00137",
+          "lis_id": "S249",
+          "govtrack_id": "300013",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        -1.0,
+        1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        -0.0
+      ]
+    ],
+    "umatrix_value": 0.7732271825156821,
+    "centroid": [
+      6.0621778264910695,
+      4.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S051",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Inouye",
+          "cspan_id": "2568",
+          "state": "HI",
+          "opensecrets_id": "N00001762",
+          "party": "Democrat",
+          "first_name": "Daniel",
+          "district": "",
+          "bioguide_id": "I000025",
+          "votesmart_id": "53285",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "4812",
+          "wikipedia_id": "Daniel Inouye",
+          "birthday": "1924-09-07",
+          "twitter": "",
+          "url": "http://inouye.senate.gov/",
+          "phone": "202-224-3934",
+          "address": "722 HART SENATE OFFICE BUILDING WASHINGTON DC 20510",
+          "thomas_id": "01369",
+          "lis_id": "S051",
+          "govtrack_id": "300056",
+          "contact_form": "http://www.inouye.senate.gov/Contact/ContactDKI.cfm",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S057",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Leahy",
+          "cspan_id": "1552",
+          "state": "VT",
+          "opensecrets_id": "N00009918",
+          "party": "Democrat",
+          "first_name": "Patrick",
+          "district": "",
+          "bioguide_id": "L000174",
+          "votesmart_id": "53353",
+          "ballotpedia_id": "Patrick Leahy",
+          "type": "sen",
+          "rss_url": "http://www.leahy.senate.gov/rss/feeds/press/",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14307",
+          "wikipedia_id": "Patrick Leahy",
+          "birthday": "1940-03-31",
+          "twitter": "SenatorLeahy",
+          "url": "https://www.leahy.senate.gov",
+          "phone": "202-224-4242",
+          "address": "437 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "01383",
+          "lis_id": "S057",
+          "govtrack_id": "300065",
+          "contact_form": "https://www.leahy.senate.gov/contact/",
+          "youtube": "SenatorPatrickLeahy",
+          "facebook": "SenatorPatrickLeahy",
+          "youtube_id": "UC46QHVobf7FO-tWehsRoDog"
+        }
+      },
+      {
+        "id": "S127",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Baucus",
+          "cspan_id": "1727",
+          "state": "MT",
+          "opensecrets_id": "N00004643",
+          "party": "Democrat",
+          "first_name": "Max",
+          "district": "",
+          "bioguide_id": "B000243",
+          "votesmart_id": "53315",
+          "ballotpedia_id": "Max Baucus",
+          "type": "sen",
+          "rss_url": "http://baucus.senate.gov/rss/?p=news",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14203",
+          "wikipedia_id": "Max Baucus",
+          "birthday": "1941-12-11",
+          "twitter": "",
+          "url": "http://www.baucus.senate.gov",
+          "phone": "202-224-2651",
+          "address": "511 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "00066",
+          "lis_id": "S127",
+          "govtrack_id": "300005",
+          "contact_form": "http://www.baucus.senate.gov/contact/emailForm.cfm?subj=issue",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S131",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Levin",
+          "cspan_id": "2592",
+          "state": "MI",
+          "opensecrets_id": "N00001691",
+          "party": "Democrat",
+          "first_name": "Carl",
+          "district": "",
+          "bioguide_id": "L000261",
+          "votesmart_id": "53307",
+          "ballotpedia_id": "Carl Levin",
+          "type": "sen",
+          "rss_url": "http://www.levin.senate.gov/rss/feeds/?type=all",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14709",
+          "wikipedia_id": "Carl Levin",
+          "birthday": "1934-06-28",
+          "twitter": "",
+          "url": "http://www.levin.senate.gov",
+          "phone": "202-224-6221",
+          "address": "269 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "01384",
+          "lis_id": "S131",
+          "govtrack_id": "300066",
+          "contact_form": "https://www.levin.senate.gov/contact/email/",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S150",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Dodd",
+          "cspan_id": "",
+          "state": "CT",
+          "opensecrets_id": "N00000581",
+          "party": "Democrat",
+          "first_name": "Christopher",
+          "district": "",
+          "bioguide_id": "D000388",
+          "votesmart_id": "53277",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14213",
+          "wikipedia_id": "Chris Dodd",
+          "birthday": "1944-05-27",
+          "twitter": "",
+          "url": "http://dodd.senate.gov",
+          "phone": "",
+          "address": "",
+          "thomas_id": "00302",
+          "lis_id": "S150",
+          "govtrack_id": "300034",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S161",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Specter",
+          "cspan_id": "",
+          "state": "PA",
+          "opensecrets_id": "N00001604",
+          "party": "Democrat",
+          "first_name": "Arlen",
+          "district": "",
+          "bioguide_id": "S000709",
+          "votesmart_id": "53340",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14910",
+          "wikipedia_id": "Arlen Specter",
+          "birthday": "1930-02-12",
+          "twitter": "",
+          "url": "http://specter.senate.gov/",
+          "phone": "",
+          "address": "",
+          "thomas_id": "01437",
+          "lis_id": "S161",
+          "govtrack_id": "300092",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S166",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Lautenberg",
+          "cspan_id": "2515",
+          "state": "NJ",
+          "opensecrets_id": "N00000659",
+          "party": "Democrat",
+          "first_name": "Frank",
+          "district": "",
+          "bioguide_id": "L000123",
+          "votesmart_id": "53324",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14914",
+          "wikipedia_id": "Frank Lautenberg",
+          "birthday": "1924-01-23",
+          "twitter": "",
+          "url": "http://www.lautenberg.senate.gov",
+          "phone": "202-224-3224",
+          "address": "141 HART SENATE OFFICE BUILDING WASHINGTON DC 20510",
+          "thomas_id": "01381",
+          "lis_id": "S166",
+          "govtrack_id": "300064",
+          "contact_form": "http://www.lautenberg.senate.gov/contact/routing.cfm",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S167",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Bingaman",
+          "cspan_id": "590",
+          "state": "NM",
+          "opensecrets_id": "N00006518",
+          "party": "Democrat",
+          "first_name": "Jeff",
+          "district": "",
+          "bioguide_id": "B000468",
+          "votesmart_id": "53326",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14912",
+          "wikipedia_id": "Jeff Bingaman",
+          "birthday": "1943-10-03",
+          "twitter": "",
+          "url": "http://bingaman.senate.gov",
+          "phone": "202-224-5521",
+          "address": "703 HART SENATE OFFICE BUILDING WASHINGTON DC 20510",
+          "thomas_id": "01285",
+          "lis_id": "S167",
+          "govtrack_id": "300009",
+          "contact_form": "http://www.bingaman.senate.gov/contact/",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S172",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Harkin",
+          "cspan_id": "2005",
+          "state": "IA",
+          "opensecrets_id": "N00004207",
+          "party": "Democrat",
+          "first_name": "Thomas",
+          "district": "",
+          "bioguide_id": "H000206",
+          "votesmart_id": "53294",
+          "ballotpedia_id": "Tom Harkin",
+          "type": "sen",
+          "rss_url": "http://www.harkin.senate.gov/rss/rss.cfm",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14230",
+          "wikipedia_id": "Tom Harkin",
+          "birthday": "1939-11-19",
+          "twitter": "",
+          "url": "http://www.harkin.senate.gov",
+          "phone": "202-224-3254",
+          "address": "731 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "00501",
+          "lis_id": "S172",
+          "govtrack_id": "300051",
+          "contact_form": "http://www.harkin.senate.gov/contact.cfm",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S198",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Reid",
+          "cspan_id": "1683",
+          "state": "NV",
+          "opensecrets_id": "N00009922",
+          "party": "Democrat",
+          "first_name": "Harry",
+          "district": "",
+          "bioguide_id": "R000146",
+          "votesmart_id": "53320",
+          "ballotpedia_id": "Harry Reid",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "15054",
+          "wikipedia_id": "Harry Reid",
+          "birthday": "1939-12-02",
+          "twitter": "",
+          "url": "http://www.reid.senate.gov",
+          "phone": "202-224-3542",
+          "address": "522 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "00952",
+          "lis_id": "S198",
+          "govtrack_id": "300082",
+          "contact_form": "http://www.reid.senate.gov/contact",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S201",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Conrad",
+          "cspan_id": "2517",
+          "state": "ND",
+          "opensecrets_id": "N00004613",
+          "party": "Democrat",
+          "first_name": "Kent",
+          "district": "",
+          "bioguide_id": "C000705",
+          "votesmart_id": "53331",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "15502",
+          "wikipedia_id": "Kent Conrad",
+          "birthday": "1948-03-12",
+          "twitter": "",
+          "url": "http://conrad.senate.gov",
+          "phone": "202-224-2043",
+          "address": "530 HART SENATE OFFICE BUILDING WASHINGTON DC 20510",
+          "thomas_id": "01307",
+          "lis_id": "S201",
+          "govtrack_id": "300026",
+          "contact_form": "http://www.conrad.senate.gov/contact/webform.cfm",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S209",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Kohl",
+          "cspan_id": "4030",
+          "state": "WI",
+          "opensecrets_id": "N00004309",
+          "party": "Democrat",
+          "first_name": "Herbert",
+          "district": "",
+          "bioguide_id": "K000305",
+          "votesmart_id": "53362",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "15703",
+          "wikipedia_id": "Herb Kohl",
+          "birthday": "1935-02-07",
+          "twitter": "",
+          "url": "http://kohl.senate.gov/",
+          "phone": "202-224-5653",
+          "address": "330 HART SENATE OFFICE BUILDING WASHINGTON DC 20510",
+          "thomas_id": "01380",
+          "lis_id": "S209",
+          "govtrack_id": "300061",
+          "contact_form": "http://www.kohl.senate.gov/contact.cfm",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S210",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Lieberman",
+          "cspan_id": "4363",
+          "state": "CT",
+          "opensecrets_id": "N00000616",
+          "party": "Independent",
+          "first_name": "Joseph",
+          "district": "",
+          "bioguide_id": "L000304",
+          "votesmart_id": "53278",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "15704",
+          "wikipedia_id": "Joe Lieberman",
+          "birthday": "1942-02-24",
+          "twitter": "",
+          "url": "http://lieberman.senate.gov/",
+          "phone": "202-224-4041",
+          "address": "706 HART SENATE OFFICE BUILDING WASHINGTON DC 20510",
+          "thomas_id": "01385",
+          "lis_id": "S210",
+          "govtrack_id": "300067",
+          "contact_form": "http://www.lieberman.senate.gov/index.cfm/contact/email-me-about-an-issue",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S213",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Akaka",
+          "cspan_id": "8704",
+          "state": "HI",
+          "opensecrets_id": "N00007653",
+          "party": "Democrat",
+          "first_name": "Daniel",
+          "district": "",
+          "bioguide_id": "A000069",
+          "votesmart_id": "53286",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14400",
+          "wikipedia_id": "Daniel Akaka",
+          "birthday": "1924-09-11",
+          "twitter": "",
+          "url": "http://akaka.senate.gov",
+          "phone": "202-224-6361",
+          "address": "141 HART SENATE OFFICE BUILDING WASHINGTON DC 20510",
+          "thomas_id": "00007",
+          "lis_id": "S213",
+          "govtrack_id": "300001",
+          "contact_form": "http://www.akaka.senate.gov/email-senator-akaka.cfm",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S223",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Boxer",
+          "cspan_id": "2470",
+          "state": "CA",
+          "opensecrets_id": "N00006692",
+          "party": "Democrat",
+          "first_name": "Barbara",
+          "district": "",
+          "bioguide_id": "B000711",
+          "votesmart_id": "53274",
+          "ballotpedia_id": "Barbara Boxer",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "F",
+          "washington_post_id": "",
+          "icpsr_id": "15011",
+          "wikipedia_id": "Barbara Boxer",
+          "birthday": "1940-11-11",
+          "twitter": "",
+          "url": "https://www.boxer.senate.gov",
+          "phone": "202-224-3553",
+          "address": "112 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "00116",
+          "lis_id": "S223",
+          "govtrack_id": "300011",
+          "contact_form": "https://www.boxer.senate.gov/contact/shareyourviews.html",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S247",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Wyden",
+          "cspan_id": "1962",
+          "state": "OR",
+          "opensecrets_id": "N00007724",
+          "party": "Democrat",
+          "first_name": "Ron",
+          "district": "",
+          "bioguide_id": "W000779",
+          "votesmart_id": "27036",
+          "ballotpedia_id": "Ron Wyden",
+          "type": "sen",
+          "rss_url": "http://www.wyden.senate.gov/rss/feeds/?type=all&amp;",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14871",
+          "wikipedia_id": "Ron Wyden",
+          "birthday": "1949-05-03",
+          "twitter": "RonWyden",
+          "url": "https://www.wyden.senate.gov",
+          "phone": "202-224-5244",
+          "address": "221 Dirksen Senate Office Building Washington DC 20510",
+          "thomas_id": "01247",
+          "lis_id": "S247",
+          "govtrack_id": "300100",
+          "contact_form": "https://www.wyden.senate.gov/contact/",
+          "youtube": "senronwyden",
+          "facebook": "",
+          "youtube_id": "UCsd3UEaoLoqX60P88BdpGGw"
+        }
+      },
+      {
+        "id": "S253",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Durbin",
+          "cspan_id": "6741",
+          "state": "IL",
+          "opensecrets_id": "N00004981",
+          "party": "Democrat",
+          "first_name": "Richard",
+          "district": "",
+          "bioguide_id": "D000563",
+          "votesmart_id": "26847",
+          "ballotpedia_id": "Dick Durbin",
+          "type": "sen",
+          "rss_url": "http://durbin.senate.gov/public/index.cfm/rss/feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "15021",
+          "wikipedia_id": "Dick Durbin",
+          "birthday": "1944-11-21",
+          "twitter": "SenatorDurbin",
+          "url": "https://www.durbin.senate.gov",
+          "phone": "202-224-2152",
+          "address": "711 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "00326",
+          "lis_id": "S253",
+          "govtrack_id": "300038",
+          "contact_form": "https://www.durbin.senate.gov/contact/",
+          "youtube": "SenatorDurbin",
+          "facebook": "SenatorDurbin",
+          "youtube_id": "UCkbixlNCxcKAffEhe3X5-lw"
+        }
+      },
+      {
+        "id": "S257",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Johnson",
+          "cspan_id": "2545",
+          "state": "SD",
+          "opensecrets_id": "N00010084",
+          "party": "Democrat",
+          "first_name": "Tim",
+          "district": "",
+          "bioguide_id": "J000177",
+          "votesmart_id": "27067",
+          "ballotpedia_id": "Tim Johnson, South Dakota",
+          "type": "sen",
+          "rss_url": "http://www.johnson.senate.gov/public/?a=rss.feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "15425",
+          "wikipedia_id": "Tim Johnson (South Dakota politician)",
+          "birthday": "1946-12-28",
+          "twitter": "",
+          "url": "http://www.johnson.senate.gov",
+          "phone": "202-224-5842",
+          "address": "136 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "00604",
+          "lis_id": "S257",
+          "govtrack_id": "300058",
+          "contact_form": "http://www.johnson.senate.gov/public/index.cfm?p=ContactForm",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S258",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Landrieu",
+          "cspan_id": "22357",
+          "state": "LA",
+          "opensecrets_id": "N00005395",
+          "party": "Democrat",
+          "first_name": "Mary",
+          "district": "",
+          "bioguide_id": "L000550",
+          "votesmart_id": "661",
+          "ballotpedia_id": "Mary Landrieu",
+          "type": "sen",
+          "rss_url": "http://www.landrieu.senate.gov/rss/",
+          "gender": "F",
+          "washington_post_id": "",
+          "icpsr_id": "49702",
+          "wikipedia_id": "Mary Landrieu",
+          "birthday": "1955-11-23",
+          "twitter": "",
+          "url": "http://www.landrieu.senate.gov",
+          "phone": "202-224-5824",
+          "address": "703 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01546",
+          "lis_id": "S258",
+          "govtrack_id": "300063",
+          "contact_form": "http://www.landrieu.senate.gov/?p=contact",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S259",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Reed",
+          "cspan_id": "24239",
+          "state": "RI",
+          "opensecrets_id": "N00000362",
+          "party": "Democrat",
+          "first_name": "John",
+          "district": "",
+          "bioguide_id": "R000122",
+          "votesmart_id": "27060",
+          "ballotpedia_id": "Jack Reed",
+          "type": "sen",
+          "rss_url": "https://www.reed.senate.gov//rss/feeds/?type=all",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "29142",
+          "wikipedia_id": "Jack Reed (politician)",
+          "birthday": "1949-11-12",
+          "twitter": "SenJackReed",
+          "url": "https://www.reed.senate.gov",
+          "phone": "202-224-4642",
+          "address": "728 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "00949",
+          "lis_id": "S259",
+          "govtrack_id": "300081",
+          "contact_form": "https://www.reed.senate.gov/contact/",
+          "youtube": "SenatorReed",
+          "facebook": "SenJackReed",
+          "youtube_id": "UCT_aFVtsjxPwWKfO-PW_hPw"
+        }
+      },
+      {
+        "id": "S270",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Schumer",
+          "cspan_id": "5929",
+          "state": "NY",
+          "opensecrets_id": "N00001093",
+          "party": "Democrat",
+          "first_name": "Charles",
+          "district": "",
+          "bioguide_id": "S000148",
+          "votesmart_id": "26976",
+          "ballotpedia_id": "Chuck Schumer",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14858",
+          "wikipedia_id": "Chuck Schumer",
+          "birthday": "1950-11-23",
+          "twitter": "SenSchumer",
+          "url": "https://www.schumer.senate.gov",
+          "phone": "202-224-6542",
+          "address": "322 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01036",
+          "lis_id": "S270",
+          "govtrack_id": "300087",
+          "contact_form": "https://www.schumer.senate.gov/contact/email-chuck",
+          "youtube": "SenatorSchumer",
+          "facebook": "senschumer",
+          "youtube_id": "UC-ABttxh8uQv_10qmwGaidw"
+        }
+      },
+      {
+        "id": "S275",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Cantwell",
+          "cspan_id": "26137",
+          "state": "WA",
+          "opensecrets_id": "N00007836",
+          "party": "Democrat",
+          "first_name": "Maria",
+          "district": "",
+          "bioguide_id": "C000127",
+          "votesmart_id": "27122",
+          "ballotpedia_id": "Maria Cantwell",
+          "type": "sen",
+          "rss_url": "http://www.cantwell.senate.gov/public/index.cfm/rss/feed",
+          "gender": "F",
+          "washington_post_id": "",
+          "icpsr_id": "39310",
+          "wikipedia_id": "Maria Cantwell",
+          "birthday": "1958-10-13",
+          "twitter": "SenatorCantwell",
+          "url": "https://www.cantwell.senate.gov",
+          "phone": "202-224-3441",
+          "address": "511 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "00172",
+          "lis_id": "S275",
+          "govtrack_id": "300018",
+          "contact_form": "http://www.cantwell.senate.gov/public/index.cfm/email-maria",
+          "youtube": "SenatorCantwell",
+          "facebook": "senatorcantwell",
+          "youtube_id": "UCN52UDqKgvHRk39ncySrIMw"
+        }
+      },
+      {
+        "id": "S277",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Carper",
+          "cspan_id": "663",
+          "state": "DE",
+          "opensecrets_id": "N00012508",
+          "party": "Democrat",
+          "first_name": "Thomas",
+          "district": "",
+          "bioguide_id": "C000174",
+          "votesmart_id": "22421",
+          "ballotpedia_id": "Tom Carper",
+          "type": "sen",
+          "rss_url": "http://www.carper.senate.gov/public/index.cfm/rss/feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "15015",
+          "wikipedia_id": "Tom Carper",
+          "birthday": "1947-01-23",
+          "twitter": "SenatorCarper",
+          "url": "https://www.carper.senate.gov/public",
+          "phone": "202-224-2441",
+          "address": "513 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "00179",
+          "lis_id": "S277",
+          "govtrack_id": "300019",
+          "contact_form": "http://www.carper.senate.gov/public/index.cfm/email-senator-carper",
+          "youtube": "senatorcarper",
+          "facebook": "tomcarper",
+          "youtube_id": "UCgLnvbKwu4B3navofj6Qvvw"
+        }
+      },
+      {
+        "id": "S282",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Nelson",
+          "cspan_id": "1931",
+          "state": "FL",
+          "opensecrets_id": "N00009926",
+          "party": "Democrat",
+          "first_name": "Bill",
+          "district": "",
+          "bioguide_id": "N000032",
+          "votesmart_id": "1606",
+          "ballotpedia_id": "Bill Nelson (Florida)",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14651",
+          "wikipedia_id": "Bill Nelson",
+          "birthday": "1942-09-29",
+          "twitter": "SenBillNelson",
+          "url": "https://www.billnelson.senate.gov",
+          "phone": "202-224-5274",
+          "address": "716 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "00859",
+          "lis_id": "S282",
+          "govtrack_id": "300078",
+          "contact_form": "https://www.billnelson.senate.gov/contact-bill",
+          "youtube": "senbillnelson",
+          "facebook": "",
+          "youtube_id": "UC1Iir7_h98mI9-hHzrDJWpw"
+        }
+      },
+      {
+        "id": "S283",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Nelson",
+          "cspan_id": "16991",
+          "state": "NE",
+          "opensecrets_id": "N00005329",
+          "party": "Democrat",
+          "first_name": "Ben",
+          "district": "",
+          "bioguide_id": "N000180",
+          "votesmart_id": "21744",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40103",
+          "wikipedia_id": "Ben Nelson",
+          "birthday": "1941-05-17",
+          "twitter": "",
+          "url": "http://bennelson.senate.gov/",
+          "phone": "202-224-6551",
+          "address": "720 HART SENATE OFFICE BUILDING WASHINGTON DC 20510",
+          "thomas_id": "01627",
+          "lis_id": "S283",
+          "govtrack_id": "300077",
+          "contact_form": "http://www.bennelson.senate.gov/contact-me.cfm",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S284",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Stabenow",
+          "cspan_id": "45451",
+          "state": "MI",
+          "opensecrets_id": "N00004118",
+          "party": "Democrat",
+          "first_name": "Debbie",
+          "district": "",
+          "bioguide_id": "S000770",
+          "votesmart_id": "515",
+          "ballotpedia_id": "Debbie Stabenow",
+          "type": "sen",
+          "rss_url": "http://stabenow.senate.gov/rss/?p=news",
+          "gender": "F",
+          "washington_post_id": "",
+          "icpsr_id": "29732",
+          "wikipedia_id": "Debbie Stabenow",
+          "birthday": "1950-04-29",
+          "twitter": "SenStabenow",
+          "url": "https://www.stabenow.senate.gov",
+          "phone": "202-224-4822",
+          "address": "731 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01531",
+          "lis_id": "S284",
+          "govtrack_id": "300093",
+          "contact_form": "http://www.stabenow.senate.gov/?p=contact",
+          "youtube": "senatorstabenow",
+          "facebook": "",
+          "youtube_id": "UCFoDKCvxSwCUfDv-4Eg4K5A"
+        }
+      },
+      {
+        "id": "S295",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Pryor",
+          "cspan_id": "1002201",
+          "state": "AR",
+          "opensecrets_id": "N00013823",
+          "party": "Democrat",
+          "first_name": "Mark",
+          "district": "",
+          "bioguide_id": "P000590",
+          "votesmart_id": "35",
+          "ballotpedia_id": "Mark Pryor",
+          "type": "sen",
+          "rss_url": "http://www.pryor.senate.gov/public/index.cfm/rss/feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40301",
+          "wikipedia_id": "Mark Pryor",
+          "birthday": "1963-01-10",
+          "twitter": "",
+          "url": "http://www.pryor.senate.gov",
+          "phone": "202-224-2353",
+          "address": "255 Dirksen Senate Office Building Washington DC 20510",
+          "thomas_id": "01701",
+          "lis_id": "S295",
+          "govtrack_id": "300080",
+          "contact_form": "http://www.pryor.senate.gov/contact/form",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S306",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Men\u00e9ndez",
+          "cspan_id": "29608",
+          "state": "NJ",
+          "opensecrets_id": "N00000699",
+          "party": "Democrat",
+          "first_name": "Robert",
+          "district": "",
+          "bioguide_id": "M000639",
+          "votesmart_id": "26961",
+          "ballotpedia_id": "Bob Menendez",
+          "type": "sen",
+          "rss_url": "http://www.menendez.senate.gov/rss/feeds/index.cfm?type=news",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "29373",
+          "wikipedia_id": "Bob Menendez",
+          "birthday": "1954-01-01",
+          "twitter": "SenatorMenendez",
+          "url": "https://www.menendez.senate.gov",
+          "phone": "202-224-4744",
+          "address": "528 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "00791",
+          "lis_id": "S306",
+          "govtrack_id": "400272",
+          "contact_form": "https://www.menendez.senate.gov/contact",
+          "youtube": "SenatorMenendezNJ",
+          "facebook": "senatormenendez",
+          "youtube_id": "UC0PV0K9Z5a9p3D5917KF5fw"
+        }
+      },
+      {
+        "id": "S307",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Brown",
+          "cspan_id": "5051",
+          "state": "OH",
+          "opensecrets_id": "N00003535",
+          "party": "Democrat",
+          "first_name": "Sherrod",
+          "district": "",
+          "bioguide_id": "B000944",
+          "votesmart_id": "27018",
+          "ballotpedia_id": "Sherrod Brown",
+          "type": "sen",
+          "rss_url": "http://www.brown.senate.gov/rss/feeds/?type=all&amp;",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "29389",
+          "wikipedia_id": "Sherrod Brown",
+          "birthday": "1952-11-09",
+          "twitter": "SenSherrodBrown",
+          "url": "https://www.brown.senate.gov",
+          "phone": "202-224-2315",
+          "address": "713 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "00136",
+          "lis_id": "S307",
+          "govtrack_id": "400050",
+          "contact_form": "http://www.brown.senate.gov/contact/",
+          "youtube": "SherrodBrownOhio",
+          "facebook": "",
+          "youtube_id": "UCgy8jfERh-t_ixkKKoCmglQ"
+        }
+      },
+      {
+        "id": "S308",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Cardin",
+          "cspan_id": "4004",
+          "state": "MD",
+          "opensecrets_id": "N00001955",
+          "party": "Democrat",
+          "first_name": "Benjamin",
+          "district": "",
+          "bioguide_id": "C000141",
+          "votesmart_id": "26888",
+          "ballotpedia_id": "Ben Cardin",
+          "type": "sen",
+          "rss_url": "http://www.cardin.senate.gov/rss/feeds/?type=all",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "15408",
+          "wikipedia_id": "Ben Cardin",
+          "birthday": "1943-10-05",
+          "twitter": "SenatorCardin",
+          "url": "https://www.cardin.senate.gov",
+          "phone": "202-224-4524",
+          "address": "509 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "00174",
+          "lis_id": "S308",
+          "govtrack_id": "400064",
+          "contact_form": "http://www.cardin.senate.gov/contact/",
+          "youtube": "senatorcardin",
+          "facebook": "senatorbencardin",
+          "youtube_id": "UCiQaJnMzlfzzG3VESgyZChA"
+        }
+      },
+      {
+        "id": "S309",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Casey",
+          "cspan_id": "47036",
+          "state": "PA",
+          "opensecrets_id": "N00027503",
+          "party": "Democrat",
+          "first_name": "Robert",
+          "district": "",
+          "bioguide_id": "C001070",
+          "votesmart_id": "2541",
+          "ballotpedia_id": "Bob Casey, Jr.",
+          "type": "sen",
+          "rss_url": "http://www.casey.senate.gov/rss/feeds/?all",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40703",
+          "wikipedia_id": "Bob Casey Jr.",
+          "birthday": "1960-04-13",
+          "twitter": "SenBobCasey",
+          "url": "https://www.casey.senate.gov",
+          "phone": "202-224-6324",
+          "address": "393 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "01828",
+          "lis_id": "S309",
+          "govtrack_id": "412246",
+          "contact_form": "https://www.casey.senate.gov/contact/",
+          "youtube": "SenatorBobCasey",
+          "facebook": "SenatorBobCasey",
+          "youtube_id": "UCtVssXhx-KuZa-hSvnsnJ0A"
+        }
+      },
+      {
+        "id": "S311",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Klobuchar",
+          "cspan_id": "83701",
+          "state": "MN",
+          "opensecrets_id": "N00027500",
+          "party": "Democrat",
+          "first_name": "Amy",
+          "district": "",
+          "bioguide_id": "K000367",
+          "votesmart_id": "65092",
+          "ballotpedia_id": "Amy Klobuchar",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "F",
+          "washington_post_id": "",
+          "icpsr_id": "40700",
+          "wikipedia_id": "Amy Klobuchar",
+          "birthday": "1960-05-25",
+          "twitter": "",
+          "url": "https://www.klobuchar.senate.gov",
+          "phone": "202-224-3244",
+          "address": "302 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01826",
+          "lis_id": "S311",
+          "govtrack_id": "412242",
+          "contact_form": "http://www.klobuchar.senate.gov/public/index.cfm/contact",
+          "youtube": "senatorklobuchar",
+          "facebook": "",
+          "youtube_id": "UCvdeJsDsV51tFb_hVqvtYGA"
+        }
+      },
+      {
+        "id": "S314",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Tester",
+          "cspan_id": "1020176",
+          "state": "MT",
+          "opensecrets_id": "N00027605",
+          "party": "Democrat",
+          "first_name": "Jon",
+          "district": "",
+          "bioguide_id": "T000464",
+          "votesmart_id": "20928",
+          "ballotpedia_id": "Jon Tester",
+          "type": "sen",
+          "rss_url": "http://www.tester.senate.gov/rss/?p=hot_topic",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40702",
+          "wikipedia_id": "Jon Tester",
+          "birthday": "1956-08-21",
+          "twitter": "SenatorTester",
+          "url": "https://www.tester.senate.gov",
+          "phone": "202-224-2644",
+          "address": "311 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01829",
+          "lis_id": "S314",
+          "govtrack_id": "412244",
+          "contact_form": "https://www.tester.senate.gov/?p=email_senator",
+          "youtube": "senatorjontester",
+          "facebook": "senatortester",
+          "youtube_id": "UCgXAF-CON1coZFMxQkfj0fg"
+        }
+      },
+      {
+        "id": "S315",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Webb",
+          "cspan_id": "1914",
+          "state": "VA",
+          "opensecrets_id": "N00028058",
+          "party": "Democrat",
+          "first_name": "Jim",
+          "district": "",
+          "bioguide_id": "W000803",
+          "votesmart_id": "60043",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40706",
+          "wikipedia_id": "Jim Webb",
+          "birthday": "1946-02-09",
+          "twitter": "",
+          "url": "http://webb.senate.gov/",
+          "phone": "202-224-4024",
+          "address": "248 RUSSELL SENATE OFFICE BUILDING WASHINGTON DC 20510",
+          "thomas_id": "01822",
+          "lis_id": "S315",
+          "govtrack_id": "412249",
+          "contact_form": "http://www.webb.senate.gov/contact.cfm",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S316",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Whitehouse",
+          "cspan_id": "92235",
+          "state": "RI",
+          "opensecrets_id": "N00027533",
+          "party": "Democrat",
+          "first_name": "Sheldon",
+          "district": "",
+          "bioguide_id": "W000802",
+          "votesmart_id": "2572",
+          "ballotpedia_id": "Sheldon Whitehouse",
+          "type": "sen",
+          "rss_url": "http://www.whitehouse.senate.gov/rss/feeds/?type=all&amp;cachebuster=1",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40704",
+          "wikipedia_id": "Sheldon Whitehouse",
+          "birthday": "1955-10-20",
+          "twitter": "SenWhitehouse",
+          "url": "https://www.whitehouse.senate.gov",
+          "phone": "202-224-2921",
+          "address": "530 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01823",
+          "lis_id": "S316",
+          "govtrack_id": "412247",
+          "contact_form": "https://www.whitehouse.senate.gov/contact/email-sheldon",
+          "youtube": "SenatorWhitehouse",
+          "facebook": "SenatorWhitehouse",
+          "youtube_id": "UCnG0N70SNBkNqvIMLodPTIA"
+        }
+      },
+      {
+        "id": "S319",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Begich",
+          "cspan_id": "1030732",
+          "state": "AK",
+          "opensecrets_id": "N00029901",
+          "party": "Democrat",
+          "first_name": "Mark",
+          "district": "",
+          "bioguide_id": "B001265",
+          "votesmart_id": "79426",
+          "ballotpedia_id": "Mark Begich",
+          "type": "sen",
+          "rss_url": "http://www.begich.senate.gov/public/?a=rss.feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40900",
+          "wikipedia_id": "Mark Begich",
+          "birthday": "1962-03-30",
+          "twitter": "",
+          "url": "http://www.begich.senate.gov",
+          "phone": "202-224-3004",
+          "address": "111 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "01898",
+          "lis_id": "S319",
+          "govtrack_id": "412326",
+          "contact_form": "http://www.begich.senate.gov/public/index.cfm?p=EmailSenator",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S320",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Hagan",
+          "cspan_id": "1028015",
+          "state": "NC",
+          "opensecrets_id": "N00029617",
+          "party": "Democrat",
+          "first_name": "Kay",
+          "district": "",
+          "bioguide_id": "H001049",
+          "votesmart_id": "21082",
+          "ballotpedia_id": "Kay Hagan",
+          "type": "sen",
+          "rss_url": "http://www.hagan.senate.gov/rss",
+          "gender": "F",
+          "washington_post_id": "",
+          "icpsr_id": "40907",
+          "wikipedia_id": "Kay Hagan",
+          "birthday": "1953-05-26",
+          "twitter": "",
+          "url": "http://www.hagan.senate.gov",
+          "phone": "202-224-6342",
+          "address": "521 Dirksen Senate Office Building Washington DC 20510",
+          "thomas_id": "01902",
+          "lis_id": "S320",
+          "govtrack_id": "412324",
+          "contact_form": "http://www.hagan.senate.gov/contact/",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S324",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Shaheen",
+          "cspan_id": "22850",
+          "state": "NH",
+          "opensecrets_id": "N00024790",
+          "party": "Democrat",
+          "first_name": "Jeanne",
+          "district": "",
+          "bioguide_id": "S001181",
+          "votesmart_id": "1663",
+          "ballotpedia_id": "Jeanne Shaheen",
+          "type": "sen",
+          "rss_url": "http://www.shaheen.senate.gov/rss/",
+          "gender": "F",
+          "washington_post_id": "",
+          "icpsr_id": "40906",
+          "wikipedia_id": "Jeanne Shaheen",
+          "birthday": "1947-01-28",
+          "twitter": "SenatorShaheen",
+          "url": "https://www.shaheen.senate.gov",
+          "phone": "202-224-2841",
+          "address": "506 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01901",
+          "lis_id": "S324",
+          "govtrack_id": "412323",
+          "contact_form": "https://www.shaheen.senate.gov/contact/contact-jeanne",
+          "youtube": "senatorshaheen",
+          "facebook": "SenatorShaheen",
+          "youtube_id": "UCjLZAZMbDrybHyttdEC9LFA"
+        }
+      },
+      {
+        "id": "S325",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Udall",
+          "cspan_id": "7634",
+          "state": "CO",
+          "opensecrets_id": "N00008051",
+          "party": "Democrat",
+          "first_name": "Mark",
+          "district": "",
+          "bioguide_id": "U000038",
+          "votesmart_id": "12329",
+          "ballotpedia_id": "Mark Udall",
+          "type": "sen",
+          "rss_url": "http://markudall.senate.gov/rss/?p=blog",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "29906",
+          "wikipedia_id": "Mark Udall",
+          "birthday": "1950-07-18",
+          "twitter": "",
+          "url": "http://www.markudall.senate.gov",
+          "phone": "202-224-5941",
+          "address": "730 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01595",
+          "lis_id": "S325",
+          "govtrack_id": "400412",
+          "contact_form": "http://www.markudall.senate.gov/?p=contact_us",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S326",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Udall",
+          "cspan_id": "10075",
+          "state": "NM",
+          "opensecrets_id": "N00006561",
+          "party": "Democrat",
+          "first_name": "Tom",
+          "district": "",
+          "bioguide_id": "U000039",
+          "votesmart_id": "22658",
+          "ballotpedia_id": "Tom Udall",
+          "type": "sen",
+          "rss_url": "http://tomudall.senate.gov/rss/?p=blog",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "29924",
+          "wikipedia_id": "Tom Udall",
+          "birthday": "1948-05-18",
+          "twitter": "SenatorTomUdall",
+          "url": "https://www.tomudall.senate.gov",
+          "phone": "202-224-6621",
+          "address": "531 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01567",
+          "lis_id": "S326",
+          "govtrack_id": "400413",
+          "contact_form": "https://www.tomudall.senate.gov/?p=contact",
+          "youtube": "senatortomudall",
+          "facebook": "senatortomudall",
+          "youtube_id": "UCADpIVS6bxOcr-uWnJCC9pQ"
+        }
+      },
+      {
+        "id": "S327",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Warner",
+          "cspan_id": "7630",
+          "state": "VA",
+          "opensecrets_id": "N00002097",
+          "party": "Democrat",
+          "first_name": "Mark",
+          "district": "",
+          "bioguide_id": "W000805",
+          "votesmart_id": "535",
+          "ballotpedia_id": "Mark Warner",
+          "type": "sen",
+          "rss_url": "http://www.warner.senate.gov/public/?a=rss.feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40909",
+          "wikipedia_id": "Mark Warner",
+          "birthday": "1954-12-15",
+          "twitter": "MarkWarner",
+          "url": "https://www.warner.senate.gov",
+          "phone": "202-224-2023",
+          "address": "703 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01897",
+          "lis_id": "S327",
+          "govtrack_id": "412321",
+          "contact_form": "http://www.warner.senate.gov/public/index.cfm?p=Contact",
+          "youtube": "SenatorMarkWarner",
+          "facebook": "MarkRWarner",
+          "youtube_id": "UCwyivNlEGf4sGd1oDLfY5jw"
+        }
+      },
+      {
+        "id": "S328",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Burris",
+          "cspan_id": "2462",
+          "state": "IL",
+          "opensecrets_id": "N00015389",
+          "party": "Democrat",
+          "first_name": "Roland",
+          "district": "",
+          "bioguide_id": "B001266",
+          "votesmart_id": "18168",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40903",
+          "wikipedia_id": "Roland Burris",
+          "birthday": "1937-08-03",
+          "twitter": "",
+          "url": "http://burris.senate.gov/",
+          "phone": "",
+          "address": "",
+          "thomas_id": "01963",
+          "lis_id": "S328",
+          "govtrack_id": "412328",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S329",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Kaufman",
+          "cspan_id": "1030984",
+          "state": "DE",
+          "opensecrets_id": "N00030767",
+          "party": "Democrat",
+          "first_name": "Edward",
+          "district": "",
+          "bioguide_id": "K000373",
+          "votesmart_id": "110918",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40901",
+          "wikipedia_id": "Ted Kaufman",
+          "birthday": "1939-03-15",
+          "twitter": "",
+          "url": "http://kaufman.senate.gov/",
+          "phone": "",
+          "address": "",
+          "thomas_id": "01964",
+          "lis_id": "S329",
+          "govtrack_id": "412329",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S330",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Bennet",
+          "cspan_id": "1031622",
+          "state": "CO",
+          "opensecrets_id": "N00030608",
+          "party": "Democrat",
+          "first_name": "Michael",
+          "district": "",
+          "bioguide_id": "B001267",
+          "votesmart_id": "110942",
+          "ballotpedia_id": "Michael Bennet",
+          "type": "sen",
+          "rss_url": "http://www.bennet.senate.gov/rss/feeds/?type=news",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40910",
+          "wikipedia_id": "Michael Bennet",
+          "birthday": "1964-11-28",
+          "twitter": "SenBennetCo",
+          "url": "https://www.bennet.senate.gov",
+          "phone": "202-224-5852",
+          "address": "261 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "01965",
+          "lis_id": "S330",
+          "govtrack_id": "412330",
+          "contact_form": "https://www.bennet.senate.gov/?p=contact",
+          "youtube": "SenatorBennet",
+          "facebook": "senbennetco",
+          "youtube_id": "UCXB3cljpMwTyCUyLr2ZVLow"
+        }
+      },
+      {
+        "id": "S331",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Gillibrand",
+          "cspan_id": "1022862",
+          "state": "NY",
+          "opensecrets_id": "N00027658",
+          "party": "Democrat",
+          "first_name": "Kirsten",
+          "district": "",
+          "bioguide_id": "G000555",
+          "votesmart_id": "65147",
+          "ballotpedia_id": "Kirsten Gillibrand",
+          "type": "sen",
+          "rss_url": "http://www.gillibrand.senate.gov/rss/",
+          "gender": "F",
+          "washington_post_id": "",
+          "icpsr_id": "20735",
+          "wikipedia_id": "Kirsten Gillibrand",
+          "birthday": "1966-12-09",
+          "twitter": "SenGillibrand",
+          "url": "https://www.gillibrand.senate.gov",
+          "phone": "202-224-4451",
+          "address": "478 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "01866",
+          "lis_id": "S331",
+          "govtrack_id": "412223",
+          "contact_form": "http://www.gillibrand.senate.gov/contact/",
+          "youtube": "KirstenEGillibrand",
+          "facebook": "KirstenGillibrand",
+          "youtube_id": "UCVEloQogVsmnkd5vxJInmYg"
+        }
+      }
+    ],
+    "weights": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "umatrix_value": 0.9980473837407805,
+    "centroid": [
+      -6.928203230275509,
+      3.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.999999,
+        1.0,
+        0.978298,
+        0.999999,
+        0.999997,
+        0.999999,
+        0.999996,
+        0.999882
+      ]
+    ],
+    "umatrix_value": 0.9506867163511002,
+    "centroid": [
+      -5.196152422706632,
+      3.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.98836,
+        0.996854,
+        0.752096,
+        0.985862,
+        0.994481,
+        0.984247,
+        0.986823,
+        0.736621
+      ]
+    ],
+    "umatrix_value": 0.8897804444524636,
+    "centroid": [
+      -3.4641016151377544,
+      3.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.913082,
+        0.934718,
+        0.932196,
+        0.801791,
+        0.798086,
+        0.791667,
+        0.929946,
+        0.167719
+      ]
+    ],
+    "umatrix_value": 0.8053993704865194,
+    "centroid": [
+      -1.7320508075688772,
+      3.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.66711,
+        0.745267,
+        0.91737,
+        -0.532021,
+        -0.536037,
+        0.46081,
+        0.872269,
+        -0.768864
+      ]
+    ],
+    "umatrix_value": 0.7487661414404292,
+    "centroid": [
+      0.0,
+      3.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S245",
+        "features": [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Snowe",
+          "cspan_id": "",
+          "state": "ME",
+          "opensecrets_id": "N00000480",
+          "party": "Republican",
+          "first_name": "Olympia",
+          "district": "",
+          "bioguide_id": "S000663",
+          "votesmart_id": "26885",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "F",
+          "washington_post_id": "",
+          "icpsr_id": "14661",
+          "wikipedia_id": "Olympia Snowe",
+          "birthday": "1947-02-21",
+          "twitter": "",
+          "url": "http://snowe.senate.gov/",
+          "phone": "202-224-5344",
+          "address": "154 RUSSELL SENATE OFFICE BUILDING WASHINGTON DC 20510",
+          "thomas_id": "01085",
+          "lis_id": "S245",
+          "govtrack_id": "300091",
+          "contact_form": "http://www.snowe.senate.gov/public/index.cfm/contact?p=email",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.6688083466682295,
+    "centroid": [
+      1.7320508075688772,
+      3.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S235",
+        "features": [
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Hutchison",
+          "cspan_id": "24713",
+          "state": "TX",
+          "opensecrets_id": "N00005675",
+          "party": "Republican",
+          "first_name": "Kay",
+          "district": "",
+          "bioguide_id": "H001016",
+          "votesmart_id": "53349",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "F",
+          "washington_post_id": "",
+          "icpsr_id": "49306",
+          "wikipedia_id": "Kay Bailey Hutchison",
+          "birthday": "1943-07-22",
+          "twitter": "",
+          "url": "http://hutchison.senate.gov/",
+          "phone": "202-224-5922",
+          "address": "284 RUSSELL SENATE OFFICE BUILDING WASHINGTON DC 20510",
+          "thomas_id": "01368",
+          "lis_id": "S235",
+          "govtrack_id": "300054",
+          "contact_form": "http://www.hutchison.senate.gov/?p=email_kay",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        1.0,
+        1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.6901825498835739,
+    "centroid": [
+      3.464101615137755,
+      3.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.984364,
+        -0.623261,
+        0.979587,
+        -0.998577,
+        -0.999501,
+        -0.992576,
+        0.487966,
+        -0.632825
+      ]
+    ],
+    "umatrix_value": 0.7619486873117226,
+    "centroid": [
+      5.196152422706632,
+      3.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S230",
+        "features": [
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1
+        ],
+        "profile": {
+          "last_name": "Feingold",
+          "cspan_id": "",
+          "state": "WI",
+          "opensecrets_id": "N00000036",
+          "party": "Democrat",
+          "first_name": "Russell",
+          "district": "",
+          "bioguide_id": "F000061",
+          "votesmart_id": "53361",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "49309",
+          "wikipedia_id": "Russ Feingold",
+          "birthday": "1953-03-02",
+          "twitter": "",
+          "url": "http://feingold.senate.gov",
+          "phone": "",
+          "address": "",
+          "thomas_id": "01331",
+          "lis_id": "S230",
+          "govtrack_id": "300042",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        -1.0,
+        1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0
+      ]
+    ],
+    "umatrix_value": 0.6195288203050373,
+    "centroid": [
+      6.928203230275509,
+      3.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        1.0,
+        1.0,
+        0.999879,
+        1.0,
+        1.0,
+        1.0,
+        0.999638,
+        1.0
+      ]
+    ],
+    "umatrix_value": 0.9438440007689629,
+    "centroid": [
+      -7.794228634059947,
+      1.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.999999,
+        1.0,
+        0.978303,
+        0.999999,
+        1.0,
+        0.999999,
+        0.999653,
+        0.999998
+      ]
+    ],
+    "umatrix_value": 0.9423441851499897,
+    "centroid": [
+      -6.06217782649107,
+      1.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S173",
+        "features": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Kerry",
+          "cspan_id": "1485",
+          "state": "MA",
+          "opensecrets_id": "N00000245",
+          "party": "Democrat",
+          "first_name": "John",
+          "district": "",
+          "bioguide_id": "K000148",
+          "votesmart_id": "53306",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14920",
+          "wikipedia_id": "John Kerry",
+          "birthday": "1943-12-11",
+          "twitter": "",
+          "url": "http://www.kerry.senate.gov",
+          "phone": "202-224-2742",
+          "address": "218 RUSSELL SENATE OFFICE BUILDING WASHINGTON DC 20510",
+          "thomas_id": "01379",
+          "lis_id": "S173",
+          "govtrack_id": "300060",
+          "contact_form": "http://www.kerry.senate.gov/contact/",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "umatrix_value": 0.829780988962197,
+    "centroid": [
+      -4.330127018922193,
+      1.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.592589,
+        0.950123,
+        0.570229,
+        0.558453,
+        0.966878,
+        0.559906,
+        0.560997,
+        0.519836
+      ]
+    ],
+    "umatrix_value": 0.8432997097156361,
+    "centroid": [
+      -2.598076211353316,
+      1.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.254269,
+        0.751845,
+        0.732703,
+        0.059159,
+        0.672855,
+        0.219495,
+        0.237111,
+        -0.106602
+      ]
+    ],
+    "umatrix_value": 0.7773587859292205,
+    "centroid": [
+      -0.8660254037844386,
+      1.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.372194,
+        0.442237,
+        0.502513,
+        -0.829359,
+        -0.393973,
+        0.708775,
+        0.473485,
+        -0.901086
+      ]
+    ],
+    "umatrix_value": 0.7827895085923376,
+    "centroid": [
+      0.8660254037844386,
+      1.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.273171,
+        0.415274,
+        0.733513,
+        -0.968061,
+        -0.735912,
+        -0.050825,
+        0.713449,
+        -0.992305
+      ]
+    ],
+    "umatrix_value": 0.7489025674152023,
+    "centroid": [
+      2.598076211353316,
+      1.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S118",
+        "features": [
+          -1,
+          0,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Hatch",
+          "cspan_id": "189",
+          "state": "UT",
+          "opensecrets_id": "N00009869",
+          "party": "Republican",
+          "first_name": "Orrin",
+          "district": "",
+          "bioguide_id": "H000338",
+          "votesmart_id": "53352",
+          "ballotpedia_id": "Orrin Hatch",
+          "type": "sen",
+          "rss_url": "http://www.hatch.senate.gov/public/index.cfm/rss/feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14503",
+          "wikipedia_id": "Orrin Hatch",
+          "birthday": "1934-03-22",
+          "twitter": "SenOrrinHatch",
+          "url": "http://www.hatch.senate.gov",
+          "phone": "202-224-5251",
+          "address": "104 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01351",
+          "lis_id": "S118",
+          "govtrack_id": "300052",
+          "contact_form": "http://www.hatch.senate.gov/public/index.cfm/contact?p=Email-Orrin",
+          "youtube": "SenatorOrrinHatch",
+          "facebook": "senatororrinhatch",
+          "youtube_id": "UCQUPyPV_SR435OsPiFNIWPQ"
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        0.0,
+        1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.7134841214004473,
+    "centroid": [
+      4.330127018922194,
+      1.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S299",
+        "features": [
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Vitter",
+          "cspan_id": "60672",
+          "state": "LA",
+          "opensecrets_id": "N00009659",
+          "party": "Republican",
+          "first_name": "David",
+          "district": "",
+          "bioguide_id": "V000127",
+          "votesmart_id": "4615",
+          "ballotpedia_id": "David Vitter",
+          "type": "sen",
+          "rss_url": "http://www.vitter.senate.gov/rss/feeds/?type=all",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "29918",
+          "wikipedia_id": "David Vitter",
+          "birthday": "1961-05-03",
+          "twitter": "",
+          "url": "https://www.vitter.senate.gov",
+          "phone": "202-224-4623",
+          "address": "516 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01609",
+          "lis_id": "S299",
+          "govtrack_id": "400418",
+          "contact_form": "http://www.vitter.senate.gov/contact/email-senator-vitter",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        -1.0,
+        1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.6894003262061839,
+    "centroid": [
+      6.06217782649107,
+      1.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.993631,
+        -0.998148,
+        -0.320175,
+        -0.999796,
+        -0.836282,
+        -0.999818,
+        -0.969897,
+        -0.665582
+      ]
+    ],
+    "umatrix_value": 0.7609777851751923,
+    "centroid": [
+      7.794228634059947,
+      1.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.999718,
+        0.999975,
+        0.999347,
+        0.999921,
+        0.999934,
+        0.999915,
+        0.386366,
+        0.999918
+      ]
+    ],
+    "umatrix_value": 0.9397181342926932,
+    "centroid": [
+      -8.660254037844386,
+      0.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.998697,
+        0.999842,
+        0.991895,
+        0.999356,
+        0.999833,
+        0.999317,
+        0.364255,
+        0.999344
+      ]
+    ],
+    "umatrix_value": 0.9185187051038441,
+    "centroid": [
+      -6.928203230275509,
+      0.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.983335,
+        0.99674,
+        0.713168,
+        0.984511,
+        0.997563,
+        0.983698,
+        0.864351,
+        0.984287
+      ]
+    ],
+    "umatrix_value": 0.8726130487311905,
+    "centroid": [
+      -5.196152422706632,
+      0.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.561673,
+        0.912877,
+        0.543548,
+        0.562089,
+        0.936169,
+        0.542214,
+        0.498176,
+        0.577423
+      ]
+    ],
+    "umatrix_value": 0.8422825476602055,
+    "centroid": [
+      -3.4641016151377544,
+      0.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S334",
+        "features": [
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "profile": {
+          "last_name": "Kirk",
+          "cspan_id": "",
+          "state": "MA",
+          "opensecrets_id": "N00031303",
+          "party": "Democrat",
+          "first_name": "Paul",
+          "district": "",
+          "bioguide_id": "K000374",
+          "votesmart_id": "116298",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40912",
+          "wikipedia_id": "Paul G. Kirk",
+          "birthday": "1938-01-18",
+          "twitter": "",
+          "url": "http://kirk.senate.gov/ ",
+          "phone": "",
+          "address": "",
+          "thomas_id": "01972",
+          "lis_id": "S334",
+          "govtrack_id": "412381",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ]
+    ],
+    "umatrix_value": 0.7710962284498827,
+    "centroid": [
+      -1.7320508075688772,
+      0.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.20186,
+        0.202733,
+        0.203474,
+        -0.191645,
+        0.377752,
+        0.200115,
+        0.012012,
+        -0.568877
+      ]
+    ],
+    "umatrix_value": 0.7922643643166544,
+    "centroid": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S335",
+        "features": [
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "profile": {
+          "last_name": "Brown",
+          "cspan_id": "9266532",
+          "state": "MA",
+          "opensecrets_id": "N00031174",
+          "party": "Republican",
+          "first_name": "Scott",
+          "district": "",
+          "bioguide_id": "B001268",
+          "votesmart_id": "18919",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40913",
+          "wikipedia_id": "Scott Brown (politician)",
+          "birthday": "1959-09-12",
+          "twitter": "",
+          "url": "http://scottbrown.senate.gov",
+          "phone": "202-224-4543",
+          "address": "359 DIRKSEN SENATE OFFICE BUILDING WASHINGTON DC 20510",
+          "thomas_id": "01975",
+          "lis_id": "S335",
+          "govtrack_id": "412384",
+          "contact_form": "http://www.scottbrown.senate.gov/public/index.cfm/emailscottbrown",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        -0.0,
+        0.0,
+        0.0,
+        -1.0,
+        -0.0,
+        1.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.7774043527088783,
+    "centroid": [
+      1.7320508075688772,
+      0.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.338119,
+        -0.169398,
+        0.062258,
+        -0.892658,
+        -0.337203,
+        0.116066,
+        0.216945,
+        -0.963657
+      ]
+    ],
+    "umatrix_value": 0.7513226647116346,
+    "centroid": [
+      3.4641016151377544,
+      0.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.96587,
+        -0.885041,
+        -0.317928,
+        -0.994588,
+        -0.943656,
+        -0.967042,
+        -0.715174,
+        -0.971587
+      ]
+    ],
+    "umatrix_value": 0.7344575600144859,
+    "centroid": [
+      5.196152422706632,
+      0.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S254",
+        "features": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Enzi",
+          "cspan_id": "45824",
+          "state": "WY",
+          "opensecrets_id": "N00006249",
+          "party": "Republican",
+          "first_name": "Michael",
+          "district": "",
+          "bioguide_id": "E000285",
+          "votesmart_id": "558",
+          "ballotpedia_id": "Mike Enzi",
+          "type": "sen",
+          "rss_url": "http://www.enzi.senate.gov/public/index.cfm/rss/feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "49706",
+          "wikipedia_id": "Mike Enzi",
+          "birthday": "1944-02-01",
+          "twitter": "SenatorEnzi",
+          "url": "https://www.enzi.senate.gov",
+          "phone": "202-224-3424",
+          "address": "379A Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "01542",
+          "lis_id": "S254",
+          "govtrack_id": "300041",
+          "contact_form": "http://www.enzi.senate.gov/public/index.cfm/contact?p=e-mail-senator-enzi",
+          "youtube": "senatorenzi",
+          "facebook": "mikeenzi",
+          "youtube_id": "UCipEXEDAKVPj_B0cQjaikEA"
+        }
+      },
+      {
+        "id": "S302",
+        "features": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "profile": {
+          "last_name": "DeMint",
+          "cspan_id": "57895",
+          "state": "SC",
+          "opensecrets_id": "N00002472",
+          "party": "Republican",
+          "first_name": "Jim",
+          "district": "",
+          "bioguide_id": "D000595",
+          "votesmart_id": "25026",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "29936",
+          "wikipedia_id": "Jim DeMint",
+          "birthday": "1951-09-02",
+          "twitter": "",
+          "url": "http://demint.senate.gov",
+          "phone": "202-224-6121",
+          "address": "167 RUSSELL SENATE OFFICE BUILDING WASHINGTON DC 20510",
+          "thomas_id": "01605",
+          "lis_id": "S302",
+          "govtrack_id": "400105",
+          "contact_form": "http://www.demint.senate.gov/public/index.cfm?p=ContactInformation",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S317",
+        "features": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Barrasso",
+          "cspan_id": "1024777",
+          "state": "WY",
+          "opensecrets_id": "N00006236",
+          "party": "Republican",
+          "first_name": "John",
+          "district": "",
+          "bioguide_id": "B001261",
+          "votesmart_id": "52662",
+          "ballotpedia_id": "John Barrasso",
+          "type": "sen",
+          "rss_url": "http://www.barrasso.senate.gov/public/index.cfm?FuseAction=Rss.Feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40707",
+          "wikipedia_id": "John Barrasso",
+          "birthday": "1952-07-21",
+          "twitter": "SenJohnBarrasso",
+          "url": "https://www.barrasso.senate.gov",
+          "phone": "202-224-6441",
+          "address": "307 Dirksen Senate Office Building Washington DC 20510",
+          "thomas_id": "01881",
+          "lis_id": "S317",
+          "govtrack_id": "412251",
+          "contact_form": "https://www.barrasso.senate.gov/public/index.cfm/contact-form",
+          "youtube": "barrassowyo",
+          "facebook": "johnbarrasso",
+          "youtube_id": "UC80PfiCAB2Fe1MFayWlR6GQ"
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.7961615943950764,
+    "centroid": [
+      6.928203230275509,
+      0.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S301",
+        "features": [
+          -1,
+          -1,
+          -1,
+          -1,
+          0,
+          -1,
+          -1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Coburn",
+          "cspan_id": "36751",
+          "state": "OK",
+          "opensecrets_id": "N00005601",
+          "party": "Republican",
+          "first_name": "Thomas",
+          "district": "",
+          "bioguide_id": "C000560",
+          "votesmart_id": "22085",
+          "ballotpedia_id": "Tom Coburn",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "29555",
+          "wikipedia_id": "Tom Coburn",
+          "birthday": "1948-03-14",
+          "twitter": "",
+          "url": "http://www.coburn.senate.gov",
+          "phone": "202-224-5754",
+          "address": "172 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "00212",
+          "lis_id": "S301",
+          "govtrack_id": "400576",
+          "contact_form": "http://www.coburn.senate.gov/public/?p=ContactForm#form_904650a1-34fd-4705-aec9-87815cbf9cb4",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -0.0,
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.7724938771994507,
+    "centroid": [
+      8.660254037844386,
+      0.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S176",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "profile": {
+          "last_name": "Rockefeller",
+          "cspan_id": "1238",
+          "state": "WV",
+          "opensecrets_id": "N00001685",
+          "party": "Democrat",
+          "first_name": "John",
+          "district": "",
+          "bioguide_id": "R000361",
+          "votesmart_id": "53360",
+          "ballotpedia_id": "Jay Rockefeller",
+          "type": "sen",
+          "rss_url": "http://www.rockefeller.senate.gov/public/index.cfm/rss/feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14922",
+          "wikipedia_id": "Jay Rockefeller",
+          "birthday": "1937-06-18",
+          "twitter": "",
+          "url": "http://www.rockefeller.senate.gov",
+          "phone": "202-224-6472",
+          "address": "531 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01424",
+          "lis_id": "S176",
+          "govtrack_id": "300084",
+          "contact_form": "http://www.rockefeller.senate.gov/public/index.cfm/email-jay",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S182",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "profile": {
+          "last_name": "Mikulski",
+          "cspan_id": "1396",
+          "state": "MD",
+          "opensecrets_id": "N00001945",
+          "party": "Democrat",
+          "first_name": "Barbara",
+          "district": "",
+          "bioguide_id": "M000702",
+          "votesmart_id": "53304",
+          "ballotpedia_id": "Barbara Mikulski",
+          "type": "sen",
+          "rss_url": "http://www.mikulski.senate.gov/rssfeed.cfm",
+          "gender": "F",
+          "washington_post_id": "",
+          "icpsr_id": "14440",
+          "wikipedia_id": "Barbara Mikulski",
+          "birthday": "1936-07-20",
+          "twitter": "",
+          "url": "https://www.mikulski.senate.gov",
+          "phone": "202-224-4654",
+          "address": "503 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "00802",
+          "lis_id": "S182",
+          "govtrack_id": "300073",
+          "contact_form": "http://www.mikulski.senate.gov/contact/shareyouropinion.cfm",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S221",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "profile": {
+          "last_name": "Feinstein",
+          "cspan_id": "13061",
+          "state": "CA",
+          "opensecrets_id": "N00007364",
+          "party": "Democrat",
+          "first_name": "Dianne",
+          "district": "",
+          "bioguide_id": "F000062",
+          "votesmart_id": "53273",
+          "ballotpedia_id": "Dianne Feinstein",
+          "type": "sen",
+          "rss_url": "http://www.feinstein.senate.gov/public/?a=rss.feed",
+          "gender": "F",
+          "washington_post_id": "",
+          "icpsr_id": "49300",
+          "wikipedia_id": "Dianne Feinstein",
+          "birthday": "1933-06-22",
+          "twitter": "SenFeinstein",
+          "url": "https://www.feinstein.senate.gov",
+          "phone": "202-224-3841",
+          "address": "331 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01332",
+          "lis_id": "S221",
+          "govtrack_id": "300043",
+          "contact_form": "https://www.feinstein.senate.gov/public/index.cfm/e-mail-me",
+          "youtube": "SenatorFeinstein",
+          "facebook": "senatorfeinstein",
+          "youtube_id": "UCtVC--6LR0ff2aOP8THpuEw"
+        }
+      }
+    ],
+    "weights": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.0,
+        1.0
+      ]
+    ],
+    "umatrix_value": 0.9151227356508891,
+    "centroid": [
+      -7.794228634059947,
+      -1.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.988551,
+        0.998387,
+        0.990646,
+        0.998393,
+        0.998278,
+        0.997926,
+        -0.169151,
+        0.998774
+      ]
+    ],
+    "umatrix_value": 0.8912537620969609,
+    "centroid": [
+      -6.06217782649107,
+      -1.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.801734,
+        0.860191,
+        0.823419,
+        0.859522,
+        0.895286,
+        0.817972,
+        0.249651,
+        0.888076
+      ]
+    ],
+    "umatrix_value": 0.8485531656216146,
+    "centroid": [
+      -4.330127018922194,
+      -1.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.258067,
+        0.273301,
+        0.262561,
+        0.272287,
+        0.502398,
+        0.043179,
+        0.030004,
+        0.477732
+      ]
+    ],
+    "umatrix_value": 0.8012399270377816,
+    "centroid": [
+      -2.598076211353316,
+      -1.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S017",
+        "features": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "profile": {
+          "last_name": "Byrd",
+          "cspan_id": "",
+          "state": "WV",
+          "opensecrets_id": "N00002200",
+          "party": "Democrat",
+          "first_name": "Robert",
+          "district": "",
+          "bioguide_id": "B001210",
+          "votesmart_id": "53359",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "1366",
+          "wikipedia_id": "Robert Byrd",
+          "birthday": "1917-11-20",
+          "twitter": "",
+          "url": "http://byrd.senate.gov",
+          "phone": "",
+          "address": "",
+          "thomas_id": "01299",
+          "lis_id": "S017",
+          "govtrack_id": "300016",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "umatrix_value": 0.7344008066144321,
+    "centroid": [
+      -0.8660254037844386,
+      -1.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S338",
+        "features": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "profile": {
+          "last_name": "Manchin",
+          "cspan_id": "62864",
+          "state": "WV",
+          "opensecrets_id": "N00032838",
+          "party": "Democrat",
+          "first_name": "Joe",
+          "district": "",
+          "bioguide_id": "M001183",
+          "votesmart_id": "7547",
+          "ballotpedia_id": "Joe Manchin III",
+          "type": "sen",
+          "rss_url": "http://www.manchin.senate.gov/public/index.cfm/rss/feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40915",
+          "wikipedia_id": "Joe Manchin",
+          "birthday": "1947-08-24",
+          "twitter": "Sen_JoeManchin",
+          "url": "https://www.manchin.senate.gov/public",
+          "phone": "202-224-3954",
+          "address": "306 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01983",
+          "lis_id": "S338",
+          "govtrack_id": "412391",
+          "contact_form": "http://www.manchin.senate.gov/public/index.cfm/contact-form",
+          "youtube": "SenatorJoeManchin",
+          "facebook": "JoeManchinIII",
+          "youtube_id": "UCGyPK_ye2ptpzQgOjKIn7ag"
+        }
+      },
+      {
+        "id": "S339",
+        "features": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "profile": {
+          "last_name": "Kirk",
+          "cspan_id": "85221",
+          "state": "IL",
+          "opensecrets_id": "N00012539",
+          "party": "Republican",
+          "first_name": "Mark",
+          "district": "",
+          "bioguide_id": "K000360",
+          "votesmart_id": "33502",
+          "ballotpedia_id": "Mark Kirk",
+          "type": "sen",
+          "rss_url": "http://kirk.senate.gov/rss/?p=hot_topic",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "20115",
+          "wikipedia_id": "Mark Kirk",
+          "birthday": "1959-09-15",
+          "twitter": "",
+          "url": "https://www.kirk.senate.gov",
+          "phone": "202-224-2854",
+          "address": "524 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01647",
+          "lis_id": "S339",
+          "govtrack_id": "400222",
+          "contact_form": "http://www.kirk.senate.gov/?p=comment_on_legislation",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.8317785315405678,
+    "centroid": [
+      0.8660254037844386,
+      -1.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.046132,
+        -0.054879,
+        -0.047747,
+        -0.354492,
+        -0.01368,
+        0.230069,
+        0.058955,
+        -0.952615
+      ]
+    ],
+    "umatrix_value": 0.796735626067764,
+    "centroid": [
+      2.598076211353316,
+      -1.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.904457,
+        -0.91754,
+        -0.867983,
+        -0.94279,
+        -0.260899,
+        -0.906409,
+        0.783035,
+        -0.98896
+      ]
+    ],
+    "umatrix_value": 0.7892498784483094,
+    "centroid": [
+      4.330127018922193,
+      -1.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.83859,
+        -0.996303,
+        -0.982063,
+        -0.997107,
+        -0.672025,
+        -0.99794,
+        -0.094852,
+        -0.998849
+      ]
+    ],
+    "umatrix_value": 0.819345564774629,
+    "centroid": [
+      6.06217782649107,
+      -1.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S333",
+        "features": [
+          0,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0,
+          -1
+        ],
+        "profile": {
+          "last_name": "LeMieux",
+          "cspan_id": "46456",
+          "state": "FL",
+          "opensecrets_id": "N00031304",
+          "party": "Republican",
+          "first_name": "George",
+          "district": "",
+          "bioguide_id": "L000572",
+          "votesmart_id": "17431",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40911",
+          "wikipedia_id": "George LeMieux",
+          "birthday": "1969-05-21",
+          "twitter": "",
+          "url": "http://lemieux.senate.gov/",
+          "phone": "",
+          "address": "",
+          "thomas_id": "01971",
+          "lis_id": "S333",
+          "govtrack_id": "412380",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        -0.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -0.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.7639501394946635,
+    "centroid": [
+      7.794228634059947,
+      -1.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S313",
+        "features": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          1
+        ],
+        "profile": {
+          "last_name": "Sanders",
+          "cspan_id": "994",
+          "state": "VT",
+          "opensecrets_id": "N00000528",
+          "party": "Independent",
+          "first_name": "Bernard",
+          "district": "",
+          "bioguide_id": "S000033",
+          "votesmart_id": "27110",
+          "ballotpedia_id": "Bernie Sanders",
+          "type": "sen",
+          "rss_url": "http://www.sanders.senate.gov/rss/",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "29147",
+          "wikipedia_id": "Bernie Sanders",
+          "birthday": "1941-09-08",
+          "twitter": "SenSanders",
+          "url": "https://www.sanders.senate.gov",
+          "phone": "202-224-5141",
+          "address": "332 Dirksen Senate Office Building Washington DC 20510",
+          "thomas_id": "01010",
+          "lis_id": "S313",
+          "govtrack_id": "400357",
+          "contact_form": "http://www.sanders.senate.gov/contact/",
+          "youtube": "senatorsanders",
+          "facebook": "senatorsanders",
+          "youtube_id": "UCD_DaKNac0Ta-2PeHuoQ1uA"
+        }
+      }
+    ],
+    "weights": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -1.0,
+        1.0
+      ]
+    ],
+    "umatrix_value": 0.7947222461076293,
+    "centroid": [
+      -6.928203230275509,
+      -3.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.542266,
+        0.952526,
+        0.948532,
+        0.970905,
+        0.93107,
+        0.949581,
+        0.053342,
+        0.990004
+      ]
+    ],
+    "umatrix_value": 0.8498471849847912,
+    "centroid": [
+      -5.196152422706632,
+      -3.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.020449,
+        0.379323,
+        0.390359,
+        0.646752,
+        0.371683,
+        0.356325,
+        0.325713,
+        0.920528
+      ]
+    ],
+    "umatrix_value": 0.8138124579707273,
+    "centroid": [
+      -3.464101615137755,
+      -3.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S336",
+        "features": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "profile": {
+          "last_name": "Goodwin",
+          "cspan_id": "9266706",
+          "state": "WV",
+          "opensecrets_id": "N00032762",
+          "party": "Democrat",
+          "first_name": "Carte",
+          "district": "",
+          "bioguide_id": "G000561",
+          "votesmart_id": "126202",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40914",
+          "wikipedia_id": "Carte Goodwin",
+          "birthday": "1974-02-27",
+          "twitter": "",
+          "url": "",
+          "phone": "",
+          "address": "",
+          "thomas_id": "01980",
+          "lis_id": "S336",
+          "govtrack_id": "412389",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S337",
+        "features": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "profile": {
+          "last_name": "Coons",
+          "cspan_id": "9269028",
+          "state": "DE",
+          "opensecrets_id": "N00031820",
+          "party": "Democrat",
+          "first_name": "Chris",
+          "district": "",
+          "bioguide_id": "C001088",
+          "votesmart_id": "122834",
+          "ballotpedia_id": "Chris Coons",
+          "type": "sen",
+          "rss_url": "http://www.coons.senate.gov/rss/feeds/?type=all",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40916",
+          "wikipedia_id": "Chris Coons",
+          "birthday": "1963-09-09",
+          "twitter": "SenCoonsOffice",
+          "url": "https://www.coons.senate.gov",
+          "phone": "202-224-5042",
+          "address": "127A Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "01984",
+          "lis_id": "S337",
+          "govtrack_id": "412390",
+          "contact_form": "https://www.coons.senate.gov/contact",
+          "youtube": "senatorchriscoons",
+          "facebook": "senatorchriscoons",
+          "youtube_id": "UC2lOVbsddn1HIkcDnmCw6tA"
+        }
+      }
+    ],
+    "weights": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.460009,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "umatrix_value": 0.8091858327154998,
+    "centroid": [
+      -1.7320508075688772,
+      -3.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S055",
+        "features": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "profile": {
+          "last_name": "Kennedy",
+          "cspan_id": "",
+          "state": "MA",
+          "opensecrets_id": "N00000308",
+          "party": "Democrat",
+          "first_name": "Edward",
+          "district": "",
+          "bioguide_id": "K000105",
+          "votesmart_id": "53305",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "10808",
+          "wikipedia_id": "Ted Kennedy",
+          "birthday": "1932-02-22",
+          "twitter": "",
+          "url": "http://kennedy.senate.gov/",
+          "phone": "",
+          "address": "",
+          "thomas_id": "01377",
+          "lis_id": "S055",
+          "govtrack_id": "300059",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "umatrix_value": 0.8384806854038562,
+    "centroid": [
+      0.0,
+      -3.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.046651,
+        -0.038665,
+        -0.049742,
+        -0.044875,
+        -0.008333,
+        -0.044772,
+        0.063758,
+        -0.62025
+      ]
+    ],
+    "umatrix_value": 0.8212550821563904,
+    "centroid": [
+      1.7320508075688772,
+      -3.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.902335,
+        -0.886178,
+        -0.897942,
+        -0.8354,
+        -0.228386,
+        -0.884985,
+        0.893822,
+        -0.963708
+      ]
+    ],
+    "umatrix_value": 0.8173879080750625,
+    "centroid": [
+      3.4641016151377544,
+      -3.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S236",
+        "features": [
+          -1,
+          -1,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Inhofe",
+          "cspan_id": "5619",
+          "state": "OK",
+          "opensecrets_id": "N00005582",
+          "party": "Republican",
+          "first_name": "James",
+          "district": "",
+          "bioguide_id": "I000024",
+          "votesmart_id": "27027",
+          "ballotpedia_id": "Jim Inhofe",
+          "type": "sen",
+          "rss_url": "http://www.inhofe.senate.gov/rss/feeds/?type=all&amp;cachebuster=eea6c4d7%2d939c%2d5c1e%2db6c7aa3b8b291208",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "15424",
+          "wikipedia_id": "Jim Inhofe",
+          "birthday": "1934-11-17",
+          "twitter": "InhofePress",
+          "url": "https://www.inhofe.senate.gov",
+          "phone": "202-224-4721",
+          "address": "205 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "00583",
+          "lis_id": "S236",
+          "govtrack_id": "300055",
+          "contact_form": "https://www.inhofe.senate.gov/contact",
+          "youtube": "jiminhofepressoffice",
+          "facebook": "jiminhofe",
+          "youtube_id": "UCk3W3ilX8vGG-300qzNpG7w"
+        }
+      },
+      {
+        "id": "S265",
+        "features": [
+          -1,
+          -1,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Bunning",
+          "cspan_id": "1457",
+          "state": "KY",
+          "opensecrets_id": "N00003437",
+          "party": "Republican",
+          "first_name": "Jim",
+          "district": "",
+          "bioguide_id": "B001066",
+          "votesmart_id": "26874",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "15406",
+          "wikipedia_id": "Jim Bunning",
+          "birthday": "1931-10-23",
+          "twitter": "",
+          "url": "http://bunning.senate.gov",
+          "phone": "",
+          "address": "",
+          "thomas_id": "00146",
+          "lis_id": "S265",
+          "govtrack_id": "300014",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -0.0,
+        -1.0,
+        1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.8587452747967564,
+    "centroid": [
+      5.196152422706632,
+      -3.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.910327,
+        -0.999936,
+        -0.999783,
+        -0.992338,
+        -0.818495,
+        -0.999976,
+        0.894782,
+        -0.99998
+      ]
+    ],
+    "umatrix_value": 0.8519103645360977,
+    "centroid": [
+      6.928203230275509,
+      -3.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        0.027338,
+        0.993478,
+        0.958237,
+        0.995098,
+        0.919236,
+        0.992009,
+        0.341696,
+        0.995773
+      ]
+    ],
+    "umatrix_value": 0.816931666003085,
+    "centroid": [
+      -6.0621778264910695,
+      -4.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S332",
+        "features": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Franken",
+          "cspan_id": "23334",
+          "state": "MN",
+          "opensecrets_id": "N00029016",
+          "party": "Democrat",
+          "first_name": "Alan",
+          "district": "",
+          "bioguide_id": "F000457",
+          "votesmart_id": "108924",
+          "ballotpedia_id": "Al Franken",
+          "type": "sen",
+          "rss_url": "http://franken.senate.gov/rss/?p=hot_topic",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40904",
+          "wikipedia_id": "Al Franken",
+          "birthday": "1951-05-21",
+          "twitter": "SenFranken",
+          "url": "https://www.franken.senate.gov",
+          "phone": "202-224-5641",
+          "address": "309 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01969",
+          "lis_id": "S332",
+          "govtrack_id": "412378",
+          "contact_form": "https://www.franken.senate.gov/?p=contact",
+          "youtube": "SenatorFranken",
+          "facebook": "senatoralfranken",
+          "youtube_id": "UCMFNp5ybWmz6IlSXmPacTOw"
+        }
+      }
+    ],
+    "weights": [
+      [
+        -0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "umatrix_value": 0.7635252402937398,
+    "centroid": [
+      -4.330127018922193,
+      -4.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.38206,
+        0.396341,
+        0.572359,
+        0.589507,
+        0.035607,
+        0.358909,
+        0.588909,
+        0.745714
+      ]
+    ],
+    "umatrix_value": 0.7884106847639489,
+    "centroid": [
+      -2.598076211353316,
+      -4.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.261313,
+        0.055261,
+        0.252785,
+        0.27517,
+        -0.008606,
+        -0.016782,
+        0.284326,
+        0.412678
+      ]
+    ],
+    "umatrix_value": 0.811495542704356,
+    "centroid": [
+      -0.8660254037844384,
+      -4.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.294195,
+        0.19346,
+        -0.096471,
+        -0.012582,
+        -0.201366,
+        -0.279811,
+        0.336881,
+        -0.252773
+      ]
+    ],
+    "umatrix_value": 0.7787646691502692,
+    "centroid": [
+      0.8660254037844388,
+      -4.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.816608,
+        -0.364116,
+        -0.779929,
+        -0.494249,
+        -0.705424,
+        -0.809076,
+        0.820551,
+        -0.858516
+      ]
+    ],
+    "umatrix_value": 0.788505298339127,
+    "centroid": [
+      2.598076211353316,
+      -4.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.99967,
+        -0.989708,
+        -0.999706,
+        -0.6697,
+        -0.833974,
+        -0.999668,
+        0.999305,
+        -0.998274
+      ]
+    ],
+    "umatrix_value": 0.8348590136379929,
+    "centroid": [
+      4.330127018922193,
+      -4.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S174",
+        "features": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "McConnell",
+          "cspan_id": "2351",
+          "state": "KY",
+          "opensecrets_id": "N00003389",
+          "party": "Republican",
+          "first_name": "Mitch",
+          "district": "",
+          "bioguide_id": "M000355",
+          "votesmart_id": "53298",
+          "ballotpedia_id": "Mitch McConnell",
+          "type": "sen",
+          "rss_url": "http://www.mcconnell.senate.gov/public/?a=rss.feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14921",
+          "wikipedia_id": "Mitch McConnell",
+          "birthday": "1942-02-20",
+          "twitter": "McConnellPress",
+          "url": "https://www.mcconnell.senate.gov",
+          "phone": "202-224-2541",
+          "address": "317 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "01395",
+          "lis_id": "S174",
+          "govtrack_id": "300072",
+          "contact_form": "http://www.mcconnell.senate.gov/public/index.cfm?p=contact",
+          "youtube": "",
+          "facebook": "mitchmcconnell",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S261",
+        "features": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Sessions",
+          "cspan_id": "44441",
+          "state": "AL",
+          "opensecrets_id": "N00003062",
+          "party": "Republican",
+          "first_name": "Jefferson",
+          "district": "",
+          "bioguide_id": "S001141",
+          "votesmart_id": "443",
+          "ballotpedia_id": "Jeff Sessions",
+          "type": "sen",
+          "rss_url": "http://www.sessions.senate.gov/public/index.cfm?fuseaction=rss.feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "49700",
+          "wikipedia_id": "Jeff Sessions",
+          "birthday": "1946-12-24",
+          "twitter": "",
+          "url": "http://www.sessions.senate.gov/public",
+          "phone": "202-224-4124",
+          "address": "326 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "01548",
+          "lis_id": "S261",
+          "govtrack_id": "300088",
+          "contact_form": "http://www.sessions.senate.gov/public/index.cfm/contact-jeff",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S290",
+        "features": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Chambliss",
+          "cspan_id": "36571",
+          "state": "GA",
+          "opensecrets_id": "N00002685",
+          "party": "Republican",
+          "first_name": "Saxby",
+          "district": "",
+          "bioguide_id": "C000286",
+          "votesmart_id": "22029",
+          "ballotpedia_id": "Saxby Chambliss",
+          "type": "sen",
+          "rss_url": "http://www.chambliss.senate.gov/public/index.cfm/rss/feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "29512",
+          "wikipedia_id": "Saxby Chambliss",
+          "birthday": "1943-11-10",
+          "twitter": "",
+          "url": "http://www.chambliss.senate.gov",
+          "phone": "202-224-3521",
+          "address": "416 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "00188",
+          "lis_id": "S290",
+          "govtrack_id": "300021",
+          "contact_form": "http://www.chambliss.senate.gov/public/index.cfm?p=Email",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S293",
+        "features": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Graham",
+          "cspan_id": "36782",
+          "state": "SC",
+          "opensecrets_id": "N00009975",
+          "party": "Republican",
+          "first_name": "Lindsey",
+          "district": "",
+          "bioguide_id": "G000359",
+          "votesmart_id": "21992",
+          "ballotpedia_id": "Lindsey Graham",
+          "type": "sen",
+          "rss_url": "http://www.lgraham.senate.gov/public/index.cfm?FuseAction=Rss.Feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "29566",
+          "wikipedia_id": "Lindsey Graham",
+          "birthday": "1955-07-09",
+          "twitter": "GrahamBlog",
+          "url": "https://www.lgraham.senate.gov/public",
+          "phone": "202-224-5972",
+          "address": "290 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "00452",
+          "lis_id": "S293",
+          "govtrack_id": "300047",
+          "contact_form": "https://www.lgraham.senate.gov/public/index.cfm/e-mail-senator-graham",
+          "youtube": "USSenLindseyGraham",
+          "facebook": "USSenatorLindseyGraham",
+          "youtube_id": "UClLGZMA5Ei2Z8fR1PLEx6yQ"
+        }
+      },
+      {
+        "id": "S300",
+        "features": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Burr",
+          "cspan_id": "31054",
+          "state": "NC",
+          "opensecrets_id": "N00002221",
+          "party": "Republican",
+          "first_name": "Richard",
+          "district": "",
+          "bioguide_id": "B001135",
+          "votesmart_id": "21787",
+          "ballotpedia_id": "Richard Burr",
+          "type": "sen",
+          "rss_url": "http://www.burr.senate.gov/public/index.cfm?fuseaction=rss.feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "29548",
+          "wikipedia_id": "Richard Burr",
+          "birthday": "1955-11-30",
+          "twitter": "SenatorBurr",
+          "url": "https://www.burr.senate.gov",
+          "phone": "202-224-3154",
+          "address": "217 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "00153",
+          "lis_id": "S300",
+          "govtrack_id": "400054",
+          "contact_form": "https://www.burr.senate.gov/contact/email",
+          "youtube": "SenatorRichardBurr",
+          "facebook": "SenatorRichardBurr",
+          "youtube_id": "UCOLLZpp-1womBSFDV2uLfag"
+        }
+      },
+      {
+        "id": "S303",
+        "features": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Thune",
+          "cspan_id": "45552",
+          "state": "SD",
+          "opensecrets_id": "N00004572",
+          "party": "Republican",
+          "first_name": "John",
+          "district": "",
+          "bioguide_id": "T000250",
+          "votesmart_id": "398",
+          "ballotpedia_id": "John Thune",
+          "type": "sen",
+          "rss_url": "http://www.thune.senate.gov/public/index.cfm/rss/feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "29754",
+          "wikipedia_id": "John Thune",
+          "birthday": "1961-01-07",
+          "twitter": "SenJohnThune",
+          "url": "https://www.thune.senate.gov",
+          "phone": "202-224-2321",
+          "address": "511 Dirksen Senate Office Building Washington DC 20510",
+          "thomas_id": "01534",
+          "lis_id": "S303",
+          "govtrack_id": "400546",
+          "contact_form": "http://www.thune.senate.gov/public/index.cfm/contact",
+          "youtube": "johnthune",
+          "facebook": "",
+          "youtube_id": "UCRu6lpRfxhkDGUrKDgQNZYQ"
+        }
+      },
+      {
+        "id": "S305",
+        "features": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Isakson",
+          "cspan_id": "59135",
+          "state": "GA",
+          "opensecrets_id": "N00002593",
+          "party": "Republican",
+          "first_name": "John",
+          "district": "",
+          "bioguide_id": "I000055",
+          "votesmart_id": "1721",
+          "ballotpedia_id": "Johnny Isakson",
+          "type": "sen",
+          "rss_url": "http://www.isakson.senate.gov/public/?a=RSS.Feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "29909",
+          "wikipedia_id": "Johnny Isakson",
+          "birthday": "1944-12-28",
+          "twitter": "SenatorIsakson",
+          "url": "https://www.isakson.senate.gov",
+          "phone": "202-224-3643",
+          "address": "131 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "01608",
+          "lis_id": "S305",
+          "govtrack_id": "400194",
+          "contact_form": "https://www.isakson.senate.gov/public/index.cfm/email-me",
+          "youtube": "SenatorIsakson",
+          "facebook": "",
+          "youtube_id": "UCO80zDwuLZHtGr-KOfl_XCQ"
+        }
+      },
+      {
+        "id": "S310",
+        "features": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Corker",
+          "cspan_id": "1021114",
+          "state": "TN",
+          "opensecrets_id": "N00027441",
+          "party": "Republican",
+          "first_name": "Bob",
+          "district": "",
+          "bioguide_id": "C001071",
+          "votesmart_id": "65905",
+          "ballotpedia_id": "Bob Corker",
+          "type": "sen",
+          "rss_url": "http://www.corker.senate.gov/public/index.cfm/rss/feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40705",
+          "wikipedia_id": "Bob Corker",
+          "birthday": "1952-08-24",
+          "twitter": "SenBobCorker",
+          "url": "https://www.corker.senate.gov",
+          "phone": "202-224-3344",
+          "address": "425 Dirksen Senate Office Building Washington DC 20510",
+          "thomas_id": "01825",
+          "lis_id": "S310",
+          "govtrack_id": "412248",
+          "contact_form": "https://www.corker.senate.gov/public/index.cfm/emailme",
+          "youtube": "senatorcorker",
+          "facebook": "bobcorker",
+          "youtube_id": "UCm7if_szz7DxfcdYGrywHSA"
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.8409843200820909,
+    "centroid": [
+      6.06217782649107,
+      -4.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S252",
+        "features": [
+          -1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Collins",
+          "cspan_id": "45738",
+          "state": "ME",
+          "opensecrets_id": "N00000491",
+          "party": "Republican",
+          "first_name": "Susan",
+          "district": "",
+          "bioguide_id": "C001035",
+          "votesmart_id": "379",
+          "ballotpedia_id": "Susan Collins",
+          "type": "sen",
+          "rss_url": "http://www.collins.senate.gov/public/?a=rss.feed",
+          "gender": "F",
+          "washington_post_id": "",
+          "icpsr_id": "49703",
+          "wikipedia_id": "Susan Collins",
+          "birthday": "1952-12-07",
+          "twitter": "SenatorCollins",
+          "url": "http://www.collins.senate.gov",
+          "phone": "202-224-2523",
+          "address": "413 Dirksen Senate Office Building Washington DC 20510",
+          "thomas_id": "01541",
+          "lis_id": "S252",
+          "govtrack_id": "300025",
+          "contact_form": "http://www.collins.senate.gov/contact",
+          "youtube": "SenatorSusanCollins",
+          "facebook": "susancollins",
+          "youtube_id": "UC6GYaBx5kT2r4PN8KENxC-w"
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "umatrix_value": 0.68834138090952,
+    "centroid": [
+      -5.196152422706631,
+      -6.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S312",
+        "features": [
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "McCaskill",
+          "cspan_id": "1012014",
+          "state": "MO",
+          "opensecrets_id": "N00027694",
+          "party": "Democrat",
+          "first_name": "Claire",
+          "district": "",
+          "bioguide_id": "M001170",
+          "votesmart_id": "2109",
+          "ballotpedia_id": "Claire McCaskill",
+          "type": "sen",
+          "rss_url": "http://mccaskill.senate.gov/rss/?p=news",
+          "gender": "F",
+          "washington_post_id": "",
+          "icpsr_id": "40701",
+          "wikipedia_id": "Claire McCaskill",
+          "birthday": "1953-07-24",
+          "twitter": "McCaskillOffice",
+          "url": "https://www.mccaskill.senate.gov",
+          "phone": "202-224-6154",
+          "address": "503 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01820",
+          "lis_id": "S312",
+          "govtrack_id": "412243",
+          "contact_form": "http://www.mccaskill.senate.gov/contact",
+          "youtube": "SenatorMcCaskill",
+          "facebook": "senatormccaskill",
+          "youtube_id": "UCnarZ9jmNhI-eDcEPBwqMFw"
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        1.0,
+        1.0,
+        1.0,
+        -1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "umatrix_value": 0.6555050837672929,
+    "centroid": [
+      -3.4641016151377544,
+      -6.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S304",
+        "features": [
+          -1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "profile": {
+          "last_name": "Martinez",
+          "cspan_id": "",
+          "state": "FL",
+          "opensecrets_id": "N00026748",
+          "party": "Republican",
+          "first_name": "Mel",
+          "district": "",
+          "bioguide_id": "M001162",
+          "votesmart_id": "31193",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40501",
+          "wikipedia_id": "Mel Mart\u00ednez",
+          "birthday": "1946-10-23",
+          "twitter": "",
+          "url": "http://martinez.senate.gov",
+          "phone": "",
+          "address": "",
+          "thomas_id": "01769",
+          "lis_id": "S304",
+          "govtrack_id": "400621",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        0.0,
+        1.0,
+        0.0,
+        -0.0,
+        -0.0,
+        1.0,
+        -0.0
+      ]
+    ],
+    "umatrix_value": 0.7053752950085087,
+    "centroid": [
+      -1.7320508075688776,
+      -6.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.961201,
+        0.730126,
+        0.404397,
+        0.646669,
+        -0.506347,
+        -0.718135,
+        0.963335,
+        -0.687076
+      ]
+    ],
+    "umatrix_value": 0.7133686248613789,
+    "centroid": [
+      0.0,
+      -6.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S197",
+        "features": [
+          -1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "McCain",
+          "cspan_id": "7476",
+          "state": "AZ",
+          "opensecrets_id": "N00006424",
+          "party": "Republican",
+          "first_name": "John",
+          "district": "",
+          "bioguide_id": "M000303",
+          "votesmart_id": "53270",
+          "ballotpedia_id": "John McCain",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "15039",
+          "wikipedia_id": "John McCain",
+          "birthday": "1936-08-29",
+          "twitter": "SenJohnMcCain",
+          "url": "https://www.mccain.senate.gov",
+          "phone": "202-224-2235",
+          "address": "218 Russell Senate Office Building Washington DC 20510",
+          "thomas_id": "00754",
+          "lis_id": "S197",
+          "govtrack_id": "300071",
+          "contact_form": "https://www.mccain.senate.gov/public/index.cfm/contact-form",
+          "youtube": "SenatorJohnMcCain",
+          "facebook": "johnmccain",
+          "youtube_id": "UC9IJssXDUaKHzwx6gW4wEoA"
+        }
+      },
+      {
+        "id": "S281",
+        "features": [
+          -1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Ensign",
+          "cspan_id": "37076",
+          "state": "NV",
+          "opensecrets_id": "N00006619",
+          "party": "Republican",
+          "first_name": "John",
+          "district": "",
+          "bioguide_id": "E000194",
+          "votesmart_id": "22139",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "29537",
+          "wikipedia_id": "John Ensign",
+          "birthday": "1958-03-25",
+          "twitter": "",
+          "url": "http://ensign.senate.gov",
+          "phone": "",
+          "address": "119 RUSSELL SENATE OFFICE BUILDING WASHINGTON DC 20510",
+          "thomas_id": "00348",
+          "lis_id": "S281",
+          "govtrack_id": "300040",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.6981244737996661,
+    "centroid": [
+      1.7320508075688772,
+      -6.0
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.998063,
+        0.119386,
+        -0.994912,
+        -0.249289,
+        -0.982476,
+        -0.997518,
+        0.997947,
+        -0.815282
+      ]
+    ],
+    "umatrix_value": 0.8163995015138695,
+    "centroid": [
+      3.4641016151377544,
+      -6.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S153",
+        "features": [
+          -1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Grassley",
+          "cspan_id": "1167",
+          "state": "IA",
+          "opensecrets_id": "N00001758",
+          "party": "Republican",
+          "first_name": "Charles",
+          "district": "",
+          "bioguide_id": "G000386",
+          "votesmart_id": "53293",
+          "ballotpedia_id": "Chuck Grassley",
+          "type": "sen",
+          "rss_url": "http://grassley.senate.gov/customcf/rss_feed.cfm",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14226",
+          "wikipedia_id": "Chuck Grassley",
+          "birthday": "1933-09-17",
+          "twitter": "ChuckGrassley",
+          "url": "https://www.grassley.senate.gov",
+          "phone": "202-224-3744",
+          "address": "135 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "00457",
+          "lis_id": "S153",
+          "govtrack_id": "300048",
+          "contact_form": "http://www.grassley.senate.gov/contact",
+          "youtube": "senchuckgrassley",
+          "facebook": "grassley",
+          "youtube_id": "UCiCPRkcLMInpDeOqGkMTt4w"
+        }
+      },
+      {
+        "id": "S243",
+        "features": [
+          -1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Kyl",
+          "cspan_id": "",
+          "state": "AZ",
+          "opensecrets_id": "N00006406",
+          "party": "Republican",
+          "first_name": "Jon",
+          "district": "",
+          "bioguide_id": "K000352",
+          "votesmart_id": "26721",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "15429",
+          "wikipedia_id": "Jon Kyl",
+          "birthday": "1942-04-25",
+          "twitter": "",
+          "url": "http://kyl.senate.gov/",
+          "phone": "202-224-4521",
+          "address": "730 HART SENATE OFFICE BUILDING WASHINGTON DC 20510",
+          "thomas_id": "00655",
+          "lis_id": "S243",
+          "govtrack_id": "300062",
+          "contact_form": "http://www.kyl.senate.gov/contact.cfm",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.6889467142215855,
+    "centroid": [
+      5.196152422706632,
+      -6.0
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S264",
+        "features": [
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          1
+        ],
+        "profile": {
+          "last_name": "Bayh",
+          "cspan_id": "",
+          "state": "IN",
+          "opensecrets_id": "N00003762",
+          "party": "Democrat",
+          "first_name": "Evan",
+          "district": "",
+          "bioguide_id": "B001233",
+          "votesmart_id": "22418",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "49901",
+          "wikipedia_id": "Evan Bayh",
+          "birthday": "1955-12-26",
+          "twitter": "",
+          "url": "http://bayh.senate.gov",
+          "phone": "",
+          "address": "",
+          "thomas_id": "01572",
+          "lis_id": "S264",
+          "govtrack_id": "300006",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        1.0,
+        -1.0,
+        1.0,
+        -1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "umatrix_value": 0.5873911190135952,
+    "centroid": [
+      -4.330127018922193,
+      -7.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.988575,
+        0.802925,
+        0.586361,
+        0.799484,
+        -0.576067,
+        0.011666,
+        0.997343,
+        0.013561
+      ]
+    ],
+    "umatrix_value": 0.7096267843873467,
+    "centroid": [
+      -2.598076211353316,
+      -7.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S105",
+        "features": [
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Lugar",
+          "cspan_id": "255",
+          "state": "IN",
+          "opensecrets_id": "N00001764",
+          "party": "Republican",
+          "first_name": "Richard",
+          "district": "",
+          "bioguide_id": "L000504",
+          "votesmart_id": "53292",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14506",
+          "wikipedia_id": "Richard Lugar",
+          "birthday": "1932-04-04",
+          "twitter": "",
+          "url": "http://lugar.senate.gov/",
+          "phone": "202-224-4814",
+          "address": "306 HART SENATE OFFICE BUILDING WASHINGTON DC 20510",
+          "thomas_id": "01387",
+          "lis_id": "S105",
+          "govtrack_id": "300070",
+          "contact_form": "http://www.lugar.senate.gov/contact/",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      },
+      {
+        "id": "S271",
+        "features": [
+          -1,
+          1,
+          1,
+          1,
+          0,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Voinovich",
+          "cspan_id": "1783",
+          "state": "OH",
+          "opensecrets_id": "N00003583",
+          "party": "Republican",
+          "first_name": "George",
+          "district": "",
+          "bioguide_id": "V000126",
+          "votesmart_id": "21745",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "49903",
+          "wikipedia_id": "George Voinovich",
+          "birthday": "1936-07-15",
+          "twitter": "",
+          "url": "http://voinovich.senate.gov/",
+          "phone": "",
+          "address": "",
+          "thomas_id": "01575",
+          "lis_id": "S271",
+          "govtrack_id": "300098",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.556494,
+        -1.0,
+        1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.7127811083488969,
+    "centroid": [
+      -0.8660254037844393,
+      -7.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S224",
+        "features": [
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "profile": {
+          "last_name": "Gregg",
+          "cspan_id": "",
+          "state": "NH",
+          "opensecrets_id": "N00000444",
+          "party": "Republican",
+          "first_name": "Judd",
+          "district": "",
+          "bioguide_id": "G000445",
+          "votesmart_id": "53321",
+          "ballotpedia_id": "",
+          "type": "sen",
+          "rss_url": "",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "14826",
+          "wikipedia_id": "Judd Gregg",
+          "birthday": "1947-02-14",
+          "twitter": "",
+          "url": "http://gregg.senate.gov/",
+          "phone": "",
+          "address": "",
+          "thomas_id": "00466",
+          "lis_id": "S224",
+          "govtrack_id": "300049",
+          "contact_form": "",
+          "youtube": "",
+          "facebook": "",
+          "youtube_id": ""
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        1.0,
+        -1.0,
+        1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        -1.0
+      ]
+    ],
+    "umatrix_value": 0.6510774373480973,
+    "centroid": [
+      0.8660254037844384,
+      -7.5
+    ]
+  },
+  {
+    "labels": [
+      {
+        "id": "S287",
+        "features": [
+          -1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          0
+        ],
+        "profile": {
+          "last_name": "Cornyn",
+          "cspan_id": "93131",
+          "state": "TX",
+          "opensecrets_id": "N00024852",
+          "party": "Republican",
+          "first_name": "John",
+          "district": "",
+          "bioguide_id": "C001056",
+          "votesmart_id": "15375",
+          "ballotpedia_id": "John Cornyn",
+          "type": "sen",
+          "rss_url": "http://www.cornyn.senate.gov/public/?a=rss.feed",
+          "gender": "M",
+          "washington_post_id": "",
+          "icpsr_id": "40305",
+          "wikipedia_id": "John Cornyn",
+          "birthday": "1952-02-02",
+          "twitter": "JohnCornyn",
+          "url": "https://www.cornyn.senate.gov",
+          "phone": "202-224-2934",
+          "address": "517 Hart Senate Office Building Washington DC 20510",
+          "thomas_id": "01692",
+          "lis_id": "S287",
+          "govtrack_id": "300027",
+          "contact_form": "https://www.cornyn.senate.gov/contact",
+          "youtube": "senjohncornyn",
+          "facebook": "sen.johncornyn",
+          "youtube_id": "UCyQwLQavlOaJ64YuY_VMtiQ"
+        }
+      }
+    ],
+    "weights": [
+      [
+        -1.0,
+        1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        -0.0
+      ]
+    ],
+    "umatrix_value": 0.73148211782767,
+    "centroid": [
+      2.5980762113533156,
+      -7.5
+    ]
+  },
+  {
+    "labels": [],
+    "weights": [
+      [
+        -0.999723,
+        0.119763,
+        -0.997356,
+        -0.228122,
+        -0.998007,
+        -0.999688,
+        0.99967,
+        -0.810901
+      ]
+    ],
+    "umatrix_value": 0.8159301570453291,
+    "centroid": [
+      4.330127018922193,
+      -7.5
+    ]
+  }
+]

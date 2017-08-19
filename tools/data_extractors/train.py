@@ -108,13 +108,12 @@ def main():
         profiles = CongressMemberProfile(config)
         # export for each node
         results = []
-        for i, (centroid, vertices) in enumerate(
+        for i, (centroid, _) in enumerate(
             som.grid.shape_coords(config['export_shape_scale']),
         ):
             results.append(
                 {
                     'centroid': centroid,
-                    'vertices': vertices,
                     'umatrix_value': umatrix[i],
                     'labels': [
                         {
