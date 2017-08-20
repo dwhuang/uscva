@@ -1,5 +1,6 @@
 #cellInfo {
   font-family: 'Roboto Mono', monospace;
+  border: 1px solid black;
 }
 
 #cellInfo > thead {

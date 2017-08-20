@@ -59,46 +59,56 @@ function SelectCell(cell) {
     .attr('fill', GetSelectedCellTextColor);
 }
 
-function ClearCellInfoTable() {
-  d3.select('#cellInfo').select('tbody').selectAll('*').remove();
+function RemoveCellInfoTable() {
+  d3.select('#cellInfo').remove();
 }
 
-function PopulateCellInfoTable(data) {
+function AddCellInfoTable(data) {
   var labels = data['labels'];
   if (labels.length <= 0) {
     return;
   }
 
-  var cellInfoTable = d3.select('#cellInfo');
-  var cellInfoTableBody = cellInfoTable.select('tbody');
+  const voteCount = labels[0]['features'].length;
+
+  var table = d3.select('body').append('table');
+  table.attr('id', 'cellInfo');
+
+  var tableHead = table .append('thead');
+  var tableHeadRow = tableHead.append('tr');
+  tableHeadRow.append('th').text('Party');
+  tableHeadRow.append('th').text('Senator');
+  tableHeadRow.append('th').text('State');
+  tableHeadRow.append('th').text('Votes').attr('colspan', voteCount);
+
+  var tableBody = table.append('tbody');
 
   for (var label of labels) {
     var profile = label['profile'];
     assert(profile);
-    var features = label['features'];
-    assert(features);
+    var votes = label['features'];
+    assert(votes);
+    assert(votes.length === voteCount);
     var party = profile['party'];
+    var tableBodyRow = tableBody.append('tr');
 
-    var cellInfoTableRow = cellInfoTableBody.append('tr');
     if (party === 'Democrat') {
-      cellInfoTableRow.append('td').append('img')
-          .attr('src', 'img/democrat.png');
+      tableBodyRow.append('td').append('img').attr('src', 'img/democrat.png');
     } else if (party === 'Republican') {
-      cellInfoTableRow.append('td').append('img')
-          .attr('src', 'img/republican.png');
+      tableBodyRow.append('td').append('img').attr('src', 'img/republican.png');
     } else if (party == 'Independent') {
-      cellInfoTableRow.append('td')
-          .text('N/A');
+      tableBodyRow.append('td').text('N/A');
     } else {
-      cellInfoTableRow.append('td')
-          .text('oops');
+      tableBodyRow.append('td').text('oops');
     }
-    cellInfoTableRow.append('td')
-        .text(profile['first_name'] + ' ' + profile['last_name']);
-    cellInfoTableRow.append('td')
-        .text(profile['state']);
-    cellInfoTableRow.append('td')
-        .text(features.join(','));
+
+    var fullName = profile['first_name'] + ' ' + profile['last_name'];
+    tableBodyRow.append('td').text(fullName);
+    tableBodyRow.append('td').text(profile['state']);
+
+    for (var vote of votes) {
+      tableBodyRow.append('td').text(vote);
+    }
   }
 }
 
@@ -109,7 +119,7 @@ function OnCellClick(data) {
 
   if (!previousSelectedCell.empty()) {
     UnselectCell(previousSelectedCell);
-    ClearCellInfoTable();
+    RemoveCellInfoTable();
   }
 
   if (isUnselectingCell) {
@@ -117,7 +127,7 @@ function OnCellClick(data) {
   }
 
   SelectCell(cell);
-  PopulateCellInfoTable(data);
+  AddCellInfoTable(data);
 }
 
 function RenderGraph(entries) {
