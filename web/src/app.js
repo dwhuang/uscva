@@ -71,45 +71,58 @@ function AddCellInfoTable(data) {
 
   const voteCount = labels[0]['features'].length;
 
-  var table = d3.select('body').append('table');
-  table.attr('id', 'cellInfo');
+  var table = d3.select('body').append('table').attr('id', 'cellInfo');
 
-  var tableHead = table .append('thead');
+  var tableHead = table.append('thead');
   var tableHeadRow = tableHead.append('tr');
   tableHeadRow.append('th').text('Party');
   tableHeadRow.append('th').text('Senator');
   tableHeadRow.append('th').text('State');
-  tableHeadRow.append('th').text('Votes').attr('colspan', voteCount);
+  tableHeadRow.append('th').text('Votes'); //.attr('colspan', voteCount);
 
-  var tableBody = table.append('tbody');
-
-  for (var label of labels) {
-    var profile = label['profile'];
-    assert(profile);
-    var votes = label['features'];
-    assert(votes);
-    assert(votes.length === voteCount);
-    var party = profile['party'];
-    var tableBodyRow = tableBody.append('tr');
-
-    if (party === 'Democrat') {
-      tableBodyRow.append('td').append('img').attr('src', 'img/democrat.png');
-    } else if (party === 'Republican') {
-      tableBodyRow.append('td').append('img').attr('src', 'img/republican.png');
-    } else if (party == 'Independent') {
-      tableBodyRow.append('td').text('N/A');
-    } else {
-      tableBodyRow.append('td').text('oops');
-    }
-
-    var fullName = profile['first_name'] + ' ' + profile['last_name'];
-    tableBodyRow.append('td').text(fullName);
-    tableBodyRow.append('td').text(profile['state']);
-
-    for (var vote of votes) {
-      tableBodyRow.append('td').text(vote);
-    }
-  }
+  var row = table.append('tbody').selectAll('tr')
+    .data(labels)
+    .enter().append('tr');
+  // party
+  var partyCol = row.append('td');
+  partyCol.append('img')
+    .attr('src', function(d) {
+        if (d.profile.party === 'Democrat') {
+          return 'img/democrat.png';
+        } else if (d.profile.party === 'Republican') {
+          return 'img/republican.png';
+        }
+        return null;
+    });
+  partyCol.filter(function(d) {
+    return d.profile.party !== 'Democrat' && d.profile.party !== 'Republican';
+  }).text(function(d) { return d.profile.party; });
+  // name
+  row.append('td').text(function(d) {
+      return [d.profile.first_name, d.profile.last_name].join(' ');
+  });
+  // state
+  row.append('td').text(function(d) {
+      return d.profile.state;
+  });
+  // votes
+  var votesSVG = row.append('td').append('svg')
+      .attr('width', 200).attr('height', 50);
+  votesSVG.selectAll('rect').data(function(d) { return d.features; })
+    .enter().append('rect')
+      .attr('x', function(d, i) { return i * 3; })
+      .attr('y', 0)
+      .attr('width', 3)
+      .attr('height', 10)
+      .attr('fill', function(d) {
+        if (d == 1) {
+          return 'green';
+        } else if (d == -1) {
+          return 'red';
+        } else {
+          return 'gray';
+        }
+      });
 }
 
 function OnCellClick(data) {
