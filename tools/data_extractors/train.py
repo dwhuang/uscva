@@ -123,9 +123,7 @@ def main():
                         }
                         for id in labeled_map[i]
                     ],
-                    'weights': [
-                        som.weights[i, :].round(6).tolist(),
-                    ],
+                    'weights': som.weights[i, :].round(6).tolist(),
                 }
             )
         with open(
