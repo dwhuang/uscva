@@ -154,7 +154,8 @@ function UpdateCellInfo(data) {
             .attr('font-size', LINE_HEIGHT - VOTE_RECT_VMARGIN)
             .attr('alignment-baseline', 'before-edge')
             .attr('font-family', 'Arial, Helvetica');
-        d3.select(this).selectAll('rect').data(d.features)
+        d3.select(this).selectAll('rect')
+            .data(d.features)
             .attr('fill', function(d) {
               if (d == 1) {
                 return 'green';
@@ -167,13 +168,55 @@ function UpdateCellInfo(data) {
       });
 }
 
-var numFeatures = -1;
-function GetNumFeatures() {
-  return numFeatures;
+function RenderGraph(fpath) {
+  d3.json(fpath, function(entries) {
+    var canvas = d3.select('#transformedCanvas');
+    var cells = canvas.selectAll('g.cell').data(entries);
+    cells.exit().remove();
+    var newCells = cells
+      .enter().append('g')
+        .attr('class', 'cell')
+        .on('mouseenter', SelectCell)
+        .on('mouseleave', UnselectCell);
+    newCells
+      .append('polygon')
+        .attr('points', FindHexagonVertices)
+        .attr('fill', GetDefaultCellBackgroundColor)
+        .on('click', UpdateCellInfo);
+    newCells
+      .append('text')
+        .text(function(entry) {
+          switch (entry.labels.length) {
+            case 0: return null;
+            case 1: return '•';
+          }
+          return entry.labels.length;
+        })
+        .attr('fill', GetDefaultCellTextColor)
+        .attr('font-size', 1)
+        .attr('transform', 'scale(1,-1)')
+        .attr('text-anchor', 'middle')
+        .attr('alignment-baseline', 'middle');
+    cells.merge(newCells)
+        .attr('transform', function(entry) {
+          return 'translate(' + entry.centroid + ')';
+        })
+  });
 }
 
-function RenderGraph(entries) {
-  numFeatures = entries[0].weights.length;
+function Main() {
+  // init model list
+  var modelList = d3.select('#modelList');
+  modelList.selectAll('option')
+      .data(models)
+    .enter().append('option')
+      .attr('value', function(d) { return d.path; })
+      .text(function(d) { return d.name; });
+  modelList.on('change', function() {
+    RenderGraph(this.value);
+  });
+
+  // init canvas
   var canvasSize = GetCanvasSize();
   var rawCanvas = d3.select('#canvas')
       .attr('width', canvasSize[0])
@@ -184,42 +227,43 @@ function RenderGraph(entries) {
         'translate(' + [canvasSize[0]/2, canvasSize[1]/2] + ')'
       )
     .append('g')
-      .attr('transform', 'scale(12,-12)');
-
-  var cell = canvas.selectAll('g')
-      .data(entries)
-    .enter().append('g')
-      .attr('transform', function(entry) {
-        return 'translate(' + entry.centroid + ')';
-      })
-    .on('mouseenter', SelectCell)
-    .on('mouseleave', UnselectCell);
-  cell.append('polygon')
-      .attr('points', FindHexagonVertices)
-      .attr('fill', GetDefaultCellBackgroundColor)
-      .on('click', UpdateCellInfo);
-  cell.append('text')
-      .text(function(entry) {
-        switch (entry.labels.length) {
-          case 0: return null;
-          case 1: return '•';
-        }
-        return entry.labels.length;
-      })
-      .attr('fill', GetDefaultCellTextColor)
-      .attr('font-size', 1)
-      .attr('transform', 'scale(1,-1)')
-      .attr('text-anchor', 'middle')
-      .attr('alignment-baseline', 'middle');
-
+      .attr('transform', 'scale(12,-12)')
+      .attr('id', 'transformedCanvas');
   var cellInfo = rawCanvas.append('g')
       .attr('id', 'cellInfo');
+
+  RenderGraph(models[0].path);
 }
 
-function Main() {
-  d3.json('sbills-export.json', function(entries) {
-    RenderGraph(entries);
-  });
-}
+var models = [
+  {
+    'path': 'out_pub/s_bills_109_115-export.json',
+    'name': "Congress 109-115 senator bill votes about 'Taiwan' and 'China'",
+  },
+  {
+    'path': 'out_pub/s_bills_amdts_109-export.json',
+    'name': "Congress 109 senator bill & amendments votes about 'Taiwan' and 'China'",
+  },
+  {
+    'path': 'out_pub/s_bills_amdts_110-export.json',
+    'name': "Congress 110 senator bill & amendments votes about 'Taiwan' and 'China'",
+  },
+  {
+    'path': 'out_pub/s_bills_amdts_111-export.json',
+    'name': "Congress 111 senator bill & amendments votes about 'Taiwan' and 'China'",
+  },
+  {
+    'path': 'out_pub/s_bills_amdts_112-export.json',
+    'name': "Congress 112 senator bill & amendments votes about 'Taiwan' and 'China'",
+  },
+  {
+    'path': 'out_pub/s_bills_amdts_113-export.json',
+    'name': "Congress 113 senator bill & amendments votes about 'Taiwan' and 'China'",
+  },
+  {
+    'path': 'out_pub/s_bills_amdts_114-export.json',
+    'name': "Congress 114 senator bill & amendments votes about 'Taiwan' and 'China'",
+  },
+];
 
 Main();
