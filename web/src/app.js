@@ -177,30 +177,33 @@ function RenderGraph(fpath) {
       .enter().append('g')
         .attr('class', 'cell')
         .on('mouseenter', SelectCell)
-        .on('mouseleave', UnselectCell);
-    newCells
-      .append('polygon')
-        .attr('points', FindHexagonVertices)
-        .attr('fill', GetDefaultCellBackgroundColor)
-        .on('click', UpdateCellInfo);
-    newCells
-      .append('text')
-        .text(function(entry) {
-          switch (entry.labels.length) {
-            case 0: return null;
-            case 1: return '•';
-          }
-          return entry.labels.length;
+        .on('mouseleave', UnselectCell)
+        .each(function() {
+          d3.select(this).append('polygon');
+          d3.select(this).append('text');
         })
-        .attr('fill', GetDefaultCellTextColor)
-        .attr('font-size', 1)
-        .attr('transform', 'scale(1,-1)')
-        .attr('text-anchor', 'middle')
-        .attr('alignment-baseline', 'middle');
-    cells.merge(newCells)
-        .attr('transform', function(entry) {
-          return 'translate(' + entry.centroid + ')';
+      .merge(cells)
+        .attr('transform', function(d) {
+          return 'translate(' + d.centroid + ')';
         })
+        .each(function(d) {
+          d3.select(this).select('polygon')
+              .attr('points', FindHexagonVertices)
+              .attr('fill', GetDefaultCellBackgroundColor);
+          d3.select(this).select('text')
+              .text(function(entry) {
+                switch (entry.labels.length) {
+                  case 0: return null;
+                  case 1: return '•';
+                }
+                return entry.labels.length;
+              })
+              .attr('fill', GetDefaultCellTextColor)
+              .attr('font-size', 1)
+              .attr('transform', 'scale(1,-1)')
+              .attr('text-anchor', 'middle')
+              .attr('alignment-baseline', 'middle');
+        });
   });
 }
 
