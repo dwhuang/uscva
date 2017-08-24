@@ -3,45 +3,10 @@
 var assert = require('assert');
 var d3 = require('d3');
 
-var SQRT3 = 1.732051;
+var models = require('models');
+var partyAbbrev = require('party_abbrev');
 
-function GetPartyAbbrev(partyName) {
-  switch (partyName) {
-    case 'Adams': return 'Adams';
-    case 'Adams-Clay Federalist': return 'Adams-Clay F';
-    case 'Adams-Clay Republican': return 'Adams-Clay R';
-    case 'Anti-Jackson': return 'AJ';
-    case 'American': return 'Am';
-    case 'Anti-Administration': return 'Anti-Admin';
-    case 'Conservative': return 'C';
-    case 'Crawford Republican': return 'CRR';
-    case 'Democrat': return 'D';
-    case 'Democratic Republican (Jeffersonian)': return 'DR';
-    case 'Federalist': return 'F';
-    case 'Farmer-Labor': return 'FL';
-    case 'Free Soiler': return 'FS';
-    case 'Independent': return 'I';
-    case 'Independent Democrat': return 'ID';
-    case 'Independent Republican': return 'IR';
-    case 'Jacksonian': return 'J';
-    case 'Jackson Republican': return 'JR';
-    case 'Liberal Republican': return 'LR';
-    case 'Nullifier': return 'N';
-    case 'National Republican': return 'NR';
-    case 'Opposition': return 'OP';
-    case 'Populist': return 'PO';
-    case 'Pro-Administration': return 'Pro-Admin';
-    case 'Progressive': return 'PR';
-    case 'Republican': return 'R';
-    case 'Readjuster': return 'RA';
-    case 'Silver Republican': return 'SR';
-    case 'Silver': return 'S';
-    case 'Unionist': return 'U';
-    case 'Unconditional Unionist': return 'UU';
-    case 'Whig': return 'W';
-  }
-  return null;
-}
+var SQRT3 = 1.732051;
 
 function FindHexagonVertices() {
   return [
@@ -149,7 +114,7 @@ function UpdateCellInfo(data) {
             .text(function(d) {
               return d.profile.last_name 
                 + ', ' + d.profile.first_name
-                + ' (' + GetPartyAbbrev(d.profile.party) + '-' + d.profile.state + ')';
+                + ' (' + partyAbbrev.GetPartyAbbrev(d.profile.party) + '-' + d.profile.state + ')';
             })
             .attr('font-size', LINE_HEIGHT - VOTE_RECT_VMARGIN)
             .attr('alignment-baseline', 'before-edge')
@@ -237,36 +202,5 @@ function Main() {
 
   RenderGraph(models[0].path);
 }
-
-var models = [
-  {
-    'path': 'out_pub/s_bills_109_115-export.json',
-    'name': "Congress 109-115 senator bill votes about 'Taiwan' and 'China'",
-  },
-  {
-    'path': 'out_pub/s_bills_amdts_109-export.json',
-    'name': "Congress 109 senator bill & amendments votes about 'Taiwan' and 'China'",
-  },
-  {
-    'path': 'out_pub/s_bills_amdts_110-export.json',
-    'name': "Congress 110 senator bill & amendments votes about 'Taiwan' and 'China'",
-  },
-  {
-    'path': 'out_pub/s_bills_amdts_111-export.json',
-    'name': "Congress 111 senator bill & amendments votes about 'Taiwan' and 'China'",
-  },
-  {
-    'path': 'out_pub/s_bills_amdts_112-export.json',
-    'name': "Congress 112 senator bill & amendments votes about 'Taiwan' and 'China'",
-  },
-  {
-    'path': 'out_pub/s_bills_amdts_113-export.json',
-    'name': "Congress 113 senator bill & amendments votes about 'Taiwan' and 'China'",
-  },
-  {
-    'path': 'out_pub/s_bills_amdts_114-export.json',
-    'name': "Congress 114 senator bill & amendments votes about 'Taiwan' and 'China'",
-  },
-];
 
 Main();
