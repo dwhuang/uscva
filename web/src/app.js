@@ -5,6 +5,44 @@ var d3 = require('d3');
 
 var SQRT3 = 1.732051;
 
+function GetPartyAbbrev(partyName) {
+  switch (partyName) {
+    case 'Adams': return 'Adams';
+    case 'Adams-Clay Federalist': return 'Adams-Clay F';
+    case 'Adams-Clay Republican': return 'Adams-Clay R';
+    case 'Anti-Jackson': return 'AJ';
+    case 'American': return 'Am';
+    case 'Anti-Administration': return 'Anti-Admin';
+    case 'Conservative': return 'C';
+    case 'Crawford Republican': return 'CRR';
+    case 'Democrat': return 'D';
+    case 'Democratic Republican (Jeffersonian)': return 'DR';
+    case 'Federalist': return 'F';
+    case 'Farmer-Labor': return 'FL';
+    case 'Free Soiler': return 'FS';
+    case 'Independent': return 'I';
+    case 'Independent Democrat': return 'ID';
+    case 'Independent Republican': return 'IR';
+    case 'Jacksonian': return 'J';
+    case 'Jackson Republican': return 'JR';
+    case 'Liberal Republican': return 'LR';
+    case 'Nullifier': return 'N';
+    case 'National Republican': return 'NR';
+    case 'Opposition': return 'OP';
+    case 'Populist': return 'PO';
+    case 'Pro-Administration': return 'Pro-Admin';
+    case 'Progressive': return 'PR';
+    case 'Republican': return 'R';
+    case 'Readjuster': return 'RA';
+    case 'Silver Republican': return 'SR';
+    case 'Silver': return 'S';
+    case 'Unionist': return 'U';
+    case 'Unconditional Unionist': return 'UU';
+    case 'Whig': return 'W';
+  }
+  return null;
+}
+
 function FindHexagonVertices() {
   return [
     [0, 1],
@@ -43,94 +81,99 @@ function GetCanvasSize() {
   return [x, y];
 }
 
-function UnselectCell(cell) {
-  cell.attr('id', null);
-  cell.select('polygon')
-    .attr('fill', GetDefaultCellBackgroundColor);
-  cell.select('text')
-    .attr('fill', GetDefaultCellTextColor);
+function UnselectCell(d) {
+  var cell = d3.select(this);
+  var polygon = cell.select('polygon');
+  polygon
+    .attr('fill', polygon.attr('_fill'))
+    .attr('_fill', null);
+  var text = cell.select('text');
+  text
+    .attr('fill', text.attr('_fill'))
+    .attr('_fill', null);
 }
 
-function SelectCell(cell) {
-  cell.attr('id', 'selectedCell');
-  cell.select('polygon')
+function SelectCell(d) {
+  var cell = d3.select(this).style('cursor', 'default');
+  var polygon = cell.select('polygon');
+  polygon
+    .attr('_fill', polygon.attr('fill'))
     .attr('fill', GetSelectedCellBackgroundColor);
-  cell.select('text')
+  var text = cell.select('text');
+  text
+    .attr('_fill', text.attr('fill'))
     .attr('fill', GetSelectedCellTextColor);
-}
-
-function RemoveCellInfoTable() {
-  d3.select('#cellInfo').remove();
+  UpdateCellInfo(d);
 }
 
 function UpdateCellInfo(data) {
   var labels = data.labels;
   var cellInfo = d3.select('#cellInfo');
 
-  var rows = cellInfo.selectAll('g.row').data(labels);
-  var newRows = rows.enter().append('g').attr('class', 'row');
-  newRows.append('text');
-  newRows.append('g')
-    .attr('class', 'voteBar')
-    .attr('transform', 'translate(100, 0)');
-  rows.exit().remove();
-
   var LINE_HEIGHT = 18;
+  var VOTE_RECT_WIDTH = 10;
+  var VOTE_RECT_VMARGIN = 2;
 
-  rows.merge(newRows)
-    .attr('transform', function(d, i) {
-      return 'translate(0,' + i * LINE_HEIGHT + ')';
-    })
-    .each(function(d, i) {
-      d3.select(this).select('text')
-        .text(function(d) {
-          return d.profile.last_name;
-        })
-        .attr('font-size', LINE_HEIGHT - 4)
-        .attr('alignment-baseline', 'before-edge');
-      var voteRect = d3.select(this).select('.voteBar')
-        .selectAll('rect')
-        .data(d.features);
-      var newVoteRect = voteRect.enter().append('rect')
-        .attr('width', 10)
-        .attr('height', 10);
-      var barY = i * (LINE_HEIGHT - 4)
-      voteRect.exit().remove();
-      voteRect.merge(newVoteRect)
-        .attr('x', function(d, i) { return i * 10; })
-        .attr('y', 2)
-        .attr('height', LINE_HEIGHT - 2 * 2)
-        .attr('fill', function(d) {
-          if (d == 1) {
-            return 'green';
-          } else if (d == -1) {
-            return 'red';
-          } else {
-            return 'gray';
-          }
-        });
-    });
+  var rows = cellInfo.selectAll('g.row').data(labels);
+  rows.exit().remove();
+  rows = rows.enter()
+    .append('g')
+      .attr('class', 'row')
+      .each(function() {
+        var numFeatures = data.weights.length;
+        var row = d3.select(this);
+        row.append('a')
+          .append('text')
+            .attr('x', VOTE_RECT_WIDTH * numFeatures + 10);
+        for (var i = 0; i < numFeatures; ++i) {
+          row.append('rect')
+              .attr('width', VOTE_RECT_WIDTH)
+              .attr('height', LINE_HEIGHT - VOTE_RECT_VMARGIN * 2)
+              .attr('x', i * VOTE_RECT_WIDTH)
+              .attr('y', VOTE_RECT_VMARGIN);
+        }
+      })
+    .merge(rows);
+
+  rows
+      .attr('transform', function(d, i) {
+        return 'translate(0,' + i * LINE_HEIGHT + ')';
+      })
+      .each(function(d, i) {
+        d3.select(this).select('a')
+          .attr('href', d.profile.url)
+          .attr('xlink:href', d.profile.url) // backward compatibility
+          .attr('target', '_blank')
+          .attr('fill', 'blue');
+        d3.select(this).select('text')
+            .text(function(d) {
+              return d.profile.last_name 
+                + ', ' + d.profile.first_name
+                + ' (' + GetPartyAbbrev(d.profile.party) + '-' + d.profile.state + ')';
+            })
+            .attr('font-size', LINE_HEIGHT - VOTE_RECT_VMARGIN)
+            .attr('alignment-baseline', 'before-edge')
+            .attr('font-family', 'Arial, Helvetica');
+        d3.select(this).selectAll('rect').data(d.features)
+            .attr('fill', function(d) {
+              if (d == 1) {
+                return 'green';
+              } else if (d == -1) {
+                return 'red';
+              } else {
+                return 'gray';
+              }
+            });
+      });
 }
 
-function OnCellClick(data) {
-  var cell = d3.select(this.parentNode);
-  var previousSelectedCell = d3.select('#selectedCell');
-  const isUnselectingCell = (cell.attr('id') === 'selectedCell');
-
-  if (!previousSelectedCell.empty()) {
-    UnselectCell(previousSelectedCell);
-    //RemoveCellInfoTable();
-  }
-
-  if (isUnselectingCell) {
-    return;
-  }
-
-  SelectCell(cell);
-  UpdateCellInfo(data);
+var numFeatures = -1;
+function GetNumFeatures() {
+  return numFeatures;
 }
 
 function RenderGraph(entries) {
+  numFeatures = entries[0].weights.length;
   var canvasSize = GetCanvasSize();
   var rawCanvas = d3.select('#canvas')
       .attr('width', canvasSize[0])
@@ -149,16 +192,8 @@ function RenderGraph(entries) {
       .attr('transform', function(entry) {
         return 'translate(' + entry.centroid + ')';
       })
-    .on('mouseenter', function(d) {
-      var polygon = d3.select(this).select('polygon');
-      polygon.attr('mouseenter_fill', polygon.attr('fill'));
-      polygon.attr('fill', '#ff7');
-      UpdateCellInfo(d);
-    })
-    .on('mouseleave', function(d) {
-      var polygon = d3.select(this).select('polygon');
-      polygon.attr('fill', polygon.attr('mouseenter_fill'));
-    });
+    .on('mouseenter', SelectCell)
+    .on('mouseleave', UnselectCell);
   cell.append('polygon')
       .attr('points', FindHexagonVertices)
       .attr('fill', GetDefaultCellBackgroundColor)
