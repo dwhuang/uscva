@@ -3,6 +3,7 @@
 var assert = require('assert');
 var d3 = require('d3');
 
+var Cell = require('cell');
 var models = require('models');
 var partyAbbrev = require('party_abbrev');
 
@@ -19,23 +20,6 @@ function FindHexagonVertices() {
   ];
 }
 
-function GetDefaultCellBackgroundColor(d) {
-  const value = d.umatrix_value * 255;
-  return d3.rgb(value, value, value);
-}
-
-function GetSelectedCellBackgroundColor() {
-  return d3.rgb(66, 98, 244)
-}
-
-function GetDefaultCellTextColor() {
-  return d3.rgb(150, 150, 150);
-}
-
-function GetSelectedCellTextColor() {
-  return d3.rgb(255, 255, 255);
-}
-
 function GetCanvasSize() {
   var w = window,
   d = document,
@@ -46,7 +30,7 @@ function GetCanvasSize() {
   return [x, y];
 }
 
-function UnselectCell(d) {
+function UnselectCell() {
   var cell = d3.select(this);
   var polygon = cell.select('polygon');
   polygon
@@ -63,16 +47,16 @@ function SelectCell(d) {
   var polygon = cell.select('polygon');
   polygon
     .attr('_fill', polygon.attr('fill'))
-    .attr('fill', GetSelectedCellBackgroundColor);
+    .attr('fill', Cell.SelectedBackgroundColor);
   var text = cell.select('text');
   text
     .attr('_fill', text.attr('fill'))
-    .attr('fill', GetSelectedCellTextColor);
+    .attr('fill', Cell.GetSelectedCellTextColor);
   UpdateCellInfo(d);
 }
 
-function UpdateCellInfo(data) {
-  var labels = data.labels;
+function UpdateCellInfo(d) {
+  var labels = d.rawData.labels;
   var cellInfo = d3.select('#cellInfo');
 
   var LINE_HEIGHT = 18;
@@ -85,7 +69,7 @@ function UpdateCellInfo(data) {
     .append('g')
       .attr('class', 'row')
       .each(function() {
-        var numFeatures = data.weights.length;
+        var numFeatures = d.rawData.weights.length;
         var row = d3.select(this);
         row.append('a')
           .append('text')
@@ -136,7 +120,8 @@ function UpdateCellInfo(data) {
 function RenderGraph(fpath) {
   d3.json(fpath, function(entries) {
     var canvas = d3.select('#transformedCanvas');
-    var cells = canvas.selectAll('g.cell').data(entries);
+    var cells = canvas.selectAll('g.cell').data(
+        entries.map(function(entry) { return new Cell(entry); }));
     cells.exit().remove();
     var newCells = cells
       .enter().append('g')
@@ -149,21 +134,15 @@ function RenderGraph(fpath) {
         })
       .merge(cells)
         .attr('transform', function(d) {
-          return 'translate(' + d.centroid + ')';
+          return 'translate(' + d.rawData.centroid + ')';
         })
-        .each(function(d) {
+        .each(function() {
           d3.select(this).select('polygon')
               .attr('points', FindHexagonVertices)
-              .attr('fill', GetDefaultCellBackgroundColor);
+              .attr('fill', Cell.DefaultBackgroundColor);
           d3.select(this).select('text')
-              .text(function(entry) {
-                switch (entry.labels.length) {
-                  case 0: return null;
-                  case 1: return '•';
-                }
-                return entry.labels.length;
-              })
-              .attr('fill', GetDefaultCellTextColor)
+              .text(Cell.Text)
+              .attr('fill', Cell.DefaultTextColor)
               .attr('font-size', 1)
               .attr('transform', 'scale(1,-1)')
               .attr('text-anchor', 'middle')
