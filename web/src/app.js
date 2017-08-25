@@ -33,29 +33,38 @@ function GetCanvasSize() {
   return [x, y];
 }
 
+function PushAttr(sel, attr, val) {
+  var valTmp;
+  while (sel.attr(attr)) {
+    valTmp = sel.attr(attr);
+    sel.attr(attr, val);
+    attr = '_' + attr;
+    val = valTmp;
+  }
+  sel.attr(attr, val);
+}
+
+function PopAttr(sel, attr) {
+  var ret = sel.attr(attr);
+  while (sel.attr('_' + attr)) {
+    sel.attr(attr, sel.attr('_' + attr));
+    attr = '_' + attr;
+  }
+  sel.attr(attr, null);
+  return ret;
+}
+
 function UnselectCell() {
   var cell = d3.select(this);
-  var polygon = cell.select('polygon');
-  polygon
-    .attr('fill', polygon.attr('_fill'))
-    .attr('_fill', null);
-  var text = cell.select('text');
-  text
-    .attr('fill', text.attr('_fill'))
-    .attr('_fill', null);
+  PopAttr(cell.select('polygon'), 'fill');
+  PopAttr(cell.select('text'), 'fill');
   UpdateCellInfo();
 }
 
 function SelectCell(d) {
   var cell = d3.select(this).style('cursor', 'default');
-  var polygon = cell.select('polygon');
-  polygon
-    .attr('_fill', polygon.attr('fill'))
-    .attr('fill', Cell.SelectedBackgroundColor);
-  var text = cell.select('text');
-  text
-    .attr('_fill', text.attr('fill'))
-    .attr('fill', Cell.GetSelectedCellTextColor);
+  PushAttr(cell.select('polygon'), 'fill', Cell.SelectedBackgroundColor);
+  PushAttr(cell.select('text'), 'fill', Cell.SelectedTextColor);
   UpdateCellInfo(d);
 }
 
@@ -64,32 +73,66 @@ function AnchorCell(d) {
     return;
   }
   if (!cellInfoAnchor) {
-    cellInfoAnchor = d3.select(this).node();
-    console.log('3');
-    console.log(cellInfoAnchor);
+    // first anchor cell
+    cellInfoAnchor = d3.select(this);
+    var polygon = cellInfoAnchor.select('polygon');
+    var selColor = PopAttr(polygon, 'fill');
+    PushAttr(polygon, 'fill', 'yellow');
+    PushAttr(polygon, 'fill', selColor);
+    // offset cellInfo panel
     d3.select('#cellInfo2')
       .attr('transform', 'translate(0,' 
         + d3.select('#cellInfo').node().getBBox().height + ')');
   } else if (!cellInfo2Anchor
-      && cellInfoAnchor != d3.select(this).node()) {
-    cellInfo2Anchor = d3.select(this).node();
+      && cellInfoAnchor.node() != d3.select(this).node()) {
+    // second anchor cell if it is different from the first
+    cellInfo2Anchor = d3.select(this);
+    var polygon = cellInfo2Anchor.select('polygon');
+    var selColor = PopAttr(polygon, 'fill');
+    PushAttr(polygon, 'fill', 'yellow');
+    PushAttr(polygon, 'fill', selColor);
   } else {
-    console.log('1');
-    console.log(cellInfoAnchor);
-    console.log('2');
-    console.log(cellInfo2Anchor);
+    // we already have two cells anchored, release the two cells first
     UnanchorCell();
     UpdateCellInfo(d);
-    AnchorCell(d);
+    // try to anchor the current cell as a first anchor
+    // NOTE: tried calling AnchorCell recursively, but d3.select(this) returns
+    // null
+    if (d.rawData.labels.length > 0) {
+      cellInfoAnchor = d3.select(this);
+      var polygon = cellInfoAnchor.select('polygon');
+      var selColor = PopAttr(polygon, 'fill');
+      PushAttr(polygon, 'fill', 'yellow');
+      PushAttr(polygon, 'fill', selColor);
+      d3.select('#cellInfo2')
+        .attr('transform', 'translate(0,' 
+          + d3.select('#cellInfo').node().getBBox().height + ')');
+    }
   }
   d3.event.stopPropagation();
 }
 
 function UnanchorCell() {
-  cellInfo2Anchor = null;
-  UpdateCellInfo();
-  cellInfoAnchor = null;
-  UpdateCellInfo();
+  if (cellInfo2Anchor != null) {
+    var polygon = cellInfo2Anchor.select('polygon');
+    var fill = PopAttr(polygon, 'fill');
+    if (fill == Cell.SelectedBackgroundColor()) {
+      PopAttr(polygon, 'fill');
+      PushAttr(polygon, 'fill', fill);
+    }
+    cellInfo2Anchor = null;
+    UpdateCellInfo();
+  }
+  if (cellInfoAnchor != null) {
+    var polygon = cellInfoAnchor.select('polygon');
+    var fill = PopAttr(polygon, 'fill');
+    if (fill == Cell.SelectedBackgroundColor()) {
+      PopAttr(polygon, 'fill');
+      PushAttr(polygon, 'fill', fill);
+    }
+    cellInfoAnchor = null;
+    UpdateCellInfo();
+  }
   d3.event.stopPropagation();
 }
 
