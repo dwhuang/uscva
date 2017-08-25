@@ -9,6 +9,9 @@ var partyAbbrev = require('party_abbrev');
 
 var SQRT3 = 1.732051;
 
+var cellInfoAnchor = null;
+var cellInfo2Anchor = null;
+
 function FindHexagonVertices() {
   return [
     [0, 1],
@@ -40,6 +43,7 @@ function UnselectCell() {
   text
     .attr('fill', text.attr('_fill'))
     .attr('_fill', null);
+  UpdateCellInfo();
 }
 
 function SelectCell(d) {
@@ -55,9 +59,54 @@ function SelectCell(d) {
   UpdateCellInfo(d);
 }
 
-function UpdateCellInfo(d) {
-  var labels = d.rawData.labels;
-  var cellInfo = d3.select('#cellInfo');
+function AnchorCell(d) {
+  if (d.labels.length <= 0) {
+    return;
+  }
+  if (!cellInfoAnchor) {
+    cellInfoAnchor = d3.select(this).node();
+    console.log('3');
+    console.log(cellInfoAnchor);
+    d3.select('#cellInfo2')
+      .attr('transform', 'translate(0,' 
+        + d3.select('#cellInfo').node().getBBox().height + ')');
+  } else if (!cellInfo2Anchor
+      && cellInfoAnchor != d3.select(this).node()) {
+    cellInfo2Anchor = d3.select(this).node();
+  } else {
+    console.log('1');
+    console.log(cellInfoAnchor);
+    console.log('2');
+    console.log(cellInfo2Anchor);
+    UnanchorCell();
+    UpdateCellInfo(d);
+    AnchorCell(d);
+  }
+  d3.event.stopPropagation();
+}
+
+function UnanchorCell() {
+  cellInfo2Anchor = null;
+  UpdateCellInfo();
+  cellInfoAnchor = null;
+  UpdateCellInfo();
+  d3.event.stopPropagation();
+}
+
+function UpdateCellInfo(data) {
+  var labels = [];
+  if (data && data.labels && data.labels.length > 0) {
+    labels = data.labels;
+  }
+  var cellInfo = null;
+  if (!cellInfoAnchor) {
+    cellInfo = d3.select('#cellInfo');
+  } else if (!cellInfo2Anchor) {
+    cellInfo = d3.select('#cellInfo2');
+  }
+  if (!cellInfo) {
+    return;
+  }
 
   var LINE_HEIGHT = 18;
   var VOTE_RECT_WIDTH = 10;
@@ -98,7 +147,8 @@ function UpdateCellInfo(d) {
             .text(function(d) {
               return d.profile.last_name 
                 + ', ' + d.profile.first_name
-                + ' (' + partyAbbrev.GetPartyAbbrev(d.profile.party) + '-' + d.profile.state + ')';
+                + ' (' + partyAbbrev.GetPartyAbbrev(d.profile.party)
+                + '-' + d.profile.state + ')';
             })
             .attr('font-size', LINE_HEIGHT - VOTE_RECT_VMARGIN)
             .attr('alignment-baseline', 'before-edge')
@@ -128,6 +178,7 @@ function RenderGraph(fpath) {
         .attr('class', 'cell')
         .on('mouseenter', SelectCell)
         .on('mouseleave', UnselectCell)
+        .on('mouseup', AnchorCell)
         .each(function() {
           d3.select(this).append('polygon');
           d3.select(this).append('text');
@@ -167,7 +218,8 @@ function Main() {
   var canvasSize = GetCanvasSize();
   var rawCanvas = d3.select('#canvas')
       .attr('width', canvasSize[0])
-      .attr('height', canvasSize[1]);
+      .attr('height', canvasSize[1])
+      .on('mouseup', UnanchorCell);
   var canvas = rawCanvas.append('g')
       .attr(
         'transform',
@@ -176,8 +228,10 @@ function Main() {
     .append('g')
       .attr('transform', 'scale(12,-12)')
       .attr('id', 'transformedCanvas');
-  var cellInfo = rawCanvas.append('g')
-      .attr('id', 'cellInfo');
+  var cellInfoPane = rawCanvas.append('g')
+      .on('mouseup', function() { d3.event.stopPropagation(); });
+  cellInfoPane.append('g').attr('id', 'cellInfo');
+  cellInfoPane.append('g').attr('id', 'cellInfo2');
 
   RenderGraph(models[0].path);
 }
