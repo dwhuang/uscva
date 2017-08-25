@@ -60,7 +60,7 @@ function SelectCell(d) {
 }
 
 function AnchorCell(d) {
-  if (d.labels.length <= 0) {
+  if (d.rawData.labels.length <= 0) {
     return;
   }
   if (!cellInfoAnchor) {
@@ -93,10 +93,10 @@ function UnanchorCell() {
   d3.event.stopPropagation();
 }
 
-function UpdateCellInfo(data) {
+function UpdateCellInfo(d) {
   var labels = [];
-  if (data && data.labels && data.labels.length > 0) {
-    labels = data.labels;
+  if (d && d.rawData.labels && d.rawData.labels.length > 0) {
+    labels = d.rawData.labels;
   }
   var cellInfo = null;
   if (!cellInfoAnchor) {
