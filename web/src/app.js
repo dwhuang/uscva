@@ -30,7 +30,7 @@ function GetCanvasSize() {
   g = d.getElementsByTagName('body')[0],
   x = w.innerWidth || e.clientWidth || g.clientWidth,
   y = w.innerHeight|| e.clientHeight|| g.clientHeight;
-  return [x, y];
+  return [x, y - 50];
 }
 
 function PushAttr(sel, attr, val) {
@@ -221,7 +221,7 @@ function RenderGraph(fpath) {
         .attr('class', 'cell')
         .on('mouseenter', SelectCell)
         .on('mouseleave', UnselectCell)
-        .on('mouseup', AnchorCell)
+        .on('click', AnchorCell)
         .each(function() {
           d3.select(this).append('polygon');
           d3.select(this).append('text');
@@ -262,19 +262,28 @@ function Main() {
   var rawCanvas = d3.select('#canvas')
       .attr('width', canvasSize[0])
       .attr('height', canvasSize[1])
-      .on('mouseup', UnanchorCell);
-  var canvas = rawCanvas.append('g')
+      .on('click', UnanchorCell)
+  var zoomCanvas = rawCanvas.append('g')
+      .attr('id', 'zoom');
+  var transformLayer = zoomCanvas.append('g')
       .attr(
         'transform',
-        'translate(' + [canvasSize[0]/2, canvasSize[1]/2] + ')'
-      )
-    .append('g')
-      .attr('transform', 'scale(12,-12)')
-      .attr('id', 'transformedCanvas');
+        'translate(' + [canvasSize[0]/2, canvasSize[1]/2] + ')scale(20, -20)'
+      );
+  var canvas = transformLayer.append('g').attr('id', 'transformedCanvas');
   var cellInfoPane = rawCanvas.append('g')
-      .on('mouseup', function() { d3.event.stopPropagation(); });
+      .on('click', function() { d3.event.stopPropagation(); });
   cellInfoPane.append('g').attr('id', 'cellInfo');
   cellInfoPane.append('g').attr('id', 'cellInfo2');
+
+  var zoom = d3.zoom()
+      .scaleExtent([1, 40])
+      .translateExtent([[0, 0], canvasSize])
+      .on('zoom', function() {
+        console.log(d3.event.transform);
+        zoomCanvas.attr('transform', d3.event.transform);
+      });
+  rawCanvas.call(zoom);
 
   RenderGraph(models[0].path);
 }
