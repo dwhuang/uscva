@@ -33,38 +33,27 @@ function GetCanvasSize() {
   return [x, y - 50];
 }
 
-function PushAttr(sel, attr, val) {
-  var valTmp;
-  while (sel.attr(attr)) {
-    valTmp = sel.attr(attr);
-    sel.attr(attr, val);
-    attr = '_' + attr;
-    val = valTmp;
-  }
-  sel.attr(attr, val);
+function SetAttr(sel, attr, value, tmpAttr) {
+  sel.attr(tmpAttr, sel.attr(attr));
+  sel.attr(attr, value);
 }
 
-function PopAttr(sel, attr) {
-  var ret = sel.attr(attr);
-  while (sel.attr('_' + attr)) {
-    sel.attr(attr, sel.attr('_' + attr));
-    attr = '_' + attr;
-  }
-  sel.attr(attr, null);
-  return ret;
+function RestoreAttr(sel, attr, tmpAttr) {
+  sel.attr(attr, sel.attr(tmpAttr));
+  sel.attr(tmpAttr, null);
 }
 
 function UnselectCell() {
   var cell = d3.select(this);
-  PopAttr(cell.select('polygon'), 'fill');
-  PopAttr(cell.select('text'), 'fill');
+  RestoreAttr(cell.select('polygon'), 'fill', '_fill');
+  RestoreAttr(cell.select('text'), 'fill', '_fill');
   UpdateCellInfo();
 }
 
 function SelectCell(d) {
   var cell = d3.select(this).style('cursor', 'default');
-  PushAttr(cell.select('polygon'), 'fill', Cell.SelectedBackgroundColor);
-  PushAttr(cell.select('text'), 'fill', Cell.SelectedTextColor);
+  SetAttr(cell.select('polygon'), 'fill', Cell.SelectedBackgroundColor, '_fill');
+  SetAttr(cell.select('text'), 'fill', Cell.SelectedTextColor, '_fill');
   UpdateCellInfo(d);
 }
 
@@ -76,9 +65,7 @@ function AnchorCell(d) {
     // first anchor cell
     cellInfoAnchor = d3.select(this);
     var polygon = cellInfoAnchor.select('polygon');
-    var selColor = PopAttr(polygon, 'fill');
-    PushAttr(polygon, 'fill', 'yellow');
-    PushAttr(polygon, 'fill', selColor);
+    SetAttr(polygon, '_fill', 'yellow', '__fill');
     // offset cellInfo panel
     d3.select('#cellInfo2')
       .attr('transform', 'translate(0,' 
@@ -88,9 +75,7 @@ function AnchorCell(d) {
     // second anchor cell if it is different from the first
     cellInfo2Anchor = d3.select(this);
     var polygon = cellInfo2Anchor.select('polygon');
-    var selColor = PopAttr(polygon, 'fill');
-    PushAttr(polygon, 'fill', 'yellow');
-    PushAttr(polygon, 'fill', selColor);
+    SetAttr(polygon, '_fill', 'yellow', '__fill');
   } else {
     // we already have two cells anchored, release the two cells first
     UnanchorCell();
@@ -101,9 +86,7 @@ function AnchorCell(d) {
     if (d.rawData.labels.length > 0) {
       cellInfoAnchor = d3.select(this);
       var polygon = cellInfoAnchor.select('polygon');
-      var selColor = PopAttr(polygon, 'fill');
-      PushAttr(polygon, 'fill', 'yellow');
-      PushAttr(polygon, 'fill', selColor);
+      SetAttr(polygon, '_fill', 'yellow', '__fill');
       d3.select('#cellInfo2')
         .attr('transform', 'translate(0,' 
           + d3.select('#cellInfo').node().getBBox().height + ')');
@@ -115,20 +98,20 @@ function AnchorCell(d) {
 function UnanchorCell() {
   if (cellInfo2Anchor != null) {
     var polygon = cellInfo2Anchor.select('polygon');
-    var fill = PopAttr(polygon, 'fill');
-    if (fill == Cell.SelectedBackgroundColor()) {
-      PopAttr(polygon, 'fill');
-      PushAttr(polygon, 'fill', fill);
+    if (polygon.attr('_fill') === null) {
+      RestoreAttr(polygon, 'fill', '__fill');
+    } else {
+      RestoreAttr(polygon, '_fill', '__fill');
     }
     cellInfo2Anchor = null;
     UpdateCellInfo();
   }
   if (cellInfoAnchor != null) {
     var polygon = cellInfoAnchor.select('polygon');
-    var fill = PopAttr(polygon, 'fill');
-    if (fill == Cell.SelectedBackgroundColor()) {
-      PopAttr(polygon, 'fill');
-      PushAttr(polygon, 'fill', fill);
+    if (polygon.attr('_fill') === null) {
+      RestoreAttr(polygon, 'fill', '__fill');
+    } else {
+      RestoreAttr(polygon, '_fill', '__fill');
     }
     cellInfoAnchor = null;
     UpdateCellInfo();
