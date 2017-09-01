@@ -72,7 +72,7 @@ class Cell {
         {
           points: [[0, 1], [SQRT3/2, 1/2], [SQRT3/2, -1/2], [0, -1],
                    [-SQRT3/2, -1/2], [-SQRT3/2, 1/2]],
-          fillColor: d3.rgb(210, 210, 210)
+          fillColor: this.DefaultBackgroundColor()
         }
       ];
     } else if (entries.length === 1) {
