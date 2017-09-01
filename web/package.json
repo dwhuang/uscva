@@ -9,6 +9,7 @@
   "devDependencies": {
     "assert": "^1.4.1",
     "d3": "^4.10.0",
+    "d3-tip": "^0.7.1",
     "http-server": "^0.10.0",
     "webpack": "^3.5.5"
   },

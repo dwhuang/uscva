@@ -2,8 +2,10 @@
 
 var assert = require('assert');
 var d3 = require('d3');
+var d3tip = require('d3-tip');
 
 var Cell = require('cell');
+var featureIds = require('feature_ids');
 var models = require('models');
 var partyAbbrev = require('party_abbrev');
 
@@ -11,6 +13,10 @@ var SQRT3 = 1.732051;
 
 var cellInfoAnchor = null;
 var cellInfo2Anchor = null;
+
+var tip = d3tip().attr('class', 'd3-tip').offset([-7, 0]).html(function(d) {
+  return '<span>' + featureIds.Get(d.index) + '</span>';
+});
 
 function FindHexagonVertices() {
   return [
@@ -174,7 +180,9 @@ function UpdateCellInfo(d) {
               .attr('width', VOTE_RECT_WIDTH)
               .attr('height', LINE_HEIGHT - VOTE_RECT_VMARGIN * 2)
               .attr('x', i * VOTE_RECT_WIDTH)
-              .attr('y', VOTE_RECT_VMARGIN);
+              .attr('y', VOTE_RECT_VMARGIN)
+              .on('mouseover', tip.show)
+              .on('mouseleave', tip.hide);
         }
       })
     .merge(rows);
@@ -200,11 +208,13 @@ function UpdateCellInfo(d) {
             .attr('alignment-baseline', 'before-edge')
             .attr('font-family', 'Arial, Helvetica');
         d3.select(this).selectAll('rect')
-            .data(d.features)
+            .data(d.features.map(function(f, i) {
+              return {value: f, index: i};
+            }))
             .attr('fill', function(d) {
-              if (d == 1) {
+              if (d.value == 1) {
                 return 'green';
-              } else if (d == -1) {
+              } else if (d.value == -1) {
                 return 'red';
               } else {
                 return 'gray';
@@ -296,6 +306,7 @@ function Main() {
       .attr('value', function(d) { return d.path; })
       .text(function(d) { return d.name; });
   modelList.on('change', function() {
+    // TODO(owenchu): This should only be called after feature IDs are loaded.
     RenderGraph(this.value);
   });
 
@@ -306,12 +317,15 @@ function Main() {
       .attr('height', canvasSize[1])
       .on('click', UnanchorCell)
   var zoomCanvas = rawCanvas.append('g').attr('id', 'zoom');
+  zoomCanvas.call(tip);
   var cellInfoPane = rawCanvas.append('g')
       .on('click', function() { d3.event.stopPropagation(); });
   cellInfoPane.append('g').attr('id', 'cellInfo');
   cellInfoPane.append('g').attr('id', 'cellInfo2');
 
-  RenderGraph(models[0].path);
+  featureIds.Load('out_pub/sbills-feature_ids.json', function() {
+    RenderGraph(models[0].path);
+  });
 }
 
 Main();

@@ -1,8 +1,9 @@
-#cellInfo {
-  font-family: 'Roboto Mono', monospace;
-  border: 1px solid black;
-}
-
-#cellInfo > thead {
-  text-decoration: underline;
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 5px 8px 5px 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  margin: 6px 0 0 0;
 }
