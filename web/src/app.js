@@ -45,14 +45,20 @@ function RestoreAttr(sel, attr, tmpAttr) {
 
 function UnselectCell() {
   var cell = d3.select(this);
-  RestoreAttr(cell.select('polygon'), 'fill', '_fill');
+  cell.select('g').selectAll('polygon')
+      .each(function() {
+        RestoreAttr(d3.select(this), 'fill', '_fill');
+      });
   RestoreAttr(cell.select('text'), 'fill', '_fill');
   UpdateCellInfo();
 }
 
 function SelectCell(d) {
   var cell = d3.select(this).style('cursor', 'default');
-  SetAttr(cell.select('polygon'), 'fill', Cell.SelectedBackgroundColor, '_fill');
+  cell.select('g').selectAll('polygon')
+      .each(function() {
+        SetAttr(d3.select(this), 'fill', Cell.SelectedBackgroundColor, '_fill');
+      });
   SetAttr(cell.select('text'), 'fill', Cell.SelectedTextColor, '_fill');
   UpdateCellInfo(d);
 }
@@ -64,8 +70,10 @@ function AnchorCell(d) {
   if (!cellInfoAnchor) {
     // first anchor cell
     cellInfoAnchor = d3.select(this);
-    var polygon = cellInfoAnchor.select('polygon');
-    SetAttr(polygon, '_fill', 'yellow', '__fill');
+    cellInfoAnchor.select('g').selectAll('polygon')
+        .each(function() {
+          SetAttr(d3.select(this), '_fill', 'yellow', '__fill');
+        });
     // offset cellInfo panel
     d3.select('#cellInfo2')
       .attr('transform', 'translate(0,' 
@@ -74,8 +82,10 @@ function AnchorCell(d) {
       && cellInfoAnchor.node() != d3.select(this).node()) {
     // second anchor cell if it is different from the first
     cellInfo2Anchor = d3.select(this);
-    var polygon = cellInfo2Anchor.select('polygon');
-    SetAttr(polygon, '_fill', 'yellow', '__fill');
+    cellInfo2Anchor.select('g').selectAll('polygon')
+        .each(function() {
+          SetAttr(d3.select(this), '_fill', 'yellow', '__fill');
+        });
   } else {
     // we already have two cells anchored, release the two cells first
     UnanchorCell();
@@ -85,8 +95,10 @@ function AnchorCell(d) {
     // null
     if (d.rawData.labels.length > 0) {
       cellInfoAnchor = d3.select(this);
-      var polygon = cellInfoAnchor.select('polygon');
-      SetAttr(polygon, '_fill', 'yellow', '__fill');
+      cellInfoAnchor.select('g').selectAll('polygon')
+          .each(function() {
+            SetAttr(d3.select(this), '_fill', 'yellow', '__fill');
+          });
       d3.select('#cellInfo2')
         .attr('transform', 'translate(0,' 
           + d3.select('#cellInfo').node().getBBox().height + ')');
@@ -97,22 +109,28 @@ function AnchorCell(d) {
 
 function UnanchorCell() {
   if (cellInfo2Anchor != null) {
-    var polygon = cellInfo2Anchor.select('polygon');
-    if (polygon.attr('_fill') === null) {
-      RestoreAttr(polygon, 'fill', '__fill');
-    } else {
-      RestoreAttr(polygon, '_fill', '__fill');
-    }
+    cellInfo2Anchor.select('g').selectAll('polygon')
+        .each(function() {
+          var polygon = d3.select(this);
+          if (polygon.attr('_fill') === null) {
+            RestoreAttr(polygon, 'fill', '__fill');
+          } else {
+            RestoreAttr(polygon, '_fill', '__fill');
+          }
+        });
     cellInfo2Anchor = null;
     UpdateCellInfo();
   }
   if (cellInfoAnchor != null) {
-    var polygon = cellInfoAnchor.select('polygon');
-    if (polygon.attr('_fill') === null) {
-      RestoreAttr(polygon, 'fill', '__fill');
-    } else {
-      RestoreAttr(polygon, '_fill', '__fill');
-    }
+    cellInfoAnchor.select('g').selectAll('polygon')
+        .each(function() {
+          var polygon = d3.select(this);
+          if (polygon.attr('_fill') === null) {
+            RestoreAttr(polygon, 'fill', '__fill');
+          } else {
+            RestoreAttr(polygon, '_fill', '__fill');
+          }
+        });
     cellInfoAnchor = null;
     UpdateCellInfo();
   }
@@ -193,30 +211,36 @@ function UpdateCellInfo(d) {
       });
 }
 
-function RenderGraph(fpath) {
-  d3.json(fpath, function(entries) {
+function RenderGraph(modelFilePath) {
+  d3.json(modelFilePath, function(entries) {
     var canvas = d3.select('#transformedCanvas');
     var cells = canvas.selectAll('g.cell').data(
         entries.map(function(entry) { return new Cell(entry); }));
     cells.exit().remove();
-    var newCells = cells
-      .enter().append('g')
+    cells.enter().append('g')
         .attr('class', 'cell')
         .on('mouseenter', SelectCell)
         .on('mouseleave', UnselectCell)
         .on('click', AnchorCell)
         .each(function() {
-          d3.select(this).append('polygon');
+          d3.select(this).append('g');
           d3.select(this).append('text');
         })
       .merge(cells)
         .attr('transform', function(d) {
           return 'translate(' + d.rawData.centroid + ')';
         })
-        .each(function() {
-          d3.select(this).select('polygon')
-              .attr('points', FindHexagonVertices)
-              .attr('fill', Cell.DefaultBackgroundColor);
+        .each(function(d) {
+          var polygons = d3.select(this).select('g').selectAll('polygon')
+              .data(d.PolygonGroup());
+          polygons.exit().remove();
+          polygons.enter().append('polygon')
+            .merge(polygons)
+              .each(function(d) {
+                d3.select(this)
+                    .attr('points', d.points)
+                    .attr('fill', d.fillColor)
+              });
           d3.select(this).select('text')
               .text(Cell.Text)
               .attr('fill', Cell.DefaultTextColor)
@@ -229,7 +253,7 @@ function RenderGraph(fpath) {
 }
 
 function Main() {
-  // init model list
+  // Init model list.
   var modelList = d3.select('#modelList');
   modelList.selectAll('option')
       .data(models)
@@ -240,7 +264,7 @@ function Main() {
     RenderGraph(this.value);
   });
 
-  // init canvas
+  // Init canvas.
   var canvasSize = GetCanvasSize();
   var rawCanvas = d3.select('#canvas')
       .attr('width', canvasSize[0])
