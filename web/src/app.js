@@ -76,7 +76,7 @@ function AnchorCell(d) {
         });
     // offset cellInfo panel
     d3.select('#cellInfo2')
-      .attr('transform', 'translate(0,' 
+      .attr('transform', 'translate(0,'
         + d3.select('#cellInfo').node().getBBox().height + ')');
   } else if (!cellInfo2Anchor
       && cellInfoAnchor.node() != d3.select(this).node()) {
@@ -100,7 +100,7 @@ function AnchorCell(d) {
             SetAttr(d3.select(this), '_fill', 'yellow', '__fill');
           });
       d3.select('#cellInfo2')
-        .attr('transform', 'translate(0,' 
+        .attr('transform', 'translate(0,'
           + d3.select('#cellInfo').node().getBBox().height + ')');
     }
   }
@@ -134,7 +134,9 @@ function UnanchorCell() {
     cellInfoAnchor = null;
     UpdateCellInfo();
   }
-  d3.event.stopPropagation();
+  if (d3.event) {
+    d3.event.stopPropagation();
+  }
 }
 
 function UpdateCellInfo(d) {
@@ -189,7 +191,7 @@ function UpdateCellInfo(d) {
           .attr('fill', 'blue');
         d3.select(this).select('text')
             .text(function(d) {
-              return d.profile.last_name 
+              return d.profile.last_name
                 + ', ' + d.profile.first_name
                 + ' (' + partyAbbrev.GetPartyAbbrev(d.profile.party)
                 + '-' + d.profile.state + ')';
@@ -211,9 +213,12 @@ function UpdateCellInfo(d) {
       });
 }
 
-function RenderGraph(modelFilePath) {
-  d3.json(modelFilePath, function(entries) {
-    var canvas = d3.select('#transformedCanvas');
+function RenderGraph(fpath) {
+  UnanchorCell();
+  UnanchorCell();
+  d3.json(fpath, function(entries) {
+    var canvasSize = GetCanvasSize();
+    var canvas = d3.select('#zoom');
     var cells = canvas.selectAll('g.cell').data(
         entries.map(function(entry) { return new Cell(entry); }));
     cells.exit().remove();
@@ -228,7 +233,12 @@ function RenderGraph(modelFilePath) {
         })
       .merge(cells)
         .attr('transform', function(d) {
-          return 'translate(' + d.rawData.centroid + ')';
+          return 'translate('
+            + [
+              d.rawData.centroid[0] + canvasSize[0] / 2,
+              -d.rawData.centroid[1] + canvasSize[1] / 2,
+            ]
+            + ')';
         })
         .each(function(d) {
           var polygons = d3.select(this).select('g').selectAll('polygon')
@@ -245,11 +255,36 @@ function RenderGraph(modelFilePath) {
               .text(Cell.Text)
               .attr('fill', Cell.DefaultTextColor)
               .attr('font-size', 1)
-              .attr('transform', 'scale(1,-1)')
               .attr('text-anchor', 'middle')
               .attr('alignment-baseline', 'middle');
         });
+
+    AutoZoom();
   });
+}
+
+function AutoZoom(entries) {
+  var bbox = d3.select('#zoom').node().getBBox();
+  var canvasSize = GetCanvasSize();
+  var s = Math.min(canvasSize[0] / bbox.width, canvasSize[1] / bbox.height);
+  s *= 0.7;
+  var zoom = d3.zoom()
+      .scaleExtent([5, 40])
+      .translateExtent([[0, 0], canvasSize])
+      .on('zoom', function() {
+        d3.select('#zoom').attr('transform', d3.event.transform);
+      });
+  d3.select('#canvas').call(zoom);
+  d3.select('#canvas')
+      .transition()
+      .duration(500)
+      .call(
+        zoom.transform,
+        d3.zoomIdentity
+          .translate(canvasSize[0]/2, canvasSize[1]/2)
+          .scale(s)
+          .translate(-canvasSize[0]/2, -canvasSize[1]/2)
+      );
 }
 
 function Main() {
@@ -270,27 +305,11 @@ function Main() {
       .attr('width', canvasSize[0])
       .attr('height', canvasSize[1])
       .on('click', UnanchorCell)
-  var zoomCanvas = rawCanvas.append('g')
-      .attr('id', 'zoom');
-  var transformLayer = zoomCanvas.append('g')
-      .attr(
-        'transform',
-        'translate(' + [canvasSize[0]/2, canvasSize[1]/2] + ')scale(20, -20)'
-      );
-  var canvas = transformLayer.append('g').attr('id', 'transformedCanvas');
+  var zoomCanvas = rawCanvas.append('g').attr('id', 'zoom');
   var cellInfoPane = rawCanvas.append('g')
       .on('click', function() { d3.event.stopPropagation(); });
   cellInfoPane.append('g').attr('id', 'cellInfo');
   cellInfoPane.append('g').attr('id', 'cellInfo2');
-
-  var zoom = d3.zoom()
-      .scaleExtent([1, 40])
-      .translateExtent([[0, 0], canvasSize])
-      .on('zoom', function() {
-        console.log(d3.event.transform);
-        zoomCanvas.attr('transform', d3.event.transform);
-      });
-  rawCanvas.call(zoom);
 
   RenderGraph(models[0].path);
 }
