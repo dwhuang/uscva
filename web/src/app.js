@@ -199,10 +199,10 @@ function UpdateCellInfo(d) {
           .attr('fill', 'blue');
         d3.select(this).select('text')
             .text(function(d) {
-              return d.profile.last_name
-                + ', ' + d.profile.first_name
-                + ' (' + partyAbbrev.GetPartyAbbrev(d.profile.party)
-                + '-' + d.profile.state + ')';
+              return '(' + partyAbbrev.GetPartyAbbrev(d.profile.party)
+                + '-' + d.profile.state + ') '
+                + d.profile.last_name
+                + ', ' + d.profile.first_name;
             })
             .attr('font-size', LINE_HEIGHT - VOTE_RECT_VMARGIN)
             .attr('alignment-baseline', 'before-edge')
