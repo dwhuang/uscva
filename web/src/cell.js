@@ -30,12 +30,10 @@ class Cell {
   // TODO(owenchu): Refactor this mess.
   PolygonGroup() {
     const labels = this.rawData.labels;
-    const numDemocrats = labels.filter(function(label) {
-      return label.profile.party === 'Democrat';
-    }).length;
-    const numRepublicans = labels.filter(function(label) {
-      return label.profile.party === 'Republican';
-    }).length;
+    const numDemocrats = labels.filter(
+        label => label.profile.party === 'Democrat').length;
+    const numRepublicans = labels.filter(
+        label => label.profile.party === 'Republican').length;
     const numOtherSenators = labels.length - numDemocrats - numRepublicans;
 
     const entries = [];
@@ -60,7 +58,7 @@ class Cell {
         fillColor: d3.rgb(51, 153, 102)
       });
     }
-    entries.sort(function(a, b) {
+    entries.sort((a, b) => {
       if (a.count > b.count) return -1;
       if (a.count < b.count) return 1;
       // TODO(owenchu): Order by party so it's consistent across cells.
