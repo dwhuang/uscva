@@ -67,7 +67,7 @@ class CongressMemberFeatures:
                     sample.append(m['votes'][bill_id])
                     voted_any = True
                 else:
-                    sample.append(0)
+                    sample.append('')
             if voted_any:
                 samples.append(sample)
 

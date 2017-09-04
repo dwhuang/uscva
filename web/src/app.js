@@ -212,12 +212,17 @@ function UpdateCellInfo(d) {
               return {value: f, index: i};
             }))
             .attr('fill', function(d) {
+              if (d.value === '') {
+                return 'transparent';
+              }
               if (d.value == 1) {
                 return 'green';
               } else if (d.value == -1) {
                 return 'red';
-              } else {
+              } else if (d.value == 0) {
                 return 'gray';
+              } else {
+                return 'black'; // something's wrong
               }
             });
       });

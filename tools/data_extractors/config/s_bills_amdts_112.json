@@ -26,5 +26,6 @@
     "congress_member_data_path_patterns": [
         "^congress-legislators$",
         "^legislators-(current|historic).csv$"
-    ]
+    ],
+    "training_data_nan_threshold": 0.7
 }

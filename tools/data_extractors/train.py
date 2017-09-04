@@ -17,6 +17,7 @@ from som.hexgrid import HexGrid
 from som.utils import read_data
 from som.utils import gen_random_data
 from som.utils import parameter_sweep
+from som.utils import filter_inputs_by_nan_ratio
 from file_walker import FileWalker
 
 
@@ -58,8 +59,8 @@ def main():
         lr_infl=0.6,
         lr_sigma=0.0001,
         input_ranges=[
-            np.min(inputs, axis=0),
-            np.max(inputs, axis=0),
+            np.nanmin(inputs, axis=0),
+            np.nanmax(inputs, axis=0),
         ],
     )
 
@@ -68,7 +69,11 @@ def main():
         config['name'],
     )
     if command == 'train':
-        som.train(inputs, 1000)
+        training_inputs = filter_inputs_by_nan_ratio(
+            inputs,
+            config['training_data_nan_threshold'],
+        )
+        som.train(training_inputs, 1000)
         display_som(som, labels, inputs)
         # save SOM to a file
         with open(som_fname, 'wb') as fp:
@@ -118,7 +123,10 @@ def main():
                     'labels': [
                         {
                             'id': id,
-                            'features': [int(f) for f in features[id]],
+                            'features': [
+                                '' if np.isnan(f) else int(f)
+                                for f in features[id]
+                            ],
                             'profile': profiles.get_profile(id),
                         }
                         for id in labeled_map[i]
