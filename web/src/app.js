@@ -228,53 +228,55 @@ function UpdateCellInfo(d) {
       });
 }
 
-function RenderGraph(fpath) {
+function RenderGraph(model) {
   UnanchorCell();
   UnanchorCell();
-  d3.json(fpath, function(entries) {
-    var canvasSize = GetCanvasSize();
-    var canvas = d3.select('#zoom');
-    var cells = canvas.selectAll('g.cell').data(
-        entries.map(function(entry) { return new Cell(entry); }));
-    cells.exit().remove();
-    cells.enter().append('g')
-        .attr('class', 'cell')
-        .on('mouseenter', SelectCell)
-        .on('mouseleave', UnselectCell)
-        .on('click', AnchorCell)
-        .each(function() {
-          d3.select(this).append('g');
-          d3.select(this).append('text');
-        })
-      .merge(cells)
-        .attr('transform', function(d) {
-          return 'translate('
-            + [
-              d.rawData.centroid[0] + canvasSize[0] / 2,
-              -d.rawData.centroid[1] + canvasSize[1] / 2,
-            ]
-            + ')';
-        })
-        .each(function(d) {
-          var polygons = d3.select(this).select('g').selectAll('polygon')
-              .data(d.PolygonGroup());
-          polygons.exit().remove();
-          polygons.enter().append('polygon')
-            .merge(polygons)
-              .each(function(d) {
-                d3.select(this)
-                    .attr('points', d.points)
-                    .attr('fill', d.fillColor)
-              });
-          d3.select(this).select('text')
-              .text(Cell.Text)
-              .attr('fill', Cell.DefaultTextColor)
-              .attr('font-size', 1)
-              .attr('text-anchor', 'middle')
-              .attr('alignment-baseline', 'middle');
-        });
+  featureIds.Load(model.featureIdsPath, function() {
+    d3.json(model.modelPath, function(entries) {
+      var canvasSize = GetCanvasSize();
+      var canvas = d3.select('#zoom');
+      var cells = canvas.selectAll('g.cell').data(
+          entries.map(function(entry) { return new Cell(entry); }));
+      cells.exit().remove();
+      cells.enter().append('g')
+          .attr('class', 'cell')
+          .on('mouseenter', SelectCell)
+          .on('mouseleave', UnselectCell)
+          .on('click', AnchorCell)
+          .each(function() {
+            d3.select(this).append('g');
+            d3.select(this).append('text');
+          })
+        .merge(cells)
+          .attr('transform', function(d) {
+            return 'translate('
+              + [
+                d.rawData.centroid[0] + canvasSize[0] / 2,
+                -d.rawData.centroid[1] + canvasSize[1] / 2,
+              ]
+              + ')';
+          })
+          .each(function(d) {
+            var polygons = d3.select(this).select('g').selectAll('polygon')
+                .data(d.PolygonGroup());
+            polygons.exit().remove();
+            polygons.enter().append('polygon')
+              .merge(polygons)
+                .each(function(d) {
+                  d3.select(this)
+                      .attr('points', d.points)
+                      .attr('fill', d.fillColor)
+                });
+            d3.select(this).select('text')
+                .text(Cell.Text)
+                .attr('fill', Cell.DefaultTextColor)
+                .attr('font-size', 1)
+                .attr('text-anchor', 'middle')
+                .attr('alignment-baseline', 'middle');
+          });
 
-    AutoZoom();
+      AutoZoom();
+    });
   });
 }
 
@@ -308,11 +310,12 @@ function Main() {
   modelList.selectAll('option')
       .data(models)
     .enter().append('option')
-      .attr('value', function(d) { return d.path; })
+      .attr('value', function(d) { return JSON.stringify(d); })
       .text(function(d) { return d.name; });
   modelList.on('change', function() {
-    // TODO(owenchu): This should only be called after feature IDs are loaded.
-    RenderGraph(this.value);
+    var selectedOption = this.options[this.selectedIndex];
+    var model = JSON.parse(selectedOption.value);
+    RenderGraph(model);
   });
 
   // Init canvas.
@@ -328,9 +331,7 @@ function Main() {
   cellInfoPane.append('g').attr('id', 'cellInfo');
   cellInfoPane.append('g').attr('id', 'cellInfo2');
 
-  featureIds.Load('out_pub/sbills-feature_ids.json', function() {
-    RenderGraph(models[0].path);
-  });
+  RenderGraph(models[0]);
 }
 
 Main();

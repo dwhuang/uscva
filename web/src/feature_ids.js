@@ -1,8 +1,5 @@
 'use strict';
 
-// TODO(dwhuang): Export multiple feature ID files or maybe just output IDs in
-// the model files if possible.
-
 var d3 = require('d3');
 
 var featuresIds = [];
