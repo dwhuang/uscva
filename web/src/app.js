@@ -14,7 +14,7 @@ var SQRT3 = 1.732051;
 var cellInfoAnchor = null;
 var cellInfo2Anchor = null;
 
-var tip = d3tip().attr('class', 'd3-tip').offset([-7, 0]).html(function(d) {
+var tip = d3tip().attr('class', 'd3-tip').offset([-2, 30]).html(function(d) {
   return '<span>' + featureIds.Get(d.index) + '</span>';
 });
 
