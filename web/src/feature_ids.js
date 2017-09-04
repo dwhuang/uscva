@@ -12,7 +12,7 @@ function Get(index) {
 }
 
 function LoadFeatureIds(featureIdsFilePath, doneCallback) {
-  d3.json(featureIdsFilePath, function(data) {
+  d3.json(featureIdsFilePath, data => {
     featuresIds = data;
     doneCallback();
   });
