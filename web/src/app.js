@@ -14,9 +14,8 @@ var SQRT3 = 1.732051;
 var cellInfoAnchor = null;
 var cellInfo2Anchor = null;
 
-var tip = d3tip().attr('class', 'd3-tip').offset([-2, 30]).html(function(d) {
-  return '<span>' + featureIds.Get(d.index) + '</span>';
-});
+var tip = d3tip().attr('class', 'd3-tip').offset([-2, 30]).html(
+    d => '<span>' + featureIds.Get(d.index) + '</span>');
 
 function FindHexagonVertices() {
   return [
@@ -188,9 +187,7 @@ function UpdateCellInfo(d) {
     .merge(rows);
 
   rows
-      .attr('transform', function(d, i) {
-        return 'translate(0,' + i * LINE_HEIGHT + ')';
-      })
+      .attr('transform', (d, i) => 'translate(0,' + i * LINE_HEIGHT + ')')
       .each(function(d, i) {
         d3.select(this).select('a')
           .attr('href', d.profile.url)
@@ -198,20 +195,17 @@ function UpdateCellInfo(d) {
           .attr('target', '_blank')
           .attr('fill', 'blue');
         d3.select(this).select('text')
-            .text(function(d) {
-              return '(' + partyAbbrev.GetPartyAbbrev(d.profile.party)
-                + '-' + d.profile.state + ') '
-                + d.profile.last_name
-                + ', ' + d.profile.first_name;
-            })
+            .text((d) =>
+              '(' + partyAbbrev.GetPartyAbbrev(d.profile.party) +
+              '-' + d.profile.state + ') ' +
+              d.profile.last_name +
+              ', ' + d.profile.first_name)
             .attr('font-size', LINE_HEIGHT - VOTE_RECT_VMARGIN)
             .attr('alignment-baseline', 'before-edge')
             .attr('font-family', 'Arial, Helvetica');
         d3.select(this).selectAll('rect')
-            .data(d.features.map(function(f, i) {
-              return {value: f, index: i};
-            }))
-            .attr('fill', function(d) {
+            .data(d.features.map((f, i) => ({value: f, index: i})))
+            .attr('fill', (d) => {
               if (d.value === '') {
                 return 'transparent';
               }
@@ -231,12 +225,12 @@ function UpdateCellInfo(d) {
 function RenderGraph(model) {
   UnanchorCell();
   UnanchorCell();
-  featureIds.Load(model.featureIdsPath, function() {
-    d3.json(model.modelPath, function(entries) {
+  featureIds.Load(model.featureIdsPath, () => {
+    d3.json(model.modelPath, (entries) => {
       var canvasSize = GetCanvasSize();
       var canvas = d3.select('#zoom');
       var cells = canvas.selectAll('g.cell').data(
-          entries.map(function(entry) { return new Cell(entry); }));
+          entries.map(entry => new Cell(entry)));
       cells.exit().remove();
       cells.enter().append('g')
           .attr('class', 'cell')
@@ -248,14 +242,11 @@ function RenderGraph(model) {
             d3.select(this).append('text');
           })
         .merge(cells)
-          .attr('transform', function(d) {
-            return 'translate('
-              + [
-                d.rawData.centroid[0] + canvasSize[0] / 2,
-                -d.rawData.centroid[1] + canvasSize[1] / 2,
-              ]
-              + ')';
-          })
+          .attr('transform', d =>
+            'translate(' + [
+              d.rawData.centroid[0] + canvasSize[0] / 2,
+              -d.rawData.centroid[1] + canvasSize[1] / 2
+            ] + ')')
           .each(function(d) {
             var polygons = d3.select(this).select('g').selectAll('polygon')
                 .data(d.PolygonGroup());
@@ -288,7 +279,7 @@ function AutoZoom(entries) {
   var zoom = d3.zoom()
       .scaleExtent([5, 40])
       .translateExtent([[0, 0], canvasSize])
-      .on('zoom', function() {
+      .on('zoom', () => {
         d3.select('#zoom').attr('transform', d3.event.transform);
       });
   d3.select('#canvas').call(zoom);
@@ -310,8 +301,8 @@ function Main() {
   modelList.selectAll('option')
       .data(models)
     .enter().append('option')
-      .attr('value', function(d) { return JSON.stringify(d); })
-      .text(function(d) { return d.name; });
+      .attr('value', d => JSON.stringify(d))
+      .text(d => d.name);
   modelList.on('change', function() {
     var selectedOption = this.options[this.selectedIndex];
     var model = JSON.parse(selectedOption.value);
@@ -327,7 +318,7 @@ function Main() {
   var zoomCanvas = rawCanvas.append('g').attr('id', 'zoom');
   zoomCanvas.call(tip);
   var cellInfoPane = rawCanvas.append('g')
-      .on('click', function() { d3.event.stopPropagation(); });
+      .on('click', () => { d3.event.stopPropagation(); });
   cellInfoPane.append('g').attr('id', 'cellInfo');
   cellInfoPane.append('g').attr('id', 'cellInfo2');
 
