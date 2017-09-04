@@ -1,5 +1,5 @@
 module.exports = {
-  GetPartyAbbrev: function(partyName) {
+  GetPartyAbbrev: partyName => {
     switch (partyName) {
       case 'Adams': return 'Adams';
       case 'Adams-Clay Federalist': return 'Adams-Clay F';
