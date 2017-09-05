@@ -79,6 +79,12 @@ function AnchorCell(d) {
         .each(function() {
           SetAttr(d3.select(this), '_fill', 'yellow', '__fill');
         });
+    // highlight cellinfo area
+    d3.select('#cellInfo').select('#background')
+      .style('fill', 'yellow')
+      .transition().ease(d3.easeQuad).duration(2000)
+      .style('fill', 'white')
+      .style('stroke', 'yellow');
     // offset cellInfo panel
     d3.select('#cellInfo2')
       .attr('transform', 'translate(0,'
@@ -91,6 +97,12 @@ function AnchorCell(d) {
         .each(function() {
           SetAttr(d3.select(this), '_fill', 'yellow', '__fill');
         });
+    // highlight cellinfo area
+    d3.select('#cellInfo2').select('#background')
+      .style('fill', 'yellow')
+      .transition().ease(d3.easeQuad).duration(2000)
+      .style('fill', 'white')
+      .style('stroke', 'yellow');
   } else {
     // we already have two cells anchored, release the two cells first
     UnanchorCell();
@@ -104,6 +116,12 @@ function AnchorCell(d) {
           .each(function() {
             SetAttr(d3.select(this), '_fill', 'yellow', '__fill');
           });
+      // highlight cellinfo area
+      d3.select('#cellInfo2').select('#background')
+        .style('fill', 'yellow')
+        .transition().ease(d3.easeQuad).duration(2000)
+        .style('fill', 'white')
+        .style('stroke', 'yellow');
       d3.select('#cellInfo2')
         .attr('transform', 'translate(0,'
           + d3.select('#cellInfo').node().getBBox().height + ')');
@@ -164,11 +182,13 @@ function UpdateCellInfo(d) {
   var MAX_VOTE_RECT_WIDTH = 10;
   var VOTE_RECT_VMARGIN = 2;
 
+  var numVotes = 0;
+  var voteRectWidth = 0;
   if (labels.length > 0) {
-    var num_votes = labels[0].features.length;
-    var vote_rect_width = Math.round(MAX_VOTE_BAR_WIDTH / num_votes);
-    if (vote_rect_width > MAX_VOTE_RECT_WIDTH) {
-      vote_rect_width = MAX_VOTE_RECT_WIDTH;
+    numVotes = labels[0].features.length;
+    voteRectWidth = Math.round(MAX_VOTE_BAR_WIDTH / numVotes);
+    if (voteRectWidth > MAX_VOTE_RECT_WIDTH) {
+      voteRectWidth = MAX_VOTE_RECT_WIDTH;
     }
   }
 
@@ -178,16 +198,15 @@ function UpdateCellInfo(d) {
     .append('g')
       .attr('class', 'row')
       .each(function() {
-        var numFeatures = d.rawData.weights.length;
         var row = d3.select(this);
         row.append('a')
           .append('text')
-            .attr('x', vote_rect_width * numFeatures + 10);
-        for (var i = 0; i < numFeatures; ++i) {
+            .attr('x', voteRectWidth * numVotes + 10);
+        for (var i = 0; i < numVotes; ++i) {
           row.append('rect')
-              .attr('width', vote_rect_width)
+              .attr('width', voteRectWidth)
               .attr('height', LINE_HEIGHT - VOTE_RECT_VMARGIN * 2)
-              .attr('x', i * vote_rect_width)
+              .attr('x', i * voteRectWidth)
               .attr('y', VOTE_RECT_VMARGIN)
               .on('mouseover', tip.show)
               .on('mouseleave', tip.hide);
@@ -231,10 +250,17 @@ function UpdateCellInfo(d) {
               }
             });
       });
+
+  var numRows = cellInfo.selectAll('.row').size();
+  var bgHeight = numRows * LINE_HEIGHT;
+  var bgWidth = numVotes * voteRectWidth + 10 + 300;
+  cellInfo.select('#background')
+    .attr('width', bgWidth)
+    .attr('height', bgHeight)
+    .attr('style', 'fill:white');
 }
 
 function RenderGraph(model) {
-  UnanchorCell();
   UnanchorCell();
   featureIds.Load(model.featureIdsPath, () => {
     d3.json(model.modelPath, (entries) => {
@@ -330,8 +356,10 @@ function Main() {
   zoomCanvas.call(tip);
   var cellInfoPane = rawCanvas.append('g')
       .on('click', () => { d3.event.stopPropagation(); });
-  cellInfoPane.append('g').attr('id', 'cellInfo');
-  cellInfoPane.append('g').attr('id', 'cellInfo2');
+  cellInfoPane.append('g').attr('id', 'cellInfo')
+    .append('rect').attr('id', 'background');
+  cellInfoPane.append('g').attr('id', 'cellInfo2')
+    .append('rect').attr('id', 'background');
 
   RenderGraph(models[0]);
 }
