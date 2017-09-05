@@ -160,8 +160,17 @@ function UpdateCellInfo(d) {
   }
 
   var LINE_HEIGHT = 18;
-  var VOTE_RECT_WIDTH = 10;
+  var MAX_VOTE_BAR_WIDTH = 300;
+  var MAX_VOTE_RECT_WIDTH = 10;
   var VOTE_RECT_VMARGIN = 2;
+
+  if (labels.length > 0) {
+    var num_votes = labels[0].features.length;
+    var vote_rect_width = Math.round(MAX_VOTE_BAR_WIDTH / num_votes);
+    if (vote_rect_width > MAX_VOTE_RECT_WIDTH) {
+      vote_rect_width = MAX_VOTE_RECT_WIDTH;
+    }
+  }
 
   var rows = cellInfo.selectAll('g.row').data(labels);
   rows.exit().remove();
@@ -173,12 +182,12 @@ function UpdateCellInfo(d) {
         var row = d3.select(this);
         row.append('a')
           .append('text')
-            .attr('x', VOTE_RECT_WIDTH * numFeatures + 10);
+            .attr('x', vote_rect_width * numFeatures + 10);
         for (var i = 0; i < numFeatures; ++i) {
           row.append('rect')
-              .attr('width', VOTE_RECT_WIDTH)
+              .attr('width', vote_rect_width)
               .attr('height', LINE_HEIGHT - VOTE_RECT_VMARGIN * 2)
-              .attr('x', i * VOTE_RECT_WIDTH)
+              .attr('x', i * vote_rect_width)
               .attr('y', VOTE_RECT_VMARGIN)
               .on('mouseover', tip.show)
               .on('mouseleave', tip.hide);
@@ -190,16 +199,18 @@ function UpdateCellInfo(d) {
       .attr('transform', (d, i) => 'translate(0,' + i * LINE_HEIGHT + ')')
       .each(function(d, i) {
         d3.select(this).select('a')
-          .attr('href', d.profile.url)
-          .attr('xlink:href', d.profile.url) // backward compatibility
-          .attr('target', '_blank')
-          .attr('fill', 'blue');
+          .attr('href', d.profile ? d.profile.url : null)
+          .attr('xlink:href', d.profile ? d.profile.url : null)
+          .attr('target', d.profile ? '_blank' : null)
+          .attr('fill', d.profile ? 'blue' : 'black');
         d3.select(this).select('text')
             .text((d) =>
-              '(' + partyAbbrev.GetPartyAbbrev(d.profile.party) +
-              '-' + d.profile.state + ') ' +
-              d.profile.last_name +
-              ', ' + d.profile.first_name)
+              d.profile ? 
+                '(' + partyAbbrev.GetPartyAbbrev(d.profile.party) +
+                '-' + d.profile.state + ') ' +
+                d.profile.last_name +
+                ', ' + d.profile.first_name
+              : d.id)
             .attr('font-size', LINE_HEIGHT - VOTE_RECT_VMARGIN)
             .attr('alignment-baseline', 'before-edge')
             .attr('font-family', 'Arial, Helvetica');

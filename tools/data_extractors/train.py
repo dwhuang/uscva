@@ -21,17 +21,18 @@ from som.utils import filter_inputs_by_nan_ratio
 from file_walker import FileWalker
 
 
-def display_som(som, labels, inputs):
+def display_som(som, labels, inputs, show_umatrix=False):
     print(som.smoothness())
     print(som.error(inputs))
 
-    # U-matrix visualization
-    umatrix = som.umatrix()
-    som.grid.draw(
-        [[m, m, m] for m in umatrix],
-        text=som.label(labels, inputs),
-        scale=10,
-    )
+    if show_umatrix:
+        # U-matrix visualization
+        umatrix = som.umatrix()
+        som.grid.draw(
+            [[m, m, m] for m in umatrix],
+            text=som.label(labels, inputs),
+            scale=10,
+        )
 
 
 def main():
@@ -63,6 +64,7 @@ def main():
             np.nanmax(inputs, axis=0),
         ],
     )
+    print("model size:", som.grid.radius)
 
     som_fname = '{}/{}-model.som'.format(
         config['output_path'],
@@ -82,7 +84,7 @@ def main():
         # load SOM from a file
         with open(som_fname, 'rb') as fp:
             som = pickle.load(fp)
-        display_som(som, labels, inputs)
+        display_som(som, labels, inputs, show_umatrix=True)
     elif command == 'parameter_sweep':
         parameter_sweep(10,
             data_fname,

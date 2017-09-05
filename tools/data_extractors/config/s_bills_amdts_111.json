@@ -21,7 +21,7 @@
         "Taiwan",
         "China"
     ],
-    "som_model_size": 5,
+    "som_model_size": 3,
     "export_shape_scale": 1,
     "congress_member_data_path_patterns": [
         "^congress-legislators$",

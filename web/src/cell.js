@@ -31,9 +31,9 @@ class Cell {
   PolygonGroup() {
     const labels = this.rawData.labels;
     const numDemocrats = labels.filter(
-        label => label.profile.party === 'Democrat').length;
+        label => label.profile && label.profile.party === 'Democrat').length;
     const numRepublicans = labels.filter(
-        label => label.profile.party === 'Republican').length;
+        label => label.profile && label.profile.party === 'Republican').length;
     const numOtherSenators = labels.length - numDemocrats - numRepublicans;
 
     const entries = [];
