@@ -28,7 +28,7 @@ where green indicates that the congress member voted 'yes' to a bill,
 red indicates a 'no' vote, gray indicates a present vote, and white indicates
 no data, mostly likely due to ineligibility to vote.
 
-To allow easy compairons, two cells can be selected (left-click) at the same time.
+To allow easy comparison, two cells can be selected (left-click) at the same time.
 One can also use mouse drag and wheel to zoom and pan.
 
 The dropdown menu at the top lists available datasets.
