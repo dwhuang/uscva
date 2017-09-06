@@ -69,4 +69,9 @@ module.exports = [
     'modelPath': 'out_pub/s_bills_109_115-export.json',
     'featureIdsPath': 'out_pub/s_bills_109_115-feature_ids.json',
   },
+  {
+    'name': "109-115 senetor and house rep votes for bills/amendments having keywords 'Taiwan' or 'China'",
+    'modelPath': 'out_pub/bills_amdts_109_115-export.json',
+    'featureIdsPath': 'out_pub/bills_amdts_109_115-feature_ids.json',
+  },
 ];
