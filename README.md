@@ -4,6 +4,8 @@ The goal is to provide people who are interested in US-Taiwan relationship
 with a quick overview of how each congress member voted for bills having keywords
 'Taiwan' and/or 'China'. 
 
+<h4><a href="https://dwhuang.github.io/uscva/v1/index.html" target="_blank">Take me to the visualizer now >>></a></h4>
+
 ## A Quick Introduction
 
 ![Sample Map](img/map.png)
