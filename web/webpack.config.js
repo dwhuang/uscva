@@ -1,6 +1,9 @@
 const path = require('path');
+const webpack = require('webpack');
 
 const config = {
+  target: 'web',
+
   context: path.resolve(__dirname, 'src'),
 
   entry: {
@@ -14,7 +17,24 @@ const config = {
     ]
   },
 
-  target: 'web',
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env']
+          }
+        }
+      }
+    ]
+  },
+
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin()
+  ],
 
   output: {
     path: path.resolve(__dirname, 'public/scripts'),
