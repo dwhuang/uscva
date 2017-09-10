@@ -1,13 +1,25 @@
 const path = require('path');
 
-module.exports = {
+const config = {
   context: path.resolve(__dirname, 'src'),
-  entry: './app.js',
-  resolve: {
-    modules: [path.resolve(__dirname, 'src'), 'node_modules']
+
+  entry: {
+    app: './app.js'
   },
+
+  resolve: {
+    modules: [
+      path.resolve(__dirname, 'src'),
+      'node_modules'
+    ]
+  },
+
+  target: 'web',
+
   output: {
     path: path.resolve(__dirname, 'public/scripts'),
-    filename: 'bundle.js'
+    filename: 'uscva.js'
   }
 };
+
+module.exports = config;
