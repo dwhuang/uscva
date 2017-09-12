@@ -14,6 +14,9 @@ var SQRT3 = 1.732051;
 var cellInfoAnchor = null;
 var cellInfo2Anchor = null;
 
+var cells = null;
+var searchTokens = [];
+
 var tip = d3tip().attr('class', 'd3-tip').offset([-2, 30]).html(
     d => '<span>' + featureIds.Get(d.index) + '</span>');
 
@@ -162,6 +165,13 @@ function UnanchorCell() {
   }
 }
 
+function GetPartyStateAbbrev(profile) {
+  if (profile === null) {
+    return '';
+  }
+  return partyAbbrev.GetPartyAbbrev(profile.party) + '-' + profile.state;
+}
+
 function UpdateCellInfo(d) {
   var labels = [];
   if (d && d.rawData.labels && d.rawData.labels.length > 0) {
@@ -225,8 +235,7 @@ function UpdateCellInfo(d) {
         d3.select(this).select('text')
             .text((d) =>
               d.profile ? 
-                '(' + partyAbbrev.GetPartyAbbrev(d.profile.party) +
-                '-' + d.profile.state + ') ' +
+                '(' + GetPartyStateAbbrev(d.profile) + ') ' +
                 d.profile.last_name +
                 ', ' + d.profile.first_name
               : d.id)
@@ -260,16 +269,54 @@ function UpdateCellInfo(d) {
     .attr('style', 'fill:white');
 }
 
+function HasKeywords(labels, keywords) {
+  if (keywords === null || keywords.length == 0) {
+    return true;
+  }
+  if (labels === null || labels.length == 0) {
+    return false;
+  }
+  for (var i = 0; i < labels.length; ++i) {
+    var label = labels[i];
+    var context = [
+      label.profile.first_name.toLowerCase(),
+      label.profile.last_name.toLowerCase(),
+      GetPartyStateAbbrev(label.profile).toLowerCase(),
+    ];
+    var foundAllKeywords = true;
+    for (var j = 0; j < keywords.length; ++j) {
+      var keyword = keywords[j];
+      var foundKeyword = false;
+      for (var k = 0; k < context.length; ++k) {
+        var c = context[k];
+        if (c.includes(keyword)) {
+          foundKeyword = true;
+          break;
+        }
+      }
+      if (!foundKeyword) {
+        foundAllKeywords = false;
+        break;
+      }
+    }
+    if (foundAllKeywords) {
+      return true;
+    }
+  }
+  return false;
+}
+
 function RenderGraph(model) {
   UnanchorCell();
+  TriggerClearSearch();
   featureIds.Load(model.featureIdsPath, () => {
     d3.json(model.modelPath, (entries) => {
       var canvasSize = GetCanvasSize();
       var canvas = d3.select('#zoom');
-      var cells = canvas.selectAll('g.cell').data(
+      cells = canvas.selectAll('g.cell').data(
           entries.map(entry => new Cell(entry)));
       cells.exit().remove();
-      cells.enter().append('g')
+      cells = cells.enter().append('g')
           .attr('class', 'cell')
           .on('mouseenter', SelectCell)
           .on('mouseleave', UnselectCell)
@@ -301,6 +348,19 @@ function RenderGraph(model) {
                 .attr('font-size', 1)
                 .attr('text-anchor', 'middle')
                 .attr('alignment-baseline', 'middle');
+          })
+          .on('search', (d) => {
+            var polygon = d3.select(d3.event.target).select('g')
+                .selectAll('polygon');
+            if (searchTokens === null || searchTokens.length == 0) {
+              polygon.attr('opacity', 1);
+              return;
+            }
+            if(HasKeywords(d.rawData.labels, searchTokens)) {
+              polygon.attr('opacity', 1);
+            } else {
+              polygon.attr('opacity', 0.25);
+            }
           });
 
       AutoZoom();
@@ -332,6 +392,30 @@ function AutoZoom(entries) {
       );
 }
 
+function TriggerSearch() {
+  if (!cells) {
+    return;
+  }
+
+  var text = d3.select('#searchText').node().value;
+  if (!text) {
+    searchTokens = [];
+  } else {
+    searchTokens = text.trim().toLowerCase().split(' ');
+    for (var i = searchTokens.length - 1; i >= 0; --i) {
+      if (searchTokens[i].trim() == '') {
+        searchTokens.splice(i, 1);
+      }
+    }
+  }
+  cells.dispatch('search');
+}
+
+function TriggerClearSearch() {
+  d3.select('#searchText').node().value = null;
+  TriggerSearch();
+}
+
 function Main() {
   // Init model list.
   var modelList = d3.select('#modelList');
@@ -345,6 +429,10 @@ function Main() {
     var model = JSON.parse(selectedOption.value);
     RenderGraph(model);
   });
+
+  // Init search
+  d3.select('#searchText').on('keyup', TriggerSearch);
+  d3.select('#searchClearButton').on('click', TriggerClearSearch);
 
   // Init canvas.
   var canvasSize = GetCanvasSize();
