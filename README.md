@@ -1,8 +1,9 @@
 # US Congress Voting Pattern Visualizer for Taiwan-related Bills
 This project visualizes the voting patterns of the US congress for Taiwan-related bills.
-The goal is to provide people who are interested in US-Taiwan relationship
-with a quick overview of how each congress member voted for bills having keywords
-'Taiwan' and/or 'China'. 
+Each congress member is mapped to a location on a 2D map according to his or her voting history. 
+Congress members having similar voting history are mapped to nearby locations on the map.
+We focus on bill votes related to Taiwan only, that is, we restrict to bills containing keywords 'Taiwan' or 'China'.
+The goal is to provide a quick overview of the distribution of congress members based on their Taiwan-related bill votes.
 
 <h4><a href="https://dwhuang.github.io/uscva/v1/index.html" target="_blank">Take me to the visualizer now >>></a></h4>
 
@@ -11,8 +12,7 @@ with a quick overview of how each congress member voted for bills having keyword
 ![Sample Map](img/map.png)
 
 In the above screenshot, each congress member is mapped to a cell based on 
-his/her voting history for Taiwan-related bills. The mapping is done such that
-proximity reflects similarity in voting patterns. As a result, congress members
+his/her voting history for Taiwan-related bills. Congress members
 who are mapped to nearby cells have generally similar voting history.
 The background colors indicate parties:
 red for Republicant, blue for Democrats, and green for other parties. 
@@ -35,8 +35,8 @@ The dropdown menu at the top lists available datasets.
 
 ## Technical Details
 
-The visualizations are made using self-organizing maps (SOM), a kind of neural network
-that learns to project high-dimensional data onto a 2D surface in a nonlinear fashion.
+The visualizations are made using self-organizing maps (SOMs), a class of neural network
+that learns to project high-dimensional data onto a 2D surface in a nonlinear and topology-preserving fashion.
 
 ## References
 - Data source: https://www.govtrack.us/developers
