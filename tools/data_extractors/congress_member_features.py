@@ -10,6 +10,7 @@ congress members.
 """
 import sys
 import json
+from collections import OrderedDict
 
 class CongressMemberFeatures:
     def __init__(self, config):
@@ -29,7 +30,7 @@ class CongressMemberFeatures:
             print("Congress member voting records not found")
             raise RuntimeError()
 
-        self.bill_ids = set(self.read_bill_ids(fname_bill_ids))
+        self.bill_ids = self.read_bill_ids(fname_bill_ids)
         if len(self.bill_ids) == 0:
             print("Bill IDs not found")
             raise RuntimeError()
@@ -53,16 +54,20 @@ class CongressMemberFeatures:
         for m in self.congress_members:
             for bill_voted in m['votes']:
                 bills_voted.add(bill_voted)
+        # intersect bills_voted with self.bill_ids
+        bills = {}
+        for id in self.bill_ids.keys():
+            if id in bills_voted:
+                bills[id] = self.bill_ids[id]
         # sort bill ids using congress number first and then bill type/number
-        bills = sorted(self.bill_ids.intersection(bills_voted),
-            key=lambda bill_id: bill_id.split('-')[::-1],
-        )
+        bills = sorted(bills.items(), key=lambda t: t[0].split('-')[::-1])
+        bills = OrderedDict(bills)
         # create training samples
         samples = []
         for m in self.congress_members:
             sample = [m['id']]
             voted_any = False
-            for bill_id in bills:
+            for bill_id in bills.keys():
                 if bill_id in m['votes']:
                     sample.append(m['votes'][bill_id])
                     voted_any = True

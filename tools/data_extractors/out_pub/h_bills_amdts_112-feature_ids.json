@@ -1,12 +1,12 @@
-[
-  "hr1473-112",
-  "hr1540-112",
-  "hr2055-112",
-  "hr2112-112",
-  "hr3523-112",
-  "hr4212-112",
-  "hr4310-112",
-  "hr4402-112",
-  "hr5326-112",
-  "hr6018-112"
-]
+{
+  "hr1473-112": "http://thomas.loc.gov/cgi-bin/bdquery/z?d112:HR1473:@@@L&summ2=m&",
+  "hr1540-112": "http://thomas.loc.gov/cgi-bin/bdquery/z?d112:HR1540:@@@L&summ2=m&",
+  "hr2055-112": "http://thomas.loc.gov/cgi-bin/bdquery/z?d112:HR2055:@@@L&summ2=m&",
+  "hr2112-112": "http://thomas.loc.gov/cgi-bin/bdquery/z?d112:HR2112:@@@L&summ2=m&",
+  "hr3523-112": "http://thomas.loc.gov/cgi-bin/bdquery/z?d112:HR3523:@@@L&summ2=m&",
+  "hr4212-112": "http://thomas.loc.gov/cgi-bin/bdquery/z?d112:HR4212:@@@L&summ2=m&",
+  "hr4310-112": "http://thomas.loc.gov/cgi-bin/bdquery/z?d112:HR4310:@@@L&summ2=m&",
+  "hr4402-112": "http://thomas.loc.gov/cgi-bin/bdquery/z?d112:HR4402:@@@L&summ2=m&",
+  "hr5326-112": "http://thomas.loc.gov/cgi-bin/bdquery/z?d112:HR5326:@@@L&summ2=m&",
+  "hr6018-112": "http://thomas.loc.gov/cgi-bin/bdquery/z?d112:HR6018:@@@L&summ2=m&"
+}

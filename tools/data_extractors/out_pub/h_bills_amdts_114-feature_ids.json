@@ -1,17 +1,17 @@
-[
-  "hr1735-114",
-  "hr1853-114",
-  "hr2029-114",
-  "hr2596-114",
-  "hr2685-114",
-  "hr3457-114",
-  "hr3460-114",
-  "hr3662-114",
-  "hr4127-114",
-  "hr4909-114",
-  "hr5485-114",
-  "s1356-114",
-  "s1635-114",
-  "s2426-114",
-  "s2943-114"
-]
+{
+  "hr1735-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/hr/BILLSTATUS-114hr1735.xml",
+  "hr1853-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/hr/BILLSTATUS-114hr1853.xml",
+  "hr2029-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/hr/BILLSTATUS-114hr2029.xml",
+  "hr2596-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/hr/BILLSTATUS-114hr2596.xml",
+  "hr2685-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/hr/BILLSTATUS-114hr2685.xml",
+  "hr3457-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/hr/BILLSTATUS-114hr3457.xml",
+  "hr3460-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/hr/BILLSTATUS-114hr3460.xml",
+  "hr3662-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/hr/BILLSTATUS-114hr3662.xml",
+  "hr4127-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/hr/BILLSTATUS-114hr4127.xml",
+  "hr4909-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/hr/BILLSTATUS-114hr4909.xml",
+  "hr5485-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/hr/BILLSTATUS-114hr5485.xml",
+  "s1356-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/s/BILLSTATUS-114s1356.xml",
+  "s1635-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/s/BILLSTATUS-114s1635.xml",
+  "s2426-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/s/BILLSTATUS-114s2426.xml",
+  "s2943-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/s/BILLSTATUS-114s2943.xml"
+}

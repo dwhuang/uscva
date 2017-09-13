@@ -19,23 +19,42 @@ class BillFinder:
             print("No keywords provided")
             return
 
-        results = []
+        results = {}
+        all_bill_urls = {}
         for fpath in FileWalker.walk(
             config['input_path'],
             config['bill_data_path_patterns'],
         ):
             with open(fpath, 'r') as fp:
                 raw = json.load(fp)
+                id = None
+                for bill_id_field in config['possible_bill_id_fields']:
+                    if bill_id_field in raw:
+                        id = raw[bill_id_field]
+                if id is None:
+                    print("Cannot determine bill ID")
+                    raise RuntimeError()
                 if BillFinder.__has_keyword(raw, keywords):
-                    id = None
-                    for bill_id_field in config['possible_bill_id_fields']:
-                        if bill_id_field in raw:
-                            id = raw[bill_id_field]
-                    if id is None:
-                        print("Cannot determine bill ID")
-                        raise RuntimeError()
                     print(id)
-                    results.append(id)
+                    if 'url' in raw:
+                        results[id] = raw['url']
+                    elif 'amends_bill' in raw and 'bill_id' in raw['amends_bill']:
+                        results[id] = raw['amends_bill']['bill_id']
+                    else:
+                        raise RuntimeError(
+                            "Cannot determine URL or bill ID for",
+                            id,
+                        )
+                if 'url' in raw:
+                    all_bill_urls[id] = raw['url']
+
+        # amendment values are now bills ids, find their URLs
+        for id, value in results.items():
+            if not value.startswith('http'):
+                if value not in all_bill_urls:
+                    print("Cannot resolve URL for", id, value)
+                    continue
+                results[id] = all_bill_urls[value]
 
         with open(
             "{}/{}-bills.json".format(

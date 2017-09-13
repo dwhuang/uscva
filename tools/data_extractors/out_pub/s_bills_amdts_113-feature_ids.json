@@ -1,10 +1,10 @@
-[
-  "hr3304-113",
-  "hr3547-113",
-  "hr3979-113",
-  "hr4660-113",
-  "hr83-113",
-  "hr933-113",
-  "s1197-113",
-  "s744-113"
-]
+{
+  "hr3304-113": "http://thomas.loc.gov/cgi-bin/bdquery/z?d113:HR3304:@@@L&summ2=m&",
+  "hr3547-113": "http://thomas.loc.gov/cgi-bin/bdquery/z?d113:HR3547:@@@L&summ2=m&",
+  "hr3979-113": "http://thomas.loc.gov/cgi-bin/bdquery/z?d113:HR3979:@@@L&summ2=m&",
+  "hr4660-113": "http://thomas.loc.gov/cgi-bin/bdquery/z?d113:HR4660:@@@L&summ2=m&",
+  "hr83-113": "http://thomas.loc.gov/cgi-bin/bdquery/z?d113:HR83:@@@L&summ2=m&",
+  "hr933-113": "http://thomas.loc.gov/cgi-bin/bdquery/z?d113:HR933:@@@L&summ2=m&",
+  "s1197-113": "http://thomas.loc.gov/cgi-bin/bdquery/z?d113:SN1197:@@@L&summ2=m&",
+  "s744-113": "http://thomas.loc.gov/cgi-bin/bdquery/z?d113:SN744:@@@L&summ2=m&"
+}

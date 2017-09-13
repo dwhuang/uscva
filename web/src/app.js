@@ -18,7 +18,7 @@ var cells = null;
 var searchTokens = [];
 
 var tip = d3tip().attr('class', 'd3-tip').offset([-2, 30]).html(
-    d => '<span>' + featureIds.Get(d.index) + '</span>');
+    d => '<span>' + featureIds.Get(d.index)[0] + '</span>');
 
 function FindHexagonVertices() {
   return [
@@ -213,7 +213,11 @@ function UpdateCellInfo(d) {
           .append('text')
             .attr('x', voteRectWidth * numVotes + 10);
         for (var i = 0; i < numVotes; ++i) {
-          row.append('rect')
+          row.append('a')
+              .attr('href', featureIds.Get(i)[1])
+              .attr('xlink:href', featureIds.Get(i)[1])
+              .attr('target', '_blank')
+            .append('rect')
               .attr('width', voteRectWidth)
               .attr('height', LINE_HEIGHT - VOTE_RECT_VMARGIN * 2)
               .attr('x', i * voteRectWidth)

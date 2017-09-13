@@ -1,8 +1,8 @@
-[
-  "hr1473-112",
-  "hr1540-112",
-  "hr2055-112",
-  "hr2112-112",
-  "hr4310-112",
-  "s3254-112"
-]
+{
+  "hr1473-112": "http://thomas.loc.gov/cgi-bin/bdquery/z?d112:HR1473:@@@L&summ2=m&",
+  "hr1540-112": "http://thomas.loc.gov/cgi-bin/bdquery/z?d112:HR1540:@@@L&summ2=m&",
+  "hr2055-112": "http://thomas.loc.gov/cgi-bin/bdquery/z?d112:HR2055:@@@L&summ2=m&",
+  "hr2112-112": "http://thomas.loc.gov/cgi-bin/bdquery/z?d112:HR2112:@@@L&summ2=m&",
+  "hr4310-112": "http://thomas.loc.gov/cgi-bin/bdquery/z?d112:HR4310:@@@L&summ2=m&",
+  "s3254-112": "http://thomas.loc.gov/cgi-bin/bdquery/z?d112:SN3254:@@@L&summ2=m&"
+}

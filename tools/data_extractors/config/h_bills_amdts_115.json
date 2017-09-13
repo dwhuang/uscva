@@ -1,0 +1,31 @@
+{
+    "name": "h_bills_amdts_115",
+    "output_path": "out",
+    "input_path": "../../data",
+    "vote_data_path_patterns": [
+        "^115$",
+        "^votes$",
+        "^\\d{4}$",
+        "^[h]\\d+$",
+        "^data.json$"
+    ],
+    "bill_data_path_patterns": [
+        "^115$",
+        "^bills|amendments$",
+        "^[hs].*$",
+        "^.*$",
+        "^data.json$"
+    ],
+    "possible_bill_id_fields": ["bill_id", "amendment_id"],
+    "bill_keywords": [
+        "Taiwan",
+        "China"
+    ],
+    "som_model_size": 3,
+    "export_shape_scale": 1,
+    "congress_member_data_path_patterns": [
+        "^congress-legislators$",
+        "^legislators-(current|historic).csv$"
+    ],
+    "training_data_nan_threshold": 0.7
+}
