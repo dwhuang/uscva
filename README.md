@@ -1,4 +1,5 @@
-# US Congress Voting Pattern Visualizer for Taiwan-related Bills
+# Visualizing the Distributions of the US Congressional Votes for Taiwan-Related Bills and Amendments
+
 This project visualizes the voting patterns of the US congress for Taiwan-related bills.
 Each congress member is mapped to a location on a 2D map according to his or her voting history. 
 **Congress members having similar voting history are mapped to nearby locations on the map, although their absolute locations are arbitrary.**
