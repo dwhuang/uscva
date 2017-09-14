@@ -6,7 +6,7 @@ Each congress member is mapped to a location on a 2D map according to his or her
 We focus on bill votes related to Taiwan only, that is, we restrict to bills containing keywords 'Taiwan' or 'China'.
 The goal is to provide a quick overview of the distribution of congress members based on their Taiwan-related bill votes.
 
-<h4><a href="https://dwhuang.github.io/uscva/v1/index.html" target="_blank">Live Demo</a></h4>
+<h1><a href="https://dwhuang.github.io/uscva/v1/index.html" target="_blank">Live Demo</a></h1>
 
 ## A Quick Introduction
 
