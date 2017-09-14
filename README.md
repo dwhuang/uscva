@@ -1,7 +1,7 @@
 # US Congress Voting Pattern Visualizer for Taiwan-related Bills
 This project visualizes the voting patterns of the US congress for Taiwan-related bills.
 Each congress member is mapped to a location on a 2D map according to his or her voting history. 
-Congress members having similar voting history are mapped to nearby locations on the map.
+**Congress members having similar voting history are mapped to nearby locations on the map, although absolute locations are arbitrary.**
 We focus on bill votes related to Taiwan only, that is, we restrict to bills containing keywords 'Taiwan' or 'China'.
 The goal is to provide a quick overview of the distribution of congress members based on their Taiwan-related bill votes.
 
