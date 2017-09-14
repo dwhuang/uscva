@@ -18,7 +18,20 @@ var cells = null;
 var searchTokens = [];
 
 var tip = d3tip().attr('class', 'd3-tip').offset([-2, 30]).html(
-    d => '<span>' + featureIds.Get(d.index)[0] + '</span>');
+  d => {
+    var vote = d.value;
+    if (vote === "") {
+      vote = "Did not vote";
+    } else if (vote === 0) {
+      vote = "Present";
+    } else if (vote === 1) {
+      vote = "Yes";
+    } else if (vote === -1) {
+      vote = "No";
+    }
+    return '<span>' + featureIds.Get(d.index)[0] + ': ' + vote + '</span>';
+  }
+);
 
 function FindHexagonVertices() {
   return [
@@ -282,6 +295,9 @@ function HasKeywords(labels, keywords) {
   }
   for (var i = 0; i < labels.length; ++i) {
     var label = labels[i];
+    if (label === null || label.profile === null) {
+      continue;
+    }
     var context = [
       label.profile.first_name.toLowerCase(),
       label.profile.last_name.toLowerCase(),

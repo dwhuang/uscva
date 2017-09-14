@@ -7,6 +7,7 @@ Output a list of bill IDs that has any of the keywords.
 """
 import sys
 import json
+import re
 
 from file_walker import FileWalker
 from array import array
@@ -37,7 +38,10 @@ class BillFinder:
                 if BillFinder.__has_keyword(raw, keywords):
                     print(id)
                     if 'url' in raw:
-                        results[id] = raw['url']
+                        url = raw['url']
+                        if url.endswith('.xml'):
+                            url = BillFinder.__synthesizeURL(id)
+                        results[id] = url
                     elif 'amends_bill' in raw and 'bill_id' in raw['amends_bill']:
                         results[id] = raw['amends_bill']['bill_id']
                     else:
@@ -46,7 +50,10 @@ class BillFinder:
                             id,
                         )
                 if 'url' in raw:
-                    all_bill_urls[id] = raw['url']
+                    url = raw['url']
+                    if url.endswith('.xml'):
+                        url = BillFinder.__synthesizeURL(id)
+                    all_bill_urls[id] = url
 
         # amendment values are now bills ids, find their URLs
         for id, value in results.items():
@@ -82,6 +89,31 @@ class BillFinder:
                     print(keyword, struct)
                     return True
         return False
+
+    
+    BILL_CATEGORIES = {
+        'conres': 'C',
+        'jres': 'J',
+        'r': 'R',
+        'res': 'E',
+        '': 'N',
+    }
+
+
+    @staticmethod
+    def __synthesizeURL(bill_id):
+        m = re.match(r"^([hs])([a-z]*)(\d+)-(\d+)$", bill_id.strip().lower())
+        if m is None:
+            return None
+        g = m.groups()
+        prefix1 = g[0].upper()
+        prefix2 = BillFinder.BILL_CATEGORIES.get(g[1])
+        if prefix2 is None:
+            return None
+
+        return "http://thomas.loc.gov/cgi-bin/bdquery/z?d{}:{}{}{}:@@@L&summ2=m&".format(
+            g[3], prefix1, prefix2, g[2]
+        )
 
 
 def main(argv):

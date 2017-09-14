@@ -8,7 +8,7 @@ class Cell {
   static DefaultTextColor() { return d3.rgb(150, 150, 150); }
   static SelectedTextColor() { return d3.rgb(255, 255, 255); }
   static DefaultBackgroundColor(cell) { return cell.DefaultBackgroundColor(); }
-  static SelectedBackgroundColor() { return d3.rgb(66, 98, 244); }
+  static SelectedBackgroundColor() { return d3.rgb(255, 180, 0); }
 
   constructor(rawData) {
     this.rawData = rawData;

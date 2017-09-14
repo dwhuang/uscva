@@ -40,11 +40,11 @@
   "hr933-113": "http://thomas.loc.gov/cgi-bin/bdquery/z?d113:HR933:@@@L&summ2=m&",
   "s1197-113": "http://thomas.loc.gov/cgi-bin/bdquery/z?d113:SN1197:@@@L&summ2=m&",
   "s744-113": "http://thomas.loc.gov/cgi-bin/bdquery/z?d113:SN744:@@@L&summ2=m&",
-  "hr1735-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/hr/BILLSTATUS-114hr1735.xml",
-  "hr2029-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/hr/BILLSTATUS-114hr2029.xml",
-  "hr2685-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/hr/BILLSTATUS-114hr2685.xml",
-  "s1356-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/s/BILLSTATUS-114s1356.xml",
-  "s2943-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/s/BILLSTATUS-114s2943.xml",
-  "s754-114": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/114/s/BILLSTATUS-114s754.xml",
-  "hr244-115": "https://www.gpo.gov/fdsys/bulkdata/BILLSTATUS/115/hr/BILLSTATUS-115hr244.xml"
+  "hr1735-114": "http://thomas.loc.gov/cgi-bin/bdquery/z?d114:HR1735:@@@L&summ2=m&",
+  "hr2029-114": "http://thomas.loc.gov/cgi-bin/bdquery/z?d114:HR2029:@@@L&summ2=m&",
+  "hr2685-114": "http://thomas.loc.gov/cgi-bin/bdquery/z?d114:HR2685:@@@L&summ2=m&",
+  "s1356-114": "http://thomas.loc.gov/cgi-bin/bdquery/z?d114:SN1356:@@@L&summ2=m&",
+  "s2943-114": "http://thomas.loc.gov/cgi-bin/bdquery/z?d114:SN2943:@@@L&summ2=m&",
+  "s754-114": "http://thomas.loc.gov/cgi-bin/bdquery/z?d114:SN754:@@@L&summ2=m&",
+  "hr244-115": "http://thomas.loc.gov/cgi-bin/bdquery/z?d115:HR244:@@@L&summ2=m&"
 }
