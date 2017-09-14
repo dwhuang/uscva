@@ -33,17 +33,6 @@ var tip = d3tip().attr('class', 'd3-tip').offset([-2, 30]).html(
   }
 );
 
-function FindHexagonVertices() {
-  return [
-    [0, 1],
-    [SQRT3/2, 1/2],
-    [SQRT3/2, -1/2],
-    [0, -1],
-    [-SQRT3/2, -1/2],
-    [-SQRT3/2, 1/2],
-  ];
-}
-
 function GetCanvasSize() {
   var w = window,
   d = document,
