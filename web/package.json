@@ -19,7 +19,8 @@
   "scripts": {
     "bundle-clean": "rm -f public/scripts/bundle.*",
     "bundle-dev": "webpack -d --progress --display-error-details --watch",
-    "bundle-prod": "webpack -p",
+    "bundle-prod": "webpack -p --output-filename uscva.prod.js",
+    "push-to-prod": "tools/publish.sh",
     "start": "http-server ./public -c-1 -o"
   }
 }

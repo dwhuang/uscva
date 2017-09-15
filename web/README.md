@@ -6,5 +6,7 @@
 4. npm start (This starts http-server and opens public/index.html in a browser tab.)
 5. Go break things
 
-## Bundle production JS
-npm run bundle-prod
+## Push New Version to Prod
+npm run push-to-prod -- [version]
+
+[version] can be any string. It's used to create (or recreate) a top-level directory on the gh-pages branch.

@@ -1,2 +1,4 @@
+dist/
 node_modules/
 public/scripts/uscva.js
+public/scripts/uscva.prod.js
