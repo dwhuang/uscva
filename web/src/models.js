@@ -1,10 +1,5 @@
 module.exports = [
   {
-    'name': "109-115 everyone's votes for bills & amendments having keywords 'Taiwan' or 'China' (upto July 2017)",
-    'modelPath': 'models/bills_amdts_109_115-export.json',
-    'featureIdsPath': 'models/bills_amdts_109_115-feature_ids.json',
-  },
-  {
     'name': "109-115 house rep votes for bills having keywords 'Taiwan' or 'China' (upto July 2017)",
     'modelPath': 'models/h_bills_109_115-export.json',
     'featureIdsPath': 'models/h_bills_109_115-feature_ids.json',
@@ -83,5 +78,10 @@ module.exports = [
     'name': "109 senator votes for bills/amendments having keywords 'Taiwan' or 'China'",
     'modelPath': 'models/s_bills_amdts_109-export.json',
     'featureIdsPath': 'models/s_bills_amdts_109-feature_ids.json',
+  },
+  {
+    'name': "109-115 everyone's votes for bills & amendments having keywords 'Taiwan' or 'China' (upto July 2017)",
+    'modelPath': 'models/bills_amdts_109_115-export.json',
+    'featureIdsPath': 'models/bills_amdts_109_115-feature_ids.json',
   },
 ];
